@@ -1,5 +1,5 @@
 //
-//  CemeteryAppViewController.h
+//  SearchViewController.h
 //  CemeteryApp
 //
 //  Created by student on 9/24/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CemeteryAppViewController : UIViewController
+@interface SearchViewController : UIViewController
 
 @end
