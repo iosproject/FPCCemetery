@@ -25,13 +25,20 @@
                                     <tabBarItem systemItem="more" id="Chi-MK-2qm"/>
                                 </items>
                             </tabBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Home Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WKs-hd-YmL">
+                                <rect key="frame" x="108" y="20" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Xud-ll-S0r"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="779" y="101"/>
+            <point key="canvasLocation" x="678" y="196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VhX-cx-9W7">
@@ -49,7 +56,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="253" y="101"/>
+            <point key="canvasLocation" x="121" y="196"/>
         </scene>
     </scenes>
     <classes>
