@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0715FACA1610BF81006A91A0 /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */; };
+		0715FACC1610BF87006A91A0 /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */; };
+		0715FACE1610BFED006A91A0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACD1610BFED006A91A0 /* Default@2x.png */; };
+		0715FAD01610BFF8006A91A0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACF1610BFF8006A91A0 /* Default.png */; };
 		3FA7D34F1610B64700F132F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D34E1610B64700F132F3 /* UIKit.framework */; };
 		3FA7D3511610B64700F132F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D3501610B64700F132F3 /* Foundation.framework */; };
 		3FA7D3531610B64700F132F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D3521610B64700F132F3 /* CoreGraphics.framework */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
+		0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
+		0715FACD1610BFED006A91A0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0715FACF1610BFF8006A91A0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3FA7D34A1610B64700F132F3 /* CemeteryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CemeteryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA7D34E1610B64700F132F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FA7D3501610B64700F132F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,6 +58,10 @@
 		3FA7D33F1610B64700F132F3 = {
 			isa = PBXGroup;
 			children = (
+				0715FACF1610BFF8006A91A0 /* Default.png */,
+				0715FACD1610BFED006A91A0 /* Default@2x.png */,
+				0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */,
+				0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */,
 				3FA7D3541610B64700F132F3 /* CemeteryApp */,
 				3FA7D34D1610B64700F132F3 /* Frameworks */,
 				3FA7D34B1610B64700F132F3 /* Products */,
@@ -152,6 +164,10 @@
 			files = (
 				3FA7D3591610B64700F132F3 /* InfoPlist.strings in Resources */,
 				3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */,
+				0715FACA1610BF81006A91A0 /* AppIcon_Normal.png in Resources */,
+				0715FACC1610BF87006A91A0 /* AppIcon_Retina.png in Resources */,
+				0715FACE1610BFED006A91A0 /* Default@2x.png in Resources */,
+				0715FAD01610BFF8006A91A0 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +296,7 @@
 				3FA7D36A1610B64800F132F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
