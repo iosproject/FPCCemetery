@@ -15,6 +15,7 @@
 		3FA7D35F1610B64800F132F3 /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */; };
 		3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */; };
 		3FA7D3651610B64800F132F3 /* CemeteryAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D3641610B64800F132F3 /* CemeteryAppViewController.m */; };
+		3FA7D36D1610BAE700F132F3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D36C1610BAE700F132F3 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		3FA7D3611610B64800F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3FA7D3631610B64800F132F3 /* CemeteryAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CemeteryAppViewController.h; sourceTree = "<group>"; };
 		3FA7D3641610B64800F132F3 /* CemeteryAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppViewController.m; sourceTree = "<group>"; };
+		3FA7D36B1610BAE700F132F3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3FA7D36C1610BAE700F132F3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				3FA7D35D1610B64800F132F3 /* CemeteryAppAppDelegate.h */,
 				3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */,
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
+				3FA7D36B1610BAE700F132F3 /* MapViewController.h */,
+				3FA7D36C1610BAE700F132F3 /* MapViewController.m */,
 				3FA7D3631610B64800F132F3 /* CemeteryAppViewController.h */,
 				3FA7D3641610B64800F132F3 /* CemeteryAppViewController.m */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
@@ -165,6 +170,7 @@
 				3FA7D35B1610B64800F132F3 /* main.m in Sources */,
 				3FA7D35F1610B64800F132F3 /* CemeteryAppAppDelegate.m in Sources */,
 				3FA7D3651610B64800F132F3 /* CemeteryAppViewController.m in Sources */,
+				3FA7D36D1610BAE700F132F3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
