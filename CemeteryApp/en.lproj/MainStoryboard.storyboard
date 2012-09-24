@@ -13,9 +13,101 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="Jtq-AU-wVD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="419" y="-286"/>
+        </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="NsH-1o-vXd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQH-4W-wuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="UUQ-qR-QNa" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ejm-Vp-mlf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Map" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="s2S-TW-h34">
+                                <rect key="frame" x="20" y="20" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="58D-wP-xqm"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="435" y="334"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BOy-Qg-dst">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCy-Bd-Liz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="nyC-6H-BzA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N06-lP-bYS">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="6Lj-ta-BmE">
+                                <rect key="frame" x="20" y="20" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="cU1-1r-MNy"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="441" y="913"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Auu-Lk-IWR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhf-b7-OFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Pru-Pj-HwG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zx9-gA-QVp">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="More" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="tG2-mO-2GW">
+                                <rect key="frame" x="26" y="20" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="uLo-vg-Bdy"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="419" y="1485"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Tl6-D9-ywf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkg-kn-XLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="9ko-DT-48R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="YtD-py-vXx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Sej-gz-Cmw" kind="relationship" relationship="viewControllers" id="5ZE-4a-oEi"/>
+                        <segue destination="UUQ-qR-QNa" kind="relationship" relationship="viewControllers" id="hV0-MA-AAi"/>
+                        <segue destination="nyC-6H-BzA" kind="relationship" relationship="viewControllers" id="dLd-Jr-FTc"/>
+                        <segue destination="Pru-Pj-HwG" kind="relationship" relationship="viewControllers" id="2w5-L2-7BG"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-438" y="524"/>
         </scene>
     </scenes>
     <classes>
