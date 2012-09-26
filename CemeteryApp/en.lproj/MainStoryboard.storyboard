@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="-286"/>
+            <point key="canvasLocation" x="-847" y="-553"/>
         </scene>
         <!--Map View Controller - Map-->
         <scene sceneID="NsH-1o-vXd">
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQH-4W-wuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="320"/>
+            <point key="canvasLocation" x="-847" y="53"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="BOy-Qg-dst">
@@ -89,8 +89,13 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="cU1-1r-MNy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCy-Bd-Liz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="1og-vx-B3W">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="451" y="909"/>
+            <point key="canvasLocation" x="-837" y="642"/>
         </scene>
         <!--Table View Controller - More-->
         <scene sceneID="GQ5-hN-qss">
@@ -176,22 +181,17 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="811" y="1487"/>
+            <point key="canvasLocation" x="-477" y="1220"/>
         </scene>
         <!--View Controller - Image Gallery-->
         <scene sceneID="MA0-0I-EyN">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Dl-0e-XvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nOK-GN-cmi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1og-vx-B3W">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
                     <navigationItem key="navigationItem" title="Image Gallery" id="Yfd-kz-iUy"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1219" y="1527"/>
+            <point key="canvasLocation" x="-69" y="1260"/>
         </scene>
         <!--View Controller - Contact Us-->
         <scene sceneID="drD-13-b6h">
@@ -201,12 +201,34 @@
                     <view key="view" contentMode="scaleToFill" id="7DX-K2-lch">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="klv-6v-DOr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="346" sectionHeaderHeight="22" sectionFooterHeight="22" id="BKU-RI-pb6">
+                                        <rect key="frame" x="0.0" y="85" width="320" height="282"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="B86-ym-c9y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Us" id="k1M-eH-lZL"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1227" y="2105"/>
+            <point key="canvasLocation" x="-61" y="1838"/>
         </scene>
         <!--View Controller - Plan Your Visit-->
         <scene sceneID="RjR-dz-WJw">
@@ -221,7 +243,7 @@
                     <navigationItem key="navigationItem" title="Plan Your Visit" id="v64-wh-3nv"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1221" y="959"/>
+            <point key="canvasLocation" x="-67" y="692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PN2-oM-h7d">
@@ -237,7 +259,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="451" y="1487"/>
+            <point key="canvasLocation" x="-837" y="1220"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tl6-D9-ywf">
@@ -251,14 +273,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="lrP-cz-tH5"/>
-                        <segue destination="UUQ-qR-QNa" kind="relationship" relationship="viewControllers" id="hV0-MA-AAi"/>
                         <segue destination="nyC-6H-BzA" kind="relationship" relationship="viewControllers" id="dLd-Jr-FTc"/>
+                        <segue destination="UUQ-qR-QNa" kind="relationship" relationship="viewControllers" id="hV0-MA-AAi"/>
                         <segue destination="HhV-Q0-Ks7" kind="relationship" relationship="viewControllers" id="fP3-If-izL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkg-kn-XLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="502"/>
+            <point key="canvasLocation" x="-1706" y="235"/>
         </scene>
     </scenes>
     <resources>
