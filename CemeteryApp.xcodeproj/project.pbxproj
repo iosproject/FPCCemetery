@@ -1298,9 +1298,9 @@
 		3F1FDAAB16137870008C52DE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC130C1619F50A00A277D6 /* img1.JPG */,
-				3FAC130D1619F50A00A277D6 /* img2.JPG */,
-				3FAC130E1619F50A00A277D6 /* img3.JPG */,
+				3FAC131D161A08F300A277D6 /* img1.png */,
+				3FAC131E161A08F300A277D6 /* img2.png */,
+				3FAC131F161A08F300A277D6 /* img3.png */,
 				3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */,
 				3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */,
 				3F1FDAAE16137870008C52DE /* Default-568h@2x.png */,
@@ -2664,9 +2664,9 @@
 				3F1FDF7916137871008C52DE /* icon_zoom_in.png in Resources */,
 				3F1FDF7A16137871008C52DE /* icon_zoom_out.png in Resources */,
 				3F1FDF7B16137871008C52DE /* LaunchImage_RedTitle.png in Resources */,
-				3FAC130F1619F50A00A277D6 /* img1.JPG in Resources */,
-				3FAC13101619F50A00A277D6 /* img2.JPG in Resources */,
-				3FAC13111619F50A00A277D6 /* img3.JPG in Resources */,
+				3FAC1320161A08F300A277D6 /* img1.png in Resources */,
+				3FAC1321161A08F300A277D6 /* img2.png in Resources */,
+				3FAC1322161A08F300A277D6 /* img3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
