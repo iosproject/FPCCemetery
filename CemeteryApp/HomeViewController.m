@@ -23,9 +23,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     _imageView.animationImages = [NSArray arrayWithObjects:
-                                  [UIImage imageNamed:@"img1.JPG"],
-                                  [UIImage imageNamed:@"img2.JPG"],
-                                  [UIImage imageNamed:@"img3.JPG"], nil];
+                                  [UIImage imageNamed:@"img1.png"],
+                                  [UIImage imageNamed:@"img2.png"],
+                                  [UIImage imageNamed:@"img3.png"], nil];
     _imageView.animationDuration = 15.00; //1 second
     _imageView.animationRepeatCount = 0; //infinite
     
