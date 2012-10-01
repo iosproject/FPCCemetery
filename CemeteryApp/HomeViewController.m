@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "TransitionImageView.h"
 
 @interface HomeViewController ()
 
@@ -21,18 +22,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+
     _imageView.animationImages = [NSArray arrayWithObjects:
-                                  [UIImage imageNamed:@"img1.png"],
-                                  [UIImage imageNamed:@"img2.png"],
-                                  [UIImage imageNamed:@"img3.png"], nil];
-    _imageView.animationDuration = 15.00; //15 second
+                                  [UIImage imageNamed:@"ss_img1.png"],
+                                  [UIImage imageNamed:@"ss_img2.png"],
+                                  [UIImage imageNamed:@"ss_img3.png"], nil];
+    _imageView.animationDuration = 12.00; //12 second
     _imageView.animationRepeatCount = 0; //infinite
-    
     [_imageView startAnimating]; //start the animation
+    
+    
 }
-
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
