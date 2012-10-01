@@ -634,6 +634,7 @@
 		3FAC130F1619F50A00A277D6 /* img1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC130C1619F50A00A277D6 /* img1.JPG */; };
 		3FAC13101619F50A00A277D6 /* img2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC130D1619F50A00A277D6 /* img2.JPG */; };
 		3FAC13111619F50A00A277D6 /* img3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC130E1619F50A00A277D6 /* img3.JPG */; };
+		3FE71AC9161A0D1100FF736A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AC7161A0D1100FF736A /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1270,7 +1271,6 @@
 		3FA7D3581610B64700F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3FA7D35A1610B64800F132F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FA7D35C1610B64800F132F3 /* CemeteryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CemeteryApp-Prefix.pch"; sourceTree = "<group>"; };
-		3FA7D35D1610B64800F132F3 /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
 		3FA7D3611610B64800F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3FA7D3631610B64800F132F3 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -1278,6 +1278,7 @@
 		3FAC130C1619F50A00A277D6 /* img1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.JPG; sourceTree = "<group>"; };
 		3FAC130D1619F50A00A277D6 /* img2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.JPG; sourceTree = "<group>"; };
 		3FAC130E1619F50A00A277D6 /* img3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.JPG; sourceTree = "<group>"; };
+		3FE71AC8161A0D1100FF736A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1971,6 +1972,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
+				3FE71AC7161A0D1100FF736A /* Model.xcdatamodeld */,
 				3F76C5E01610DF2F0027640E /* SearchViewController.h */,
 				3F76C5E31610DFDA0027640E /* MoreViewController.h */,
 				3F76C5E41610DFDA0027640E /* MoreViewController.m */,
@@ -2681,6 +2683,7 @@
 				3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */,
 				3F76C5E21610DF2F0027640E /* SearchViewController.m in Sources */,
 				3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */,
+				3FE71AC9161A0D1100FF736A /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2799,6 +2802,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3FE71AC7161A0D1100FF736A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3FE71AC8161A0D1100FF736A /* Model.xcdatamodel */,
+			);
+			currentVersion = 3FE71AC8161A0D1100FF736A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3FA7D3411610B64700F132F3 /* Project object */;
 }
