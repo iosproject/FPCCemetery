@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0715FACA1610BF81006A91A0 /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */; };
-		0715FACC1610BF87006A91A0 /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */; };
-		0715FACE1610BFED006A91A0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACD1610BFED006A91A0 /* Default@2x.png */; };
-		0715FAD01610BFF8006A91A0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACF1610BFF8006A91A0 /* Default.png */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDD1716137871008C52DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAE16137870008C52DE /* Default-568h@2x.png */; };
@@ -42,7 +38,6 @@
 		3F1FDD3116137871008C52DE /* app_remove_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAC916137870008C52DE /* app_remove_24.png */; };
 		3F1FDD3216137871008C52DE /* app_remove_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDACA16137870008C52DE /* app_remove_48.png */; };
 		3F1FDD3316137871008C52DE /* app_remove_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDACB16137870008C52DE /* app_remove_64.png */; };
-		3F1FDD3416137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDACC16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDD3516137871008C52DE /* arrow_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDACD16137870008C52DE /* arrow_24.png */; };
 		3F1FDD3616137871008C52DE /* arrow_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDACE16137870008C52DE /* arrow_48.png */; };
 		3F1FDD3716137871008C52DE /* arrow_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDACF16137870008C52DE /* arrow_64.png */; };
@@ -462,7 +457,6 @@
 		3F1FDED516137871008C52DE /* zoom_out_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC6D16137871008C52DE /* zoom_out_24.png */; };
 		3F1FDED616137871008C52DE /* zoom_out_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC6E16137871008C52DE /* zoom_out_48.png */; };
 		3F1FDED716137871008C52DE /* zoom_out_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC6F16137871008C52DE /* zoom_out_64.png */; };
-		3F1FDED816137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7116137871008C52DE /* AppIcon_Normal.png */; };
 		3F1FDED916137871008C52DE /* Home_Cem1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7216137871008C52DE /* Home_Cem1.jpeg */; };
 		3F1FDEDA16137871008C52DE /* how_to_change_colors.psd in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7316137871008C52DE /* how_to_change_colors.psd */; };
 		3F1FDEDB16137871008C52DE /* icon_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7416137871008C52DE /* icon_add.png */; };
@@ -2048,10 +2042,6 @@
 			files = (
 				3FA7D3591610B64700F132F3 /* InfoPlist.strings in Resources */,
 				3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */,
-				0715FACA1610BF81006A91A0 /* AppIcon_Normal.png in Resources */,
-				0715FACC1610BF87006A91A0 /* AppIcon_Retina.png in Resources */,
-				0715FACE1610BFED006A91A0 /* Default@2x.png in Resources */,
-				0715FAD01610BFF8006A91A0 /* Default.png in Resources */,
 				3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */,
 				3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */,
 				3F1FDD1716137871008C52DE /* Default-568h@2x.png in Resources */,
@@ -2083,7 +2073,6 @@
 				3F1FDD3116137871008C52DE /* app_remove_24.png in Resources */,
 				3F1FDD3216137871008C52DE /* app_remove_48.png in Resources */,
 				3F1FDD3316137871008C52DE /* app_remove_64.png in Resources */,
-				3F1FDD3416137871008C52DE /* AppIcon_Retina.png in Resources */,
 				3F1FDD3516137871008C52DE /* arrow_24.png in Resources */,
 				3F1FDD3616137871008C52DE /* arrow_48.png in Resources */,
 				3F1FDD3716137871008C52DE /* arrow_64.png in Resources */,
@@ -2503,7 +2492,6 @@
 				3F1FDED516137871008C52DE /* zoom_out_24.png in Resources */,
 				3F1FDED616137871008C52DE /* zoom_out_48.png in Resources */,
 				3F1FDED716137871008C52DE /* zoom_out_64.png in Resources */,
-				3F1FDED816137871008C52DE /* AppIcon_Normal.png in Resources */,
 				3F1FDED916137871008C52DE /* Home_Cem1.jpeg in Resources */,
 				3F1FDEDA16137871008C52DE /* how_to_change_colors.psd in Resources */,
 				3F1FDEDB16137871008C52DE /* icon_add.png in Resources */,

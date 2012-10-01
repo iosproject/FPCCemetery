@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9ko-DT-48R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9ko-DT-48R">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Home View Controller - Home-->
@@ -100,7 +100,6 @@
         <!--Table View Controller - More-->
         <scene sceneID="GQ5-hN-qss">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BOt-mT-hOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="izR-cz-eg3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oD1-Jm-sfQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -180,23 +179,23 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="NZM-Go-DFg"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOt-mT-hOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-477" y="1220"/>
         </scene>
         <!--View Controller - Image Gallery-->
         <scene sceneID="MA0-0I-EyN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dl-0e-XvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nOK-GN-cmi" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Image Gallery" id="Yfd-kz-iUy"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dl-0e-XvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-69" y="1260"/>
         </scene>
         <!--Table View Controller - Contact Us-->
         <scene sceneID="XyL-rg-Yhf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ODR-HW-SkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Yi8-ry-y7v" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2jn-Sc-4Af">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -221,13 +220,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact Us" id="O7r-kf-FxE"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODR-HW-SkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-75" y="1822"/>
         </scene>
         <!--View Controller - Plan Your Visit-->
         <scene sceneID="RjR-dz-WJw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cwF-UF-CV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4am-XH-7P9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7JI-W8-ggc">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -236,13 +235,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Plan Your Visit" id="v64-wh-3nv"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwF-UF-CV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-67" y="692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PN2-oM-h7d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sph-jh-def" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="HhV-Q0-Ks7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="zSu-7X-htM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vgp-9D-4kT">
@@ -252,6 +251,7 @@
                         <segue destination="izR-cz-eg3" kind="relationship" relationship="rootViewController" id="YN6-TC-fKO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sph-jh-def" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-837" y="1220"/>
         </scene>
