@@ -26,7 +26,7 @@
                                   [UIImage imageNamed:@"img1.png"],
                                   [UIImage imageNamed:@"img2.png"],
                                   [UIImage imageNamed:@"img3.png"], nil];
-    _imageView.animationDuration = 15.00; //1 second
+    _imageView.animationDuration = 15.00; //15 second
     _imageView.animationRepeatCount = 0; //infinite
     
     [_imageView startAnimating]; //start the animation
