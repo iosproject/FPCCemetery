@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07632B131619FC8E00C367E1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACD1610BFED006A91A0 /* Default@2x.png */; };
+		07632B161619FD4400C367E1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAF16137870008C52DE /* Default.png */; };
+		07632B181619FD5200C367E1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07632B171619FD5200C367E1 /* Default-568h@2x.png */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
-		3F1FDD1716137871008C52DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAE16137870008C52DE /* Default-568h@2x.png */; };
-		3F1FDD1816137871008C52DE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAF16137870008C52DE /* Default.png */; };
 		3F1FDD1916137871008C52DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB016137870008C52DE /* Default@2x.png */; };
 		3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB116137870008C52DE /* HomePic.JPG */; };
 		3F1FDD1B16137871008C52DE /* IMG_2089.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB216137870008C52DE /* IMG_2089.JPG */; };
@@ -641,6 +642,7 @@
 		0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		0715FACD1610BFED006A91A0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0715FACF1610BFF8006A91A0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		07632B171619FD5200C367E1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		3F1FDAAE16137870008C52DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -1936,6 +1938,7 @@
 		3FA7D33F1610B64700F132F3 = {
 			isa = PBXGroup;
 			children = (
+				07632B171619FD5200C367E1 /* Default-568h@2x.png */,
 				3F1FDAAB16137870008C52DE /* Images */,
 				3F1FDAB316137870008C52DE /* TWG Retina Icons */,
 				3F1FDC7016137871008C52DE /* twg_iphone_toolbar_icons */,
@@ -2053,8 +2056,6 @@
 				3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */,
 				3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */,
 				3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */,
-				3F1FDD1716137871008C52DE /* Default-568h@2x.png in Resources */,
-				3F1FDD1816137871008C52DE /* Default.png in Resources */,
 				3F1FDD1916137871008C52DE /* Default@2x.png in Resources */,
 				3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */,
 				3F1FDD1B16137871008C52DE /* IMG_2089.JPG in Resources */,
@@ -2667,6 +2668,9 @@
 				3FAC130F1619F50A00A277D6 /* img1.JPG in Resources */,
 				3FAC13101619F50A00A277D6 /* img2.JPG in Resources */,
 				3FAC13111619F50A00A277D6 /* img3.JPG in Resources */,
+				07632B131619FC8E00C367E1 /* Default@2x.png in Resources */,
+				07632B161619FD4400C367E1 /* Default.png in Resources */,
+				07632B181619FD5200C367E1 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
