@@ -15,8 +15,22 @@
 @implementation HomeViewController
 
 
+@synthesize imageView = _imageView;
 
-// first commit
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
+    _imageView.animationImages = [NSArray arrayWithObjects:
+                                  [UIImage imageNamed:@"img1.JPG"],
+                                  [UIImage imageNamed:@"img2.JPG"],
+                                  [UIImage imageNamed:@"img3.JPG"], nil];
+    _imageView.animationDuration = 15.00; //1 second
+    _imageView.animationRepeatCount = 0; //infinite
+    
+    [_imageView startAnimating]; //start the animation
+}
 
 
 
@@ -25,4 +39,8 @@
     return NO;
 }
 
+- (void)viewDidUnload {
+    [self setImageView:nil];
+    [super viewDidUnload];
+}
 @end
