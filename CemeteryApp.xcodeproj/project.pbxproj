@@ -1987,8 +1987,6 @@
 		3FA7D3551610B64700F132F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3FA7D35D1610B64800F132F3 /* CemeteryAppAppDelegate.h */,
-				3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */,
 				3FA7D3561610B64700F132F3 /* CemeteryApp-Info.plist */,
 				3FA7D3571610B64700F132F3 /* InfoPlist.strings */,
 				3FA7D35A1610B64800F132F3 /* main.m */,
