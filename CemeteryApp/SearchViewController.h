@@ -10,4 +10,6 @@
 // comment
 @interface SearchViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end

@@ -632,9 +632,9 @@
 		3FA7D35F1610B64800F132F3 /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */; };
 		3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */; };
 		3FA7D3651610B64800F132F3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D3641610B64800F132F3 /* HomeViewController.m */; };
-		3FAC130F1619F50A00A277D6 /* img1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC130C1619F50A00A277D6 /* img1.JPG */; };
-		3FAC13101619F50A00A277D6 /* img2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC130D1619F50A00A277D6 /* img2.JPG */; };
-		3FAC13111619F50A00A277D6 /* img3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC130E1619F50A00A277D6 /* img3.JPG */; };
+		3FAC1320161A08F300A277D6 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC131D161A08F300A277D6 /* img1.png */; };
+		3FAC1321161A08F300A277D6 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC131E161A08F300A277D6 /* img2.png */; };
+		3FAC1322161A08F300A277D6 /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC131F161A08F300A277D6 /* img3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1272,14 +1272,13 @@
 		3FA7D3581610B64700F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3FA7D35A1610B64800F132F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FA7D35C1610B64800F132F3 /* CemeteryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CemeteryApp-Prefix.pch"; sourceTree = "<group>"; };
-		3FA7D35D1610B64800F132F3 /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
 		3FA7D3611610B64800F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3FA7D3631610B64800F132F3 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3FA7D3641610B64800F132F3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		3FAC130C1619F50A00A277D6 /* img1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.JPG; sourceTree = "<group>"; };
-		3FAC130D1619F50A00A277D6 /* img2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.JPG; sourceTree = "<group>"; };
-		3FAC130E1619F50A00A277D6 /* img3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.JPG; sourceTree = "<group>"; };
+		3FAC131D161A08F300A277D6 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		3FAC131E161A08F300A277D6 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
+		3FAC131F161A08F300A277D6 /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1299,9 +1298,9 @@
 		3F1FDAAB16137870008C52DE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC130C1619F50A00A277D6 /* img1.JPG */,
-				3FAC130D1619F50A00A277D6 /* img2.JPG */,
-				3FAC130E1619F50A00A277D6 /* img3.JPG */,
+				3FAC131D161A08F300A277D6 /* img1.png */,
+				3FAC131E161A08F300A277D6 /* img2.png */,
+				3FAC131F161A08F300A277D6 /* img3.png */,
 				3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */,
 				3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */,
 				3F1FDAAE16137870008C52DE /* Default-568h@2x.png */,
@@ -1979,11 +1978,9 @@
 				3F76C5E41610DFDA0027640E /* MoreViewController.m */,
 				3F76C5E11610DF2F0027640E /* SearchViewController.m */,
 				3FA7D3631610B64800F132F3 /* HomeViewController.h */,
+				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
 				3F76C5DA1610D52F0027640E /* MapViewController.h */,
 				3F76C5DB1610D52F0027640E /* MapViewController.m */,
-				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
-				3FA7D35D1610B64800F132F3 /* CemeteryAppAppDelegate.h */,
-				3FA7D35E1610B64800F132F3 /* CemeteryAppAppDelegate.m */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
 			);
 			path = CemeteryApp;
