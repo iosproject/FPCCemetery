@@ -636,6 +636,7 @@
 		3FA7D3651610B64800F132F3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D3641610B64800F132F3 /* HomeViewController.m */; };
 		3FE71AC9161A0D1100FF736A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AC7161A0D1100FF736A /* Model.xcdatamodeld */; };
 		3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */; };
+		3FE71AD9161A1E4800FF736A /* TransitionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD8161A1E4800FF736A /* TransitionImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1282,6 +1283,8 @@
 		3FE71AC8161A0D1100FF736A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
+		3FE71AD7161A1E4800FF736A /* TransitionImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionImageView.h; sourceTree = "<group>"; };
+		3FE71AD8161A1E4800FF736A /* TransitionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1988,6 +1991,8 @@
 				3F76C5DA1610D52F0027640E /* MapViewController.h */,
 				3F76C5DB1610D52F0027640E /* MapViewController.m */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
+				3FE71AD7161A1E4800FF736A /* TransitionImageView.h */,
+				3FE71AD8161A1E4800FF736A /* TransitionImageView.m */,
 			);
 			path = CemeteryApp;
 			sourceTree = "<group>";
@@ -2688,6 +2693,7 @@
 				3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */,
 				3FE71AC9161A0D1100FF736A /* Model.xcdatamodeld in Sources */,
 				3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */,
+				3FE71AD9161A1E4800FF736A /* TransitionImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
