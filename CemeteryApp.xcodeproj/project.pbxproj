@@ -2668,12 +2668,9 @@
 				3F1FDF7916137871008C52DE /* icon_zoom_in.png in Resources */,
 				3F1FDF7A16137871008C52DE /* icon_zoom_out.png in Resources */,
 				3F1FDF7B16137871008C52DE /* LaunchImage_RedTitle.png in Resources */,
-				3FAC130F1619F50A00A277D6 /* img1.JPG in Resources */,
-				3FAC13101619F50A00A277D6 /* img2.JPG in Resources */,
-				3FAC13111619F50A00A277D6 /* img3.JPG in Resources */,
-				07632B131619FC8E00C367E1 /* Default@2x.png in Resources */,
-				07632B161619FD4400C367E1 /* Default.png in Resources */,
-				07632B181619FD5200C367E1 /* Default-568h@2x.png in Resources */,
+				3FA62F64161A1506003F52D3 /* ss_img1.png in Resources */,
+				3FA62F65161A1506003F52D3 /* ss_img2.png in Resources */,
+				3FA62F66161A1506003F52D3 /* ss_img3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
