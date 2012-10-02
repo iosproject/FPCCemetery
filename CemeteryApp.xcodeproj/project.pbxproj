@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07632B131619FC8E00C367E1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0715FACD1610BFED006A91A0 /* Default@2x.png */; };
-		07632B161619FD4400C367E1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAF16137870008C52DE /* Default.png */; };
-		07632B181619FD5200C367E1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07632B171619FD5200C367E1 /* Default-568h@2x.png */; };
+		07F31BEA161AAC3700CAB198 /* LaunchImage_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */; };
+		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
+		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
+		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
-		3F1FDD1916137871008C52DE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB016137870008C52DE /* Default@2x.png */; };
 		3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB116137870008C52DE /* HomePic.JPG */; };
 		3F1FDD1B16137871008C52DE /* IMG_2089.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB216137870008C52DE /* IMG_2089.JPG */; };
 		3F1FDD1C16137871008C52DE /* alarm_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB416137870008C52DE /* alarm_24.png */; };
@@ -642,9 +642,11 @@
 /* Begin PBXFileReference section */
 		0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
-		0715FACD1610BFED006A91A0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		0715FACF1610BFF8006A91A0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		07632B171619FD5200C367E1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage_Normal.png; sourceTree = "<group>"; };
+		07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage_Retina.png; sourceTree = "<group>"; };
+		07F31BEC161AAC4D00CAB198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		07F31BEE161AAC6000CAB198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		3F1FDAAE16137870008C52DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -1943,13 +1945,15 @@
 		3FA7D33F1610B64700F132F3 = {
 			isa = PBXGroup;
 			children = (
+				07F31BEE161AAC6000CAB198 /* Default@2x.png */,
+				07F31BEC161AAC4D00CAB198 /* Default.png */,
 				07632B171619FD5200C367E1 /* Default-568h@2x.png */,
 				3F1FDAAB16137870008C52DE /* Images */,
 				3F1FDAB316137870008C52DE /* TWG Retina Icons */,
 				3F1FDC7016137871008C52DE /* twg_iphone_toolbar_icons */,
-				0715FACF1610BFF8006A91A0 /* Default.png */,
-				0715FACD1610BFED006A91A0 /* Default@2x.png */,
 				0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */,
+				07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */,
+				07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */,
 				0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */,
 				3FA7D3541610B64700F132F3 /* CemeteryApp */,
 				3FA7D34D1610B64700F132F3 /* Frameworks */,
@@ -2064,7 +2068,6 @@
 				3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */,
 				3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */,
 				3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */,
-				3F1FDD1916137871008C52DE /* Default@2x.png in Resources */,
 				3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */,
 				3F1FDD1B16137871008C52DE /* IMG_2089.JPG in Resources */,
 				3F1FDD1C16137871008C52DE /* alarm_24.png in Resources */,
@@ -2676,6 +2679,10 @@
 				3FA62F64161A1506003F52D3 /* ss_img1.png in Resources */,
 				3FA62F65161A1506003F52D3 /* ss_img2.png in Resources */,
 				3FA62F66161A1506003F52D3 /* ss_img3.png in Resources */,
+				07F31BEA161AAC3700CAB198 /* LaunchImage_Normal.png in Resources */,
+				07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */,
+				07F31BED161AAC4D00CAB198 /* Default.png in Resources */,
+				07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2727,6 +2734,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2742,6 +2750,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2754,6 +2763,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2763,6 +2773,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
