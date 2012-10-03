@@ -7,12 +7,7 @@
         <attribute name="yearBorn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="yearDied" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Tomb" syncable="YES">
-        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="material" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
-        <element name="Person" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Tomb" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Person" positionX="0" positionY="0" width="128" height="118"/>
     </elements>
 </model>
