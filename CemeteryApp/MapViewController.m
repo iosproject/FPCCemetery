@@ -8,51 +8,62 @@
 
 #import "MapViewController.h"
 
-@interface MapViewController() <UIScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@end
-
 @implementation MapViewController
-@synthesize scrollView;
-@synthesize imageView;
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    self.scrollView.delegate = self;
-    self.scrollView.contentSize = self.imageView.image.size;
-    self.imageView.frame = CGRectMake(0, 0, self.imageView.image.size.width, self.imageView.image.size.height);
+- (void)loadView {
+	UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+	scroll.backgroundColor = [UIColor blackColor];
+	scroll.delegate = self;
+	image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map.png"]];
+	scroll.contentSize = image.frame.size;
+	[scroll addSubview:image];
+	
+	scroll.minimumZoomScale = scroll.frame.size.width / image.frame.size.width;
+	scroll.maximumZoomScale = 2.0;
+	[scroll setZoomScale:scroll.minimumZoomScale];
+    
+	self.view = scroll;
+	//[scroll release];
+    
+}
+//stupid xcode
+- (void)viewDidUnload {
+	//[image release], image = nil;
 }
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    return self.imageView;
-}
 
-/*- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else{
-        return YES;
+- (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
+	CGSize boundsSize = scroll.bounds.size;
+    CGRect frameToCenter = rView.frame;
+    
+    // center horizontally
+    if (frameToCenter.size.width < boundsSize.width) {
+        frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
+    }
+    else {
+        frameToCenter.origin.x = 0;
     }
     
-}*/
-
-- (void)viewDidUnload {
-    [self setScrollView:nil];
-    [self setImageView:nil];
-    [super viewDidUnload];
+    // center vertically
+    if (frameToCenter.size.height < boundsSize.height) {
+        frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2;
+    }
+    else {
+        frameToCenter.origin.y = 0;
+    }
+	
+	return frameToCenter;
 }
 
-- (IBAction) handlePinch:(UIPinchGestureRecognizer *)recognizer
-{
-    recognizer.view.transform = CGAffineTransformScale(recognizer.view.transform, recognizer.scale, recognizer.scale);
-    recognizer.scale = 1;
+#pragma mark -
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    image.frame = [self centeredFrameForScrollView:scrollView andUIView:image];;
 }
 
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+	return image;
 }
 
 @end

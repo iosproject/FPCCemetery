@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController
-
-- (IBAction) handlePinch:(UIPinchGestureRecognizer *)recognizer;
+@interface MapViewController : UIViewController <UIScrollViewDelegate>{
+    UIImageView*image;
+}
 
 @end
