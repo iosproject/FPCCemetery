@@ -8,6 +8,6 @@
         <attribute name="yearDied" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tomb" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tomb" positionX="-387" positionY="-297" width="128" height="120"/>
     </elements>
 </model>
