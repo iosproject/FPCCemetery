@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 // comment
-@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+#define jsonObjectURL @"http://mdevsvr/result.json";
+@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+- (IBAction)getJsonData:(id)sender;
++ (BOOL)regEx:(NSString *)searchBar: (NSString *)toBeSearched;@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

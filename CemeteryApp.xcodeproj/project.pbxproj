@@ -641,6 +641,7 @@
 		3FE71AC9161A0D1100FF736A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AC7161A0D1100FF736A /* Model.xcdatamodeld */; };
 		3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */; };
 		3FE71AD9161A1E4800FF736A /* TransitionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD8161A1E4800FF736A /* TransitionImageView.m */; };
+		A2D6AD38162B510D00A51A4F /* JSONTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6AD37162B510D00A51A4F /* JSONTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1295,6 +1296,8 @@
 		3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
 		3FE71AD7161A1E4800FF736A /* TransitionImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionImageView.h; sourceTree = "<group>"; };
 		3FE71AD8161A1E4800FF736A /* TransitionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionImageView.m; sourceTree = "<group>"; };
+		A2D6AD36162B510300A51A4F /* JSONTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONTestViewController.h; path = ../../../JSONTestViewController.h; sourceTree = "<group>"; };
+		A2D6AD37162B510D00A51A4F /* JSONTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONTestViewController.m; path = ../../../JSONTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1993,6 +1996,8 @@
 		3FA7D3541610B64700F132F3 /* CemeteryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A2D6AD37162B510D00A51A4F /* JSONTestViewController.m */,
+				A2D6AD36162B510300A51A4F /* JSONTestViewController.h */,
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				3FE71AC7161A0D1100FF736A /* Model.xcdatamodeld */,
 				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
@@ -2717,6 +2722,7 @@
 				3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */,
 				3FE71AD9161A1E4800FF736A /* TransitionImageView.m in Sources */,
 				07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */,
+				A2D6AD38162B510D00A51A4F /* JSONTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
