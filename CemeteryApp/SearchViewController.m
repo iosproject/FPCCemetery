@@ -20,6 +20,15 @@
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
 
+-(void)drawRect:(CGRect)rect {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextSetLineWidth(context, 2.0);
+    CGContextMoveToPoint(context,0,0);
+    CGContextAddLineToPoint(context,20,20);
+    CGContextStrokePath(context);
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
