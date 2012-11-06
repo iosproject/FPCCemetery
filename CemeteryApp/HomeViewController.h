@@ -10,11 +10,7 @@
 
 @interface HomeViewController : UIViewController <UIGestureRecognizerDelegate> 
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *recognizer;
-
-
-- (IBAction)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer;
 
 @end
