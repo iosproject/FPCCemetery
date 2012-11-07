@@ -33,9 +33,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    tableData = [NSArray arrayWithObjects:@"John Doe", @"Mushroom Risotto",  nil];
     
+    NSData* dbData = [NSData dataWithContentsOfURL:
+                      [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/search4.json"]
+                      ];
+    
+    NSDictionary* json = nil;
+    if (dbData) {
+        json = [NSJSONSerialization
+                JSONObjectWithData:dbData
+                options:kNilOptions
+                error:nil];
+    }
+    
+    NSString *name;
+    name = [NSString stringWithFormat:@"%@ %@", json[@"Tombs"][0][@"First Name"], json[@"Tombs"][0][@"Last Name"], nil];
+    tableData = [NSArray arrayWithObjects: name,  nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
