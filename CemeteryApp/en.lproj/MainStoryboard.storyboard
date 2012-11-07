@@ -235,7 +235,6 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         <!--Table View Controller - Contact Us-->
         <scene sceneID="XyL-rg-Yhf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ODR-HW-SkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Yi8-ry-y7v" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2jn-Sc-4Af">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -278,6 +277,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact Us" id="O7r-kf-FxE"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODR-HW-SkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1271" y="1494"/>
         </scene>
