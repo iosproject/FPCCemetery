@@ -223,9 +223,9 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         <scene sceneID="MA0-0I-EyN">
             <objects>
                 <viewController id="nOK-GN-cmi" customClass="ImageGalleryViewController" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="PZc-9l-wui">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="PZc-9l-wui">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                     </imageView>
                     <navigationItem key="navigationItem" title="Image Gallery" id="Yfd-kz-iUy"/>
                     <connections>
