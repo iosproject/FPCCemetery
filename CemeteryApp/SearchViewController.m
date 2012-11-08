@@ -10,9 +10,9 @@
 
 @interface SearchViewController ()
 {
-    NSArray *tableData;
+    NSMutableArray *jsonData;
 }
-@property (weak, nonatomic) IBOutlet UITableView *searchTableView;
+
 @end
 
 @implementation SearchViewController
@@ -34,40 +34,60 @@
 {
     [super viewDidLoad];
     
-    NSData* dbData = [NSData dataWithContentsOfURL:
-                      [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/search4.json"]
-                      ];
-    
-    NSDictionary* json = nil;
-    if (dbData) {
-        json = [NSJSONSerialization
-                JSONObjectWithData:dbData
-                options:kNilOptions
-                error:nil];
-    }
-    
-    NSString *name;
-    name = [NSString stringWithFormat:@"%@ %@", json[@"Tombs"][0][@"First Name"], json[@"Tombs"][0][@"Last Name"], nil];
-    tableData = [NSArray arrayWithObjects: name,  nil];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //code executed in the background
+        
+        // read data from online source
+        //NSData* tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/search4.json"]];
+        
+        // read data from local file
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"search4" ofType:@"json"];
+        NSError *error = nil;
+        NSData *tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        
+        // fetch the data
+        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:tombData waitUntilDone:YES];
+    });
+}
+
+#define dbName @"Tombs"
+
+- (void)fetchedData:(NSData *)responseData
+{
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
+                                                         options:kNilOptions
+                                                           error:&error];
+    jsonData = [json objectForKey:dbName];
+    [self.searchTableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [tableData count];
+    return [jsonData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    
+    static NSString *simpleTableIdentifier = @"name cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    NSDictionary *tombDict = [jsonData objectAtIndex:indexPath.row];
     
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"First Name"], [tombDict objectForKey:@"Last Name"], nil];
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"Date of Death"], nil];
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // when the user selects a person show the details
+    
 }
 
 

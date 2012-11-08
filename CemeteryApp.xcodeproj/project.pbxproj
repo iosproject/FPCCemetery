@@ -17,6 +17,8 @@
 		309EBD9816488B2A00F7386B /* ssimage02.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9316488B2A00F7386B /* ssimage02.png */; };
 		309EBD9916488B2A00F7386B /* ssimage03.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9416488B2A00F7386B /* ssimage03.png */; };
 		309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9516488B2A00F7386B /* ssimage04.png */; };
+		30B05624164C354A0069FC74 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B05623164C354A0069FC74 /* DetailsViewController.m */; };
+		30B0562B164C370D0069FC74 /* search4.json in Resources */ = {isa = PBXBuildFile; fileRef = 30B0562A164C370D0069FC74 /* search4.json */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB116137870008C52DE /* HomePic.JPG */; };
@@ -661,6 +663,9 @@
 		309EBD9316488B2A00F7386B /* ssimage02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage02.png; sourceTree = "<group>"; };
 		309EBD9416488B2A00F7386B /* ssimage03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage03.png; sourceTree = "<group>"; };
 		309EBD9516488B2A00F7386B /* ssimage04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage04.png; sourceTree = "<group>"; };
+		30B05622164C354A0069FC74 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		30B05623164C354A0069FC74 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		30B0562A164C370D0069FC74 /* search4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search4.json; sourceTree = "<group>"; };
 		3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		3F1FDAAE16137870008C52DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -2013,6 +2018,8 @@
 				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
 				3F76C5E01610DF2F0027640E /* SearchViewController.h */,
 				3F76C5E11610DF2F0027640E /* SearchViewController.m */,
+				30B05622164C354A0069FC74 /* DetailsViewController.h */,
+				30B05623164C354A0069FC74 /* DetailsViewController.m */,
 				3F76C5DA1610D52F0027640E /* MapViewController.h */,
 				3F76C5DB1610D52F0027640E /* MapViewController.m */,
 				3F76C5E31610DFDA0027640E /* MoreViewController.h */,
@@ -2023,6 +2030,7 @@
 				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
 				07E81A9F16233DB400790930 /* ImageGalleryViewController.h */,
 				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
+				30B0562A164C370D0069FC74 /* search4.json */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
 			);
 			path = CemeteryApp;
@@ -2717,6 +2725,7 @@
 				309EBD9816488B2A00F7386B /* ssimage02.png in Resources */,
 				309EBD9916488B2A00F7386B /* ssimage03.png in Resources */,
 				309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */,
+				30B0562B164C370D0069FC74 /* search4.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2735,6 +2744,7 @@
 				3FE71AC9161A0D1100FF736A /* Model.xcdatamodeld in Sources */,
 				3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */,
 				07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */,
+				30B05624164C354A0069FC74 /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
