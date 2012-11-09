@@ -38,12 +38,12 @@
         //code executed in the background
         
         // read data from online source
-        //NSData* tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/search4.json"]];
+        NSData* tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
         
         // read data from local file
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"search4" ofType:@"json"];
-        NSError *error = nil;
-        NSData *tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
+        //NSError *error = nil;
+        //NSData *tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
         
         // fetch the data
         [self performSelectorOnMainThread:@selector(fetchedData:) withObject:tombData waitUntilDone:YES];
@@ -78,8 +78,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"First Name"], [tombDict objectForKey:@"Last Name"], nil];
-    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"Date of Death"], nil];
+    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"FirstName"], [tombDict objectForKey:@"LastName"], nil];
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"DOD"], nil];
     
     return cell;
 }

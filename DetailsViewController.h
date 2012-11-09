@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailsViewController : UITableViewController
+@interface DetailsViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end

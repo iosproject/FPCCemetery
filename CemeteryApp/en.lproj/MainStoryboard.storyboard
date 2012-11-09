@@ -295,10 +295,10 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
             </objects>
             <point key="canvasLocation" x="-1303" y="2022"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="s6f-rB-PMi">
             <objects>
-                <viewController id="TPl-yk-6DR" sceneMemberID="viewController">
+                <viewController id="TPl-yk-6DR" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VVV-vv-jqd">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -314,6 +314,9 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="z8g-eW-bWl"/>
+                    <connections>
+                        <outlet property="label" destination="yuR-c3-Qcr" id="Pry-AC-61x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8m-PQ-Xdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
