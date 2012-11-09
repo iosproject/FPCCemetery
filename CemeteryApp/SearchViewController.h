@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 // comment
-@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
