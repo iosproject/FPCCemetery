@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *search;
 @property (weak, nonatomic) IBOutlet UITextField *filterF;
 
-- (IBAction)getJsonData:(id)sender;
+
+//- (IBAction)getJsonData:(id)sender;
 + (BOOL)regEx:(NSString *)search: (NSString *)toBeSearched;
 + (NSMutableArray *)getInfo:(NSString *)personId;
 + (NSMutableArray *)parseJson:(NSMutableArray *)jsonArray: (NSString *)search: (NSString *) filter;

@@ -14,7 +14,8 @@
 
 @implementation DetailsViewController
 
-@synthesize label = _label;
+@synthesize selectedIndex, selectedTomb;
+@synthesize textView = _textView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +30,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    [_textView setText: [NSString stringWithFormat:@"\nDate of Birth: %@\nDate of Death: %@\nLocation: %@\n\nEpitaph: %@", selectedTomb[@"DOB"], selectedTomb[@"DOD"], selectedTomb[@"Section"], selectedTomb[@"Epitaph"]]];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self setTitle:[NSString stringWithFormat:@"%@ %@", selectedTomb[@"FirstName"], selectedTomb[@"LastName"]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +46,7 @@
 }
 
 - (void)viewDidUnload {
-    [self setLabel:nil];
+    [self setTextView:nil];
     [super viewDidUnload];
 }
 @end

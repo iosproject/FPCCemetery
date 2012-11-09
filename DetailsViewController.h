@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailsViewController : UIViewController
+{
+    NSDictionary *selectedTomb;
+    NSInteger selectedIndex;
+}
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (nonatomic) NSInteger selectedIndex;
+@property (nonatomic, retain) NSDictionary *selectedTomb;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end

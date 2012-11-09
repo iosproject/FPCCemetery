@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "DetailsViewController.h"
 
 @interface SearchViewController ()
 {
@@ -37,13 +38,18 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //code executed in the background
         
-        // read data from online source
-        NSData* tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
+        NSData* tombData = nil;
         
-        // read data from local file
-        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
-        //NSError *error = nil;
-        //NSData *tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        // read data from online source
+        tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
+        
+        if (!tombData) {
+            // read data from local file
+            NSLog(@"Local DB");
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
+            NSError *error = nil;
+            tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        }
         
         // fetch the data
         [self performSelectorOnMainThread:@selector(fetchedData:) withObject:tombData waitUntilDone:YES];
@@ -84,10 +90,15 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // when the user selects a person show the details
-    
+    if ([[segue identifier] isEqualToString:@"Details"])
+    {
+        DetailsViewController *vc = [segue destinationViewController];
+        NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
+        [vc setSelectedTomb: [jsonData objectAtIndex:selectedIndex]];
+    }
+
 }
 
 
