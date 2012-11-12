@@ -16,5 +16,6 @@
 @property (readonly)NSArray* tombs;
 
 +(TombDataManager *)instance;
+-(NSMutableArray *)filterTombsWithLastName:(NSString *)lastName;
 
 @end

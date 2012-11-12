@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [_textView setText: [NSString stringWithFormat:@"\nDate of Death: %@", selectedTomb.deathDate, nil]];
+    [_textView setText: [NSString stringWithFormat:@"\nID: %@\nSection: %@\nDate of Birth: %@\nDate of Death: %@\n\nEpitaph\n\n%@", selectedTomb.tombId, selectedTomb.section, selectedTomb.birthDate, selectedTomb.deathDate, selectedTomb.epitaph, nil]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

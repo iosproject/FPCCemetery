@@ -27,7 +27,7 @@
 
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
-//@synthesize tombs, json;
+@synthesize searchString;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -76,39 +76,6 @@
 //    [self.searchTableView reloadData];
 //}
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return [jsonData count];
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *simpleTableIdentifier = @"name cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//    NSDictionary *tombDict = [jsonData objectAtIndex:indexPath.row];
-//    
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//    }
-//    
-//    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"FirstName"], [tombDict objectForKey:@"LastName"], nil];
-//    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"DOD"], nil];
-//    
-//    return cell;
-//}
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"Details"])
-//    {
-//        DetailsViewController *vc = [segue destinationViewController];
-//        NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-//        [vc setSelectedTomb: [jsonData objectAtIndex:selectedIndex]];
-//    }
-//
-//}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -116,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[TombDataManager instance]tombs]count];
+    return [[[TombDataManager instance]filterTombsWithLastName:searchString]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,7 +95,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    Tomb *tomb = [[[TombDataManager instance]tombs]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombsWithLastName:searchString]objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
     cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
     
@@ -142,42 +109,43 @@
     {
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-        [vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
+        //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombsWithLastName:searchString]objectAtIndex:selectedIndex]];
     }
     
+}
+
+- (void)updateSearchString:(NSString*)aSearchString
+{
+    searchString = [[NSString alloc]initWithString:aSearchString];
+    [self.searchTableView reloadData];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+    [searchBar resignFirstResponder];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    searchBar.text=@"";
+    [self updateSearchString:searchBar.text];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.searchBar resignFirstResponder];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    [self updateSearchString:searchBar.text];
 }
 
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    [searchBar setShowsCancelButton:YES animated:YES];
+    [searchBar setShowsCancelButton:NO animated:YES];
     self.searchTableView.allowsSelection = NO;
     self.searchTableView.scrollEnabled = NO;
 }
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
-    [searchBar setShowsCancelButton:NO animated:YES];
-    [searchBar resignFirstResponder];
-    self.searchTableView.allowsSelection = YES;
-    self.searchTableView.scrollEnabled = YES;
-    searchBar.text = @"";
-}
-
-//- (NSArray *)filterTombsWithLastName:(NSString *)lastName
-//{
-//    if (lastName && [lastName length] > 0)
-//    {
-//        NSMutableArray *filterTombs = [json allValues];
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName LIKE %@", lastName];
-//        [filterTombs filterUsingPredicate:predicate];
-//        return filterTombs;
-//    }
-//    else
-//    {
-//        return tombs;
-//    }
-//}
 
 - (void)viewDidUnload
 {
