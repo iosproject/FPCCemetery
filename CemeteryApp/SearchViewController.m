@@ -134,6 +134,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.searchBar resignFirstResponder];
+    [self.searchBar setShowsCancelButton:NO animated:YES];
     self.searchTableView.allowsSelection = YES;
     self.searchTableView.scrollEnabled = YES;
     [self updateSearchString:searchBar.text];
@@ -142,7 +143,7 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar setShowsCancelButton:YES animated:YES];
     self.searchTableView.allowsSelection = NO;
     self.searchTableView.scrollEnabled = NO;
 }
