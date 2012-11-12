@@ -14,7 +14,9 @@
 		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
 		3004DFEE164D6D4500FE434F /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = 3004DFED164D6D4500FE434F /* result.json */; };
 		30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30082E03164C8904007AAA80 /* DetailsViewController.m */; };
-		30082E07164C8A7D007AAA80 /* SearchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 30082E06164C8A7D007AAA80 /* SearchFilter.m */; };
+		305C1CC916517987008F0496 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CC816517987008F0496 /* Tomb.m */; };
+		305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD016517AB4008F0496 /* TombDataManager.m */; };
+		305C1CD416517F19008F0496 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD316517F19008F0496 /* SearchViewController.m */; };
 		309EBD9616488B2A00F7386B /* ssimage00.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9116488B2A00F7386B /* ssimage00.png */; };
 		309EBD9716488B2A00F7386B /* ssimage01.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9216488B2A00F7386B /* ssimage01.png */; };
 		309EBD9816488B2A00F7386B /* ssimage02.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9316488B2A00F7386B /* ssimage02.png */; };
@@ -631,7 +633,6 @@
 		3F1FDF7A16137871008C52DE /* icon_zoom_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDD1316137871008C52DE /* icon_zoom_out.png */; };
 		3F1FDF7B16137871008C52DE /* LaunchImage_RedTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDD1416137871008C52DE /* LaunchImage_RedTitle.png */; };
 		3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5DB1610D52F0027640E /* MapViewController.m */; };
-		3F76C5E21610DF2F0027640E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E11610DF2F0027640E /* SearchViewController.m */; };
 		3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E41610DFDA0027640E /* MoreViewController.m */; };
 		3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F87BF331625D7D100938C3E /* CoreData.framework */; };
 		3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45177161CA7E20093329D /* Default-568h@2x.png */; };
@@ -661,8 +662,12 @@
 		3004DFED164D6D4500FE434F /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
 		30082E02164C8904007AAA80 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../DetailsViewController.h; sourceTree = "<group>"; };
 		30082E03164C8904007AAA80 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../DetailsViewController.m; sourceTree = "<group>"; };
-		30082E05164C8A7D007AAA80 /* SearchFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFilter.h; sourceTree = "<group>"; };
-		30082E06164C8A7D007AAA80 /* SearchFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFilter.m; sourceTree = "<group>"; };
+		305C1CC716517987008F0496 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
+		305C1CC816517987008F0496 /* Tomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomb.m; sourceTree = "<group>"; };
+		305C1CCF16517AB4008F0496 /* TombDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TombDataManager.h; sourceTree = "<group>"; };
+		305C1CD016517AB4008F0496 /* TombDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TombDataManager.m; sourceTree = "<group>"; };
+		305C1CD216517F0B008F0496 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		305C1CD316517F19008F0496 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		309EBD9116488B2A00F7386B /* ssimage00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage00.png; sourceTree = "<group>"; };
 		309EBD9216488B2A00F7386B /* ssimage01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage01.png; sourceTree = "<group>"; };
 		309EBD9316488B2A00F7386B /* ssimage02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage02.png; sourceTree = "<group>"; };
@@ -1285,8 +1290,6 @@
 		3F1FDD1416137871008C52DE /* LaunchImage_RedTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage_RedTitle.png; sourceTree = "<group>"; };
 		3F76C5DA1610D52F0027640E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		3F76C5DB1610D52F0027640E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		3F76C5E01610DF2F0027640E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		3F76C5E11610DF2F0027640E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		3F76C5E31610DFDA0027640E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		3F76C5E41610DFDA0027640E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		3F87BF331625D7D100938C3E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -2012,22 +2015,22 @@
 			isa = PBXGroup;
 			children = (
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
+				305C1CD216517F0B008F0496 /* SearchViewController.h */,
+				305C1CD316517F19008F0496 /* SearchViewController.m */,
+				305C1CCF16517AB4008F0496 /* TombDataManager.h */,
+				305C1CD016517AB4008F0496 /* TombDataManager.m */,
+				30082E02164C8904007AAA80 /* DetailsViewController.h */,
+				30082E03164C8904007AAA80 /* DetailsViewController.m */,
+				305C1CC716517987008F0496 /* Tomb.h */,
+				305C1CC816517987008F0496 /* Tomb.m */,
 				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
 				3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */,
 				3FA7D3631610B64800F132F3 /* HomeViewController.h */,
 				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
-				3F76C5E01610DF2F0027640E /* SearchViewController.h */,
-				3F76C5E11610DF2F0027640E /* SearchViewController.m */,
-				30082E02164C8904007AAA80 /* DetailsViewController.h */,
-				30082E03164C8904007AAA80 /* DetailsViewController.m */,
-				30082E05164C8A7D007AAA80 /* SearchFilter.h */,
-				30082E06164C8A7D007AAA80 /* SearchFilter.m */,
 				3F76C5DA1610D52F0027640E /* MapViewController.h */,
 				3F76C5DB1610D52F0027640E /* MapViewController.m */,
 				3F76C5E31610DFDA0027640E /* MoreViewController.h */,
 				3F76C5E41610DFDA0027640E /* MoreViewController.m */,
-				3F76C5E01610DF2F0027640E /* SearchViewController.h */,
-				3F76C5E11610DF2F0027640E /* SearchViewController.m */,
 				3FA7D3631610B64800F132F3 /* HomeViewController.h */,
 				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
 				07E81A9F16233DB400790930 /* ImageGalleryViewController.h */,
@@ -2741,12 +2744,13 @@
 				3FA7D35B1610B64800F132F3 /* main.m in Sources */,
 				3FA7D3651610B64800F132F3 /* HomeViewController.m in Sources */,
 				3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */,
-				3F76C5E21610DF2F0027640E /* SearchViewController.m in Sources */,
 				3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */,
 				3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */,
 				07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */,
 				30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */,
-				30082E07164C8A7D007AAA80 /* SearchFilter.m in Sources */,
+				305C1CC916517987008F0496 /* Tomb.m in Sources */,
+				305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */,
+				305C1CD416517F19008F0496 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,18 @@
 
 #import "SearchViewController.h"
 #import "DetailsViewController.h"
+#import "Tomb.h"
+#import "TombDataManager.h"
 
 @interface SearchViewController ()
-{
-    NSMutableArray *jsonData;
-}
+//{
+//    NSMutableArray *jsonData;
+//    NSDictionary *json;
+//    NSArray *tombs;
+//}
+//
+//@property (readonly) NSArray *tombs;
+//@property (readonly) NSDictionary *json;
 
 @end
 
@@ -20,6 +27,7 @@
 
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
+//@synthesize tombs, json;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,58 +43,96 @@
 {
     [super viewDidLoad];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //code executed in the background
-        
-        NSData* tombData = nil;
-        
-        // read data from online source
-        tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
-        
-        if (!tombData) {
-            // read data from local file
-            NSLog(@"Local DB");
-            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
-            NSError *error = nil;
-            tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-        }
-        
-        // fetch the data
-        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:tombData waitUntilDone:YES];
-    });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //code executed in the background
+//        
+//        NSData* tombData = nil;
+//        
+//        // read data from online source
+//        tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
+//        
+//        if (!tombData) {
+//            // read data from local file
+//            NSLog(@"Local DB");
+//            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
+//            NSError *error = nil;
+//            tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+//        }
+//        
+//        // fetch the data
+//        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:tombData waitUntilDone:YES];
+//    });
 }
 
-#define dbName @"Tombs"
+//#define dbName @"Tombs"
+//
+//- (void)fetchedData:(NSData *)responseData
+//{
+//    NSError *error;
+//    json = [NSJSONSerialization JSONObjectWithData:responseData
+//                                                         options:kNilOptions
+//                                                           error:&error];
+//    jsonData = [json objectForKey:dbName];
+//    [self.searchTableView reloadData];
+//}
 
-- (void)fetchedData:(NSData *)responseData
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return [jsonData count];
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *simpleTableIdentifier = @"name cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//    NSDictionary *tombDict = [jsonData objectAtIndex:indexPath.row];
+//    
+//    if (cell == nil)
+//    {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+//    }
+//    
+//    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"FirstName"], [tombDict objectForKey:@"LastName"], nil];
+//    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"DOD"], nil];
+//    
+//    return cell;
+//}
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"Details"])
+//    {
+//        DetailsViewController *vc = [segue destinationViewController];
+//        NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
+//        [vc setSelectedTomb: [jsonData objectAtIndex:selectedIndex]];
+//    }
+//
+//}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSError *error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
-                                                         options:kNilOptions
-                                                           error:&error];
-    jsonData = [json objectForKey:dbName];
-    [self.searchTableView reloadData];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [jsonData count];
+    return [[[TombDataManager instance]tombs]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"name cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    NSDictionary *tombDict = [jsonData objectAtIndex:indexPath.row];
+    static NSString *CellIdentifier = @"name cell";
     
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"FirstName"], [tombDict objectForKey:@"LastName"], nil];
-    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"DOD"], nil];
+    Tomb *tomb = [[[TombDataManager instance]tombs]objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
     
+    // Configure the cell.
     return cell;
 }
 
@@ -96,10 +142,11 @@
     {
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-        [vc setSelectedTomb: [jsonData objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
     }
-
+    
 }
+
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
@@ -117,7 +164,20 @@
     searchBar.text = @"";
 }
 
-
+//- (NSArray *)filterTombsWithLastName:(NSString *)lastName
+//{
+//    if (lastName && [lastName length] > 0)
+//    {
+//        NSMutableArray *filterTombs = [json allValues];
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName LIKE %@", lastName];
+//        [filterTombs filterUsingPredicate:predicate];
+//        return filterTombs;
+//    }
+//    else
+//    {
+//        return tombs;
+//    }
+//}
 
 - (void)viewDidUnload
 {

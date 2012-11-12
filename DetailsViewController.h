@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tomb.h"
 
 @interface DetailsViewController : UIViewController
 {
-    NSDictionary *selectedTomb;
+    Tomb *selectedTomb;
     NSInteger selectedIndex;
 }
 
 @property (nonatomic) NSInteger selectedIndex;
-@property (nonatomic, retain) NSDictionary *selectedTomb;
+@property (nonatomic, retain) Tomb *selectedTomb;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end

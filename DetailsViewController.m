@@ -30,14 +30,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-    [_textView setText: [NSString stringWithFormat:@"\nDate of Birth: %@\nDate of Death: %@\nLocation: %@\n\nEpitaph: %@", selectedTomb[@"DOB"], selectedTomb[@"DOD"], selectedTomb[@"Section"], selectedTomb[@"Epitaph"]]];
+    [_textView setText: [NSString stringWithFormat:@"\nDate of Death: %@", selectedTomb.deathDate, nil]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self setTitle:[NSString stringWithFormat:@"%@ %@", selectedTomb[@"FirstName"], selectedTomb[@"LastName"]]];
+    [self setTitle:[NSString stringWithFormat:@"%@ %@", selectedTomb.firstName, selectedTomb.lastName]];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
