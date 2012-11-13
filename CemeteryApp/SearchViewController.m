@@ -123,7 +123,7 @@
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
-    [searchBar setShowsCancelButton:YES animated:YES];
+    [searchBar setShowsCancelButton:NO animated:YES];
     [searchBar resignFirstResponder];
     self.searchTableView.allowsSelection = YES;
     self.searchTableView.scrollEnabled = YES;
