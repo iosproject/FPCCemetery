@@ -17,9 +17,6 @@
 //    NSDictionary *json;
 //    NSArray *tombs;
 //}
-//
-//@property (readonly) NSArray *tombs;
-//@property (readonly) NSDictionary *json;
 
 @end
 
