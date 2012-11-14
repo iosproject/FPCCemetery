@@ -73,7 +73,7 @@
     return instance;
 }
 
--(NSMutableArray*)filterTombsWithLastName:(NSString*)lastName
+/*-(NSMutableArray*)filterTombsWithLastName:(NSString*)lastName
 {
     if (lastName && [lastName length] > 0)
     {
@@ -86,6 +86,6 @@
     {
         return tombs;
     }
-}
+}*/
 
 @end
