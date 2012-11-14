@@ -18,4 +18,5 @@
 +(TombDataManager *)instance;
 -(NSMutableArray *)filterTombsWithLastName:(NSString *)lastName;
 
+
 @end

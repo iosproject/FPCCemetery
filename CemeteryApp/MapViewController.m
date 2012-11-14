@@ -14,7 +14,7 @@
 	UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 	scroll.backgroundColor = [UIColor blackColor];
 	scroll.delegate = self;
-	image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map.png"]];
+	image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map2.png"]];
 	scroll.contentSize = image.frame.size;
 	[scroll addSubview:image];
 	

@@ -73,5 +73,19 @@
     return instance;
 }
 
+/*-(NSMutableArray*)filterTombsWithLastName:(NSString*)lastName
+{
+    if (lastName && [lastName length] > 0)
+    {
+        NSMutableArray *filterTombs = [[NSMutableArray alloc]initWithArray:tombs];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName LIKE %@", lastName];
+        [filterTombs filterUsingPredicate:predicate];
+        return filterTombs;
+    }
+    else
+    {
+        return tombs;
+    }
+}*/
 
 @end

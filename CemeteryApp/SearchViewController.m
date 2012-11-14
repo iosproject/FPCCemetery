@@ -158,5 +158,31 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+/*- (void)updateSearchString:(NSString*)aSearchString
+{
+    self.searchBar.text = [[NSString alloc]initWithString:aSearchString];
+    [self.searchTableView reloadData];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    searchBar.text=@"";
+    [self updateSearchString:searchBar.text];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    //NSMutableArray *tomb = [[TombDataManager instance] tombs];
+    //[tomb removeAllObjects];
+    [searchBar resignFirstResponder];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    [self updateSearchString:searchBar.text];
+}*/
+
 @end
 
