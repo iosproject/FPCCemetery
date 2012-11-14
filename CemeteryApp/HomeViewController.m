@@ -10,12 +10,15 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic, strong) NSMutableArray *images;
+
 @end
 
 @implementation HomeViewController
 
 @synthesize imageView = _imageView;
 @synthesize textView = _textView;
+@synthesize images = _images;
 
 - (void)viewDidLoad
 {

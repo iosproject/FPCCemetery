@@ -9,11 +9,12 @@
 // comment
 @interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
-    //NSString *searchString;
+    
 
 }
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (nonatomic, retain) NSString *searchString;
+
 @end
