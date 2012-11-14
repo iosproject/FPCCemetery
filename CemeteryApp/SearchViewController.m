@@ -26,7 +26,7 @@
 
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
-//@synthesize tombs, json;
+@synthesize searchString;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -75,39 +75,6 @@
 //    [self.searchTableView reloadData];
 //}
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return [jsonData count];
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *simpleTableIdentifier = @"name cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//    NSDictionary *tombDict = [jsonData objectAtIndex:indexPath.row];
-//    
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//    }
-//    
-//    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", [tombDict objectForKey:@"FirstName"], [tombDict objectForKey:@"LastName"], nil];
-//    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", [tombDict objectForKey:@"DOD"], nil];
-//    
-//    return cell;
-//}
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"Details"])
-//    {
-//        DetailsViewController *vc = [segue destinationViewController];
-//        NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-//        [vc setSelectedTomb: [jsonData objectAtIndex:selectedIndex]];
-//    }
-//
-//}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -141,9 +108,26 @@
     {
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-        [vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
+        //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombsWithLastName:searchString]objectAtIndex:selectedIndex]];
     }
     
+}
+
+- (void)updateSearchString:(NSString*)aSearchString
+{
+    searchString = [[NSString alloc]initWithString:aSearchString];
+    [self.searchTableView reloadData];
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.searchBar resignFirstResponder];
+    [self.searchBar setShowsCancelButton:NO animated:YES];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    [self updateSearchString:searchBar.text];
 }
 
 
@@ -153,22 +137,6 @@
     self.searchTableView.allowsSelection = NO;
     self.searchTableView.scrollEnabled = NO;
 }
-
-
-//- (NSArray *)filterTombsWithLastName:(NSString *)lastName
-//{
-//    if (lastName && [lastName length] > 0)
-//    {
-//        NSMutableArray *filterTombs = [json allValues];
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName LIKE %@", lastName];
-//        [filterTombs filterUsingPredicate:predicate];
-//        return filterTombs;
-//    }
-//    else
-//    {
-//        return tombs;
-//    }
-//}
 
 - (void)viewDidUnload
 {
