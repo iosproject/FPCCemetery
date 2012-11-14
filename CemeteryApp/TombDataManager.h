@@ -13,8 +13,10 @@
     NSMutableArray* tombs;
 }
 
-@property (readonly)NSArray* tombs;
+@property (readonly)NSMutableArray* tombs;
 
 +(TombDataManager *)instance;
+-(NSArray*)filterTombsWithLastName:(NSString*)lastName;
+
 
 @end

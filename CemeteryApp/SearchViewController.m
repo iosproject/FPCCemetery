@@ -20,7 +20,6 @@
 //
 //@property (readonly) NSArray *tombs;
 //@property (readonly) NSDictionary *json;
-
 @end
 
 @implementation SearchViewController
@@ -116,7 +115,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[TombDataManager instance]tombs]count];
+    return [[[TombDataManager instance]filterTombsWithLastName:self.searchBar.text]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,7 +127,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    Tomb *tomb = [[[TombDataManager instance]tombs]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombsWithLastName:self.searchBar.text]objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
     cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
     
@@ -155,14 +154,6 @@
     self.searchTableView.scrollEnabled = NO;
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
-    [searchBar setShowsCancelButton:NO animated:YES];
-    [searchBar resignFirstResponder];
-    self.searchTableView.allowsSelection = YES;
-    self.searchTableView.scrollEnabled = YES;
-    searchBar.text = @"";
-}
 
 //- (NSArray *)filterTombsWithLastName:(NSString *)lastName
 //{
@@ -190,6 +181,32 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)updateSearchString:(NSString*)aSearchString
+{
+    self.searchBar.text = [[NSString alloc]initWithString:aSearchString];
+    [self.searchTableView reloadData];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    searchBar.text=@"";
+    [self updateSearchString:searchBar.text];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    //NSMutableArray *tomb = [[TombDataManager instance] tombs];
+    //[tomb removeAllObjects];
+    [searchBar resignFirstResponder];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    [self updateSearchString:searchBar.text];
 }
 
 @end
