@@ -26,6 +26,8 @@
 @synthesize searchBar = _searchBar;
 @synthesize searchString;
 
+@synthesize displayArray;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        //code executed in the background
 //        
@@ -80,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[TombDataManager instance]filterTombsWithLastName:searchString]count];
+    return [[[TombDataManager instance]filterTombs:searchString:@"LastName"]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,14 +92,23 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    
-    Tomb *tomb = [[[TombDataManager instance]filterTombsWithLastName:searchString]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString :@"LastName"]objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
     cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
     
     // Configure the cell.
     return cell;
 }
+
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    [self updateSearchString:searchBar.text];
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -107,7 +117,8 @@
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
         //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
-        [vc setSelectedTomb:[[[TombDataManager instance]filterTombsWithLastName:searchString]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString :@"LastName"]objectAtIndex:selectedIndex]];
+
     }
     
 }
