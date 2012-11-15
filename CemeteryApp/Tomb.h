@@ -20,13 +20,13 @@
 }
 
 
-@property (retain, nonatomic) NSString* firstName;
-@property (retain, nonatomic) NSString* lastName;
-@property (retain, nonatomic) NSString* deathDate;
-@property (retain, nonatomic) NSString* birthDate;
-@property (retain, nonatomic) NSString* epitaph;
-@property (retain, nonatomic) NSString* section;
-@property (retain, nonatomic) NSString* tombId;
+@property (strong, nonatomic) NSString* firstName;
+@property (strong, nonatomic) NSString* lastName;
+@property (strong, nonatomic) NSString* deathDate;
+@property (strong, nonatomic) NSString* birthDate;
+@property (strong, nonatomic) NSString* epitaph;
+@property (strong, nonatomic) NSString* section;
+@property (strong, nonatomic) NSString* tombId;
 
 -(id)initWithFirstName:(NSString*)aFirstName
            andLastName:(NSString*)aLastName

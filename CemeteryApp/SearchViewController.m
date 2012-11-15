@@ -26,6 +26,8 @@
 @synthesize searchBar = _searchBar;
 @synthesize searchString = _searchString;
 
+@synthesize displayArray;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        //code executed in the background
 //        
@@ -99,6 +100,16 @@
     // Configure the cell.
     return cell;
 }
+
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    self.searchTableView.allowsSelection = YES;
+    self.searchTableView.scrollEnabled = YES;
+    [self updateSearchString:searchBar.text];
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
