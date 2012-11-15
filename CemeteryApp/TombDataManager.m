@@ -10,6 +10,10 @@
 #import "Tomb.h"
 
 @implementation TombDataManager
+{
+
+    
+}
 
 @synthesize tombs;
 
@@ -17,12 +21,27 @@
     self = [super init];
     if (self)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
+        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
         NSError *error = nil;
-        NSData *tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        NSData *tombData = nil;//[NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        //NSData* tombData = nil;
+        //NSError *error = nil;
+        
+        //tombData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
+        
+        if (!tombData) {
+            // read data from local file
+            NSLog(@"Local DB");
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
+            tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        }
+
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:tombData
                                                                  options:kNilOptions
                                                                    error:&error];
+        
+//        [self fetchDBData];
+        
         NSArray *jsonData = [jsonDict objectForKey:@"Tombs"];
         
         tombs = [[NSMutableArray alloc]init];
