@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FilterViewController.h"
 // comment
-@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPopoverControllerDelegate, FilterViewDelegate>
 {
     //NSString *searchString;
 
@@ -16,5 +17,9 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (nonatomic, retain) NSString *searchString;
-@property (strong, nonatomic) NSMutableArray *displayArray;
+@property (strong, nonatomic) UIButton *filterButton;
+@property (strong, nonatomic) FilterViewController *filterPicker;
+@property (strong, nonatomic) IBOutlet FilterViewController *filter;
+
+-(IBAction)filterButton:(id)sender;
 @end

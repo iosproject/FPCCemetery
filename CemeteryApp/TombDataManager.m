@@ -72,11 +72,10 @@
 
 -(NSMutableArray*)filterTombs:(NSString*)search:(NSString *)filter
  {
-
      if (search && [search length] > 0)
      {
          NSMutableArray *filterTombs = [[NSMutableArray alloc]initWithArray:tombs];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName BEGINSWITH %@", search];
+         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@", search];
          [filterTombs filterUsingPredicate:predicate];
          return filterTombs;
      }
@@ -85,68 +84,5 @@
          return tombs;
      }
  }
-+(NSString *)formRegExString:(NSString *)searchFilter
-{
-    NSMutableString *regex = [[NSMutableString alloc] init];
-    [regex appendString:@""];
-    NSRange range = [searchFilter rangeOfString:@"-"];
-    NSArray *alphabetArray = [[NSArray alloc] initWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z", nil];
-    
-    if (range.length > 0)
-    {
-        [regex appendString:@"(^"];
-        NSString * firstLetter = [searchFilter substringToIndex:1];
-        NSString * lastLetter = [searchFilter substringFromIndex:[searchFilter length]-1];
-        NSUInteger index = 0;
-        while (![[alphabetArray objectAtIndex:index] isEqualToString:firstLetter])
-        {
-            index++;
-        }
-        [regex appendString:@""];
-        [regex appendString:[alphabetArray objectAtIndex:index]];
-        [regex appendString:@"(\\S)?)|(^"];
-        while (![[alphabetArray objectAtIndex:index] isEqualToString:lastLetter]) {
-            index++;
-            [regex appendString:[alphabetArray objectAtIndex:index]];
-            if((index != [alphabetArray count]-1) && [[alphabetArray objectAtIndex:index +1] isEqualToString:lastLetter])
-            {
-                [regex appendString:@"(\\S)?)|(^"];
-            }
-            else
-            {
-                [regex appendString:@"(\\S)?)"];
-                
-            }
-        }
-    }
-    else
-    {
-        [regex appendString:@"^"];
-        [regex appendString:searchFilter];
-        [regex appendString:@"(\\S)?"];
-    }
-    return regex;
-}
-
-+(BOOL)regEx:(NSString *)search: (NSString *)toBeSearched
-{
-    //The regular expression which is used to match the text in the search field
-    
-    NSError* error = nil;
-    NSRegularExpression* regex = [NSRegularExpression
-                                  regularExpressionWithPattern:search
-                                  options:NSRegularExpressionCaseInsensitive
-                                  error:&error];
-    
-    NSTextCheckingResult *regexResult = [regex firstMatchInString:toBeSearched options:0 range:NSMakeRange(0, [toBeSearched length])];
-    
-    //If the name matches the search text than return true
-    if(regexResult)
-    {
-        return true;
-    }
-    return false;
-}
-
 
 @end

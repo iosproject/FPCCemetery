@@ -67,7 +67,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
             </objects>
             <point key="canvasLocation" x="-2043" y="-275"/>
         </scene>
-        <!--Search View Controller - Search-->
+        <!--Search View Controller - Search (All)-->
         <scene sceneID="BOy-Qg-dst">
             <objects>
                 <viewController id="nyC-6H-BzA" customClass="SearchViewController" sceneMemberID="viewController">
@@ -130,7 +130,13 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="5LC-i9-vqX"/>
+                    <navigationItem key="navigationItem" title="Search (All)" id="5LC-i9-vqX">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="DfS-Sw-LyO">
+                            <connections>
+                                <action selector="filterButton:" destination="nyC-6H-BzA" id="uMK-I9-XDw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="qDA-wl-FTV" id="JRd-FK-cpC"/>
                         <outlet property="searchTableView" destination="80S-Wa-S7Q" id="G0c-lm-xL5"/>

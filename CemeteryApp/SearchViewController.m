@@ -25,9 +25,9 @@
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
 @synthesize searchString;
-
-@synthesize displayArray;
-
+@synthesize filterButton;
+@synthesize filter;
+@synthesize filterPicker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -169,6 +169,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(IBAction)filterButton:(id)sender
+{
+    /*
+    self.filter =[[FilterViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.view addSubview:self.filter.view];
+    self.title = @"Filter";
+     */
+}
 /*- (void)updateSearchString:(NSString*)aSearchString
 {
     self.searchBar.text = [[NSString alloc]initWithString:aSearchString];
