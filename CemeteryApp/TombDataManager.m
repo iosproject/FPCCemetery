@@ -22,28 +22,14 @@
     self = [super init];
     if (self)
     {
-        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
-        NSError *error = nil;
-        NSData *tombData = nil;//[NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-        //NSData* tombData = nil;
-        //NSError *error = nil;
-        
-        //tombData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
-        
-        if (!tombData) {
-            // read data from local file
-            NSLog(@"Local DB");
-            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
-            tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-        }
+        //Connect to the JSON file on the server
+        //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:8888/result.json"]]; //131.125.78.212
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]]; //131.125.78.212
 
-        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:tombData
-                                                                 options:kNilOptions
-                                                                   error:&error];
-        
-//        [self fetchDBData];
-        
-        NSArray *jsonData = [jsonDict objectForKey:@"Tombs"];
+        NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSError *jsonParsingError = nil;
+        jsonArray = [[NSMutableArray alloc] init];
+        jsonArray = [NSJSONSerialization JSONObjectWithData:response options:0 error:&jsonParsingError];
         
         if(!jsonArray)
         {
