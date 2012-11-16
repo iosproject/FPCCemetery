@@ -169,6 +169,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(IBAction)filterButton:(id)sender
+{
+    /*
+    self.filter =[[FilterViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.view addSubview:self.filter.view];
+    self.title = @"Filter";
+     */
+}
 /*- (void)updateSearchString:(NSString*)aSearchString
 {
     self.searchBar.text = [[NSString alloc]initWithString:aSearchString];
