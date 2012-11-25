@@ -30,12 +30,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [_textView setText: [NSString stringWithFormat:@"\nID: %@\nSection: %@\nDate of Birth: %@\nDate of Death: %@\n\nEpitaph\n\n%@", selectedTomb.tombId, selectedTomb.section, selectedTomb.birthDate, selectedTomb.deathDate, selectedTomb.epitaph, nil]];
+    [_textView setText: [NSString stringWithFormat:@"\nID: %@\nSection: %@\nDate of Birth: %@\nDate of Death: %@\nPrefix: %@\nSuffix: %@\nYears: %@\nMonths: %@\nNotes: %@\nSexton's Notes: %@\n\nEpitaph: %@\nReference: %@\nTour: %@\nInternet Link: %@\nSandstone: %@\nCondition: %@\nVeteran  \n\n%@", selectedTomb.tombId, selectedTomb.section, selectedTomb.birthDate, selectedTomb.deathDate, selectedTomb.prefix, selectedTomb.suffix, selectedTomb.years, selectedTomb.months, selectedTomb.notes, selectedTomb.sextonsNotes, selectedTomb.epitaph, selectedTomb.ref, selectedTomb.tour, selectedTomb.internet, selectedTomb.sandstone, selectedTomb.condition, selectedTomb.veteran ,nil]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self setTitle:[NSString stringWithFormat:@"%@ %@", selectedTomb.firstName, selectedTomb.lastName]];
+    if([selectedTomb.middleName isEqual:nil] || [selectedTomb.middleName isEqual:NULL] || [selectedTomb.middleName isEqualToString:@""])
+    {
+        [self setTitle:[NSString stringWithFormat:@"%@ %@", selectedTomb.firstName, selectedTomb.lastName]];
+    }
+    else
+    {
+        [self setTitle:[NSString stringWithFormat:@"%@ %@ %@", selectedTomb.firstName, selectedTomb.middleName,selectedTomb.lastName]];
+    }
 }
 
 

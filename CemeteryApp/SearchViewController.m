@@ -96,9 +96,27 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString :filterString]objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
-    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
+    if([tomb.middleName isEqual:nil] || [tomb.middleName isEqual:NULL] || [tomb.middleName isEqualToString:@""])
+    {
+        cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
+    }
+    else
+    {
+        if([tomb.middleName length] == 1)
+        {
+            tomb.middleName = [tomb.middleName stringByAppendingString:@"."];
+        }
+        cell.textLabel.text = [NSString stringWithFormat: @"%@ %@ %@", tomb.firstName, tomb.middleName ,tomb.lastName, nil];
+    }
     
+    if(![tomb.birthDate isEqualToString:@""] && ![tomb.deathDate isEqualToString:@""])
+    {
+        cell.detailTextLabel.text = [NSString stringWithFormat: @"%@ - %@", [tomb.birthDate substringToIndex:4], [tomb.deathDate substringToIndex:4], nil];
+    }
+    else
+    {
+        cell.detailTextLabel.text = @"";
+    }
     // Configure the cell.
     return cell;
 }
@@ -187,7 +205,7 @@
     }
     else if (buttonIndex == 1)
     {
-        self.filterString = @"lastName";
+        self.filterString = @"Name";
     }
     else if (buttonIndex == 2)
     {
@@ -205,7 +223,7 @@
     {
         self.filterString = @"Years";
     }
-    self.title = [NSString stringWithFormat:@" Search (%@)",self.filterString];
+    self.title = [NSString stringWithFormat:@" Search - %@",self.filterString];
 }
 /*- (void)updateSearchString:(NSString*)aSearchString
 {

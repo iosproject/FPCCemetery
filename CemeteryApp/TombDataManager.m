@@ -47,13 +47,8 @@
         {
             dict = [jsonArray objectAtIndex:i];
             columns = [TombDataManager getDBColumns:dict];
-            tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]
-                                            andLastName:[dict objectForKey:@"LastName"]
-                                           andBirthDate:[dict objectForKey:@"DOB"]
-                                           andDeathDate:[dict objectForKey:@"DOD"]
-                                             andEpitaph:[dict objectForKey:@"Epitaph"]
-                                             andSection:[dict objectForKey:@"Section"]
-                                                  andID:[dict objectForKey:@"ID"]];
+            tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]andLastName:[dict objectForKey:@"LastName"]andMiddleName:[dict objectForKey:@"Middle"] andBirthDate:[dict objectForKey:@"DOB"] andDeathDate:[dict objectForKey:@"DOD"] andPrefix:[dict objectForKey:@"Prefix"] andSuffix:[dict objectForKey:@"Suffix"] andRef:[dict objectForKey:@"Ref"] andTour:[dict objectForKey:@"Tour"] andInternet:[dict objectForKey:@"InternetLink"] andNotes:[dict objectForKey:@"Notes"] andSextonsNotes:[dict objectForKey:@"SextonsNotes"] andEpitaph:[dict objectForKey:@"Epitaph"] andSection:[dict objectForKey:@"Section"] andID:[dict objectForKey:@"ID"] andSandston:[dict objectForKey:@"Sandstone"] andYears:[dict objectForKey:@"Years"] andMonths:[dict objectForKey:@"Months"] andCondition:[dict objectForKey:@"Condition"] andVeteran:[dict objectForKey:@"Veteran"] andUniqueId:[dict objectForKey:@"UID"]];
+                                       
             [tombs addObject:tomb];
         }
     }
@@ -87,7 +82,7 @@
          {
             predicate = [NSPredicate predicateWithFormat:@"(lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search];
          }
-         else if([filter isEqualToString:@"lastName"])
+         else if([filter isEqualToString:@"Name"])
          {
              predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@",search];
          }
