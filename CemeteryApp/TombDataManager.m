@@ -13,6 +13,7 @@
 
 @synthesize tombs;
 @synthesize jsonArray;
+@synthesize didGetCols;
 
 - (id)init {
     self = [super init];
@@ -41,9 +42,11 @@
         
         NSDictionary *dict = [[NSDictionary alloc] init];
         tombs = [[NSMutableArray alloc]init];
+        NSArray *columns = [[NSArray alloc] init];
         for (int i =0; i < [jsonArray count]; i++)
         {
             dict = [jsonArray objectAtIndex:i];
+            columns = [TombDataManager getDBColumns:dict];
             tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]
                                             andLastName:[dict objectForKey:@"LastName"]
                                            andBirthDate:[dict objectForKey:@"DOB"]
@@ -53,7 +56,6 @@
                                                   andID:[dict objectForKey:@"ID"]];
             [tombs addObject:tomb];
         }
-        
     }
     return self;
 }
@@ -114,4 +116,8 @@
      }
  }
 
++(NSArray *)getDBColumns:(NSDictionary *)jsonData
+{
+    return [jsonData allKeys];
+}
 @end

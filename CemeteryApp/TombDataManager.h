@@ -19,6 +19,7 @@
 //@property (readonly)NSArray* tombs;
 @property(readonly)NSMutableArray *tombs;
 @property(readonly)NSArray *jsonArray;
+@property (readwrite) bool didGetCols;
 
 +(TombDataManager *)instance;
 -(NSMutableArray *)filterTombs:(NSString *)search:(NSString *)filter;
