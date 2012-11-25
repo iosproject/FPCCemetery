@@ -28,6 +28,8 @@
 @synthesize filterButton;
 @synthesize filter;
 @synthesize filterPicker;
+@synthesize filterActionSheet;
+@synthesize filterString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.filterString = @"lastName";
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        //code executed in the background
 //        
@@ -81,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[TombDataManager instance]filterTombs:searchString:@"LastName"]count];
+    return [[[TombDataManager instance]filterTombs:searchString:filterString]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,7 +95,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString :@"LastName"]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString :filterString]objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
     cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
     
@@ -117,7 +120,7 @@
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
         //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
-        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString :@"LastName"]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString :filterString]objectAtIndex:selectedIndex]];
 
     }
     
@@ -171,11 +174,38 @@
 
 -(IBAction)filterButton:(id)sender
 {
-    /*
-    self.filter =[[FilterViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self.view addSubview:self.filter.view];
-    self.title = @"Filter";
-     */
+    [self.searchBar resignFirstResponder];
+    filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Search Filter" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"All", @"Name",@"Date of Birth", @"Date of Death", @"Section", @"Years", nil];
+    [self.filterActionSheet showFromTabBar:self.tabBarController.tabBar];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)
+    {
+        self.filterString = @"All";
+    }
+    else if (buttonIndex == 1)
+    {
+        self.filterString = @"lastName";
+    }
+    else if (buttonIndex == 2)
+    {
+        self.filterString = @"Date of Birth";
+    }
+    else if (buttonIndex == 3)
+    {
+        self.filterString = @"Date of Death";
+    }
+    else if (buttonIndex == 4)
+    {
+        self.filterString = @"Section";
+    }
+    else
+    {
+        self.filterString = @"Years";
+    }
+    self.title = [NSString stringWithFormat:@" Search (%@)",self.filterString];
 }
 /*- (void)updateSearchString:(NSString*)aSearchString
 {

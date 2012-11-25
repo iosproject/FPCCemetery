@@ -79,7 +79,32 @@
      if (search && [search length] > 0)
      {
          NSMutableArray *filterTombs = [[NSMutableArray alloc]initWithArray:tombs];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@", search];
+         
+         NSPredicate *predicate;
+         if([filter isEqualToString:@"All"])
+         {
+            predicate = [NSPredicate predicateWithFormat:@"(lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search];
+         }
+         else if([filter isEqualToString:@"lastName"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@",search];
+         }
+         else if ([filter isEqualToString:@"Date of Birth"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"birthDate CONTAINS[cd] %@",search];
+         }
+         else if ([filter isEqualToString:@"Date of Death"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"deathDate CONTAINS[cd] %@",search];
+         }
+         else if ([filter isEqualToString:@"Section"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"section CONTAINS[cd] %@",search];
+         }
+         else
+         {
+             predicate = [NSPredicate predicateWithFormat:@"years CONTAINS[cd] %@",search];
+         }
          [filterTombs filterUsingPredicate:predicate];
          return filterTombs;
      }
