@@ -17,6 +17,7 @@
 
 @synthesize tombs;
 @synthesize jsonArray;
+@synthesize didGetCols;
 
 - (id)init {
     self = [super init];
@@ -45,19 +46,15 @@
         
         NSDictionary *dict = [[NSDictionary alloc] init];
         tombs = [[NSMutableArray alloc]init];
+        NSArray *columns = [[NSArray alloc] init];
         for (int i =0; i < [jsonArray count]; i++)
         {
             dict = [jsonArray objectAtIndex:i];
-            tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]
-                                            andLastName:[dict objectForKey:@"LastName"]
-                                           andBirthDate:[dict objectForKey:@"DOB"]
-                                           andDeathDate:[dict objectForKey:@"DOD"]
-                                             andEpitaph:[dict objectForKey:@"Epitaph"]
-                                             andSection:[dict objectForKey:@"Section"]
-                                                  andID:[dict objectForKey:@"ID"]];
+            columns = [TombDataManager getDBColumns:dict];
+            tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]andLastName:[dict objectForKey:@"LastName"]andMiddleName:[dict objectForKey:@"Middle"] andBirthDate:[dict objectForKey:@"DOB"] andDeathDate:[dict objectForKey:@"DOD"] andPrefix:[dict objectForKey:@"Prefix"] andSuffix:[dict objectForKey:@"Suffix"] andRef:[dict objectForKey:@"Ref"] andTour:[dict objectForKey:@"Tour"] andInternet:[dict objectForKey:@"InternetLink"] andNotes:[dict objectForKey:@"Notes"] andSextonsNotes:[dict objectForKey:@"SextonsNotes"] andEpitaph:[dict objectForKey:@"Epitaph"] andSection:[dict objectForKey:@"Section"] andID:[dict objectForKey:@"ID"] andSandston:[dict objectForKey:@"Sandstone"] andYears:[dict objectForKey:@"Years"] andMonths:[dict objectForKey:@"Months"] andCondition:[dict objectForKey:@"Condition"] andVeteran:[dict objectForKey:@"Veteran"] andUniqueId:[dict objectForKey:@"UID"]];
+                                       
             [tombs addObject:tomb];
         }
-        
     }
     return self;
 }
@@ -83,7 +80,32 @@
      if (search && [search length] > 0)
      {
          NSMutableArray *filterTombs = [[NSMutableArray alloc]initWithArray:tombs];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@", search];
+         
+         NSPredicate *predicate;
+         if([filter isEqualToString:@"All"])
+         {
+            predicate = [NSPredicate predicateWithFormat:@"(lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search];
+         }
+         else if([filter isEqualToString:@"Name"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@",search];
+         }
+         else if ([filter isEqualToString:@"Date of Birth"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"birthDate CONTAINS[cd] %@",search];
+         }
+         else if ([filter isEqualToString:@"Date of Death"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"deathDate CONTAINS[cd] %@",search];
+         }
+         else if ([filter isEqualToString:@"Section"])
+         {
+             predicate = [NSPredicate predicateWithFormat:@"section CONTAINS[cd] %@",search];
+         }
+         else
+         {
+             predicate = [NSPredicate predicateWithFormat:@"years CONTAINS[cd] %@",search];
+         }
          [filterTombs filterUsingPredicate:predicate];
          return filterTombs;
      }
@@ -93,4 +115,8 @@
      }
  }
 
++(NSArray *)getDBColumns:(NSDictionary *)jsonData
+{
+    return [jsonData allKeys];
+}
 @end
