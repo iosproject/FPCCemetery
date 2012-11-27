@@ -22,9 +22,11 @@
     self = [super init];
     if (self)
     {
-        //Connect to the JSON file on the server
+        //Connect to the JSON file on the local MAMP server
         //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:8888/result.json"]]; //131.125.78.212
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]]; //131.125.78.212
+        
+        //Connect to the JSON file on the EVE server
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]];
 
         NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
         NSError *jsonParsingError = nil;

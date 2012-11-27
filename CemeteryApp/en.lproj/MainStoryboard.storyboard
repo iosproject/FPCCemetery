@@ -455,6 +455,9 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>
+        <class className="FilterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FilterViewController.h"/>
+        </class>
         <class className="HomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
             <relationships>
@@ -474,6 +477,8 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         <class className="SearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
             <relationships>
+                <relationship kind="action" name="filterButton:"/>
+                <relationship kind="outlet" name="filter" candidateClass="FilterViewController"/>
                 <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
                 <relationship kind="outlet" name="searchTableView" candidateClass="UITableView"/>
             </relationships>

@@ -24,10 +24,10 @@
 
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
-@synthesize searchString = _searchString;
-
-@synthesize displayArray;
-
+@synthesize searchString;
+@synthesize filterButton;
+@synthesize filter;
+@synthesize filterPicker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -81,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[TombDataManager instance]filterTombs:_searchString:@"LastName"]count];
+    return [[[TombDataManager instance]filterTombs:searchString:@"LastName"]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,7 +92,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    Tomb *tomb = [[[TombDataManager instance]filterTombs:_searchString :@"LastName"]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString :@"LastName"]objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
     cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", tomb.deathDate, nil];
     
@@ -117,7 +117,7 @@
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
         //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
-        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:_searchString :@"LastName"]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString :@"LastName"]objectAtIndex:selectedIndex]];
 
     }
     
@@ -125,7 +125,7 @@
 
 - (void)updateSearchString:(NSString*)aSearchString
 {
-    _searchString = [[NSString alloc]initWithString:aSearchString];
+    searchString = [[NSString alloc]initWithString:aSearchString];
     [self.searchTableView reloadData];
 }
 

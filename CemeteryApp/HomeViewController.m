@@ -37,18 +37,13 @@
                                   [UIImage imageNamed:@"ssimage04.png"],nil];
     _imageView.animationDuration = 25.00; // seconds
     _imageView.animationRepeatCount = 0; //infinite
-    [self startSlideshow];
-    
-}
-
-- (void)startSlideshow
-{
     [_imageView startAnimating]; //start the animation
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self startSlideshow];
+    [_imageView startAnimating]; //start the animation4
 }
 
 - (void)viewWillDisappear:(BOOL)animated
