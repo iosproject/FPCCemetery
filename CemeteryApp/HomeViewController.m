@@ -19,7 +19,7 @@
 @synthesize imageView = _imageView;
 @synthesize textView = _textView;
 @synthesize images = _images;
-
+// just a comment
 - (void)viewDidLoad
 {
     [super viewDidLoad];
