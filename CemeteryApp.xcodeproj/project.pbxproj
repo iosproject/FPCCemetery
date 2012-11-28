@@ -2020,9 +2020,9 @@
 		3FA7D3541610B64700F132F3 /* CemeteryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				3F8331CC1655770A00A51624 /* FilterViewController.h */,
 				3F8331CD1655770A00A51624 /* FilterViewController.m */,
-				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				305C1CD216517F0B008F0496 /* SearchViewController.h */,
 				305C1CD316517F19008F0496 /* SearchViewController.m */,
 				305C1CCF16517AB4008F0496 /* TombDataManager.h */,
