@@ -139,9 +139,7 @@
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
         //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
         [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString :filterString]objectAtIndex:selectedIndex]];
-
     }
-    
 }
 
 - (void)updateSearchString:(NSString*)aSearchString
@@ -169,12 +167,12 @@
     [self updateSearchString:searchBar.text];
 }
 
-
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
     [searchBar setShowsCancelButton:YES animated:YES];
     self.searchTableView.allowsSelection = NO;
     self.searchTableView.scrollEnabled = NO;
+    [self updateSearchString:searchBar.text];
 }
 
 - (void)viewDidUnload
@@ -182,7 +180,6 @@
     [self setSearchBar:nil];
     [self setSearchTableView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -193,7 +190,12 @@
 -(IBAction)filterButton:(id)sender
 {
     [self.searchBar resignFirstResponder];
-    filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Search Filter" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"All", @"Name",@"Date of Birth", @"Date of Death", @"Section", @"Years", nil];
+    
+    filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Search Filter"
+                                                    delegate:self
+                                           cancelButtonTitle:@"Cancel"
+                                      destructiveButtonTitle:nil
+                                           otherButtonTitles:@"All", @"Name",@"Date of Birth", @"Date of Death", @"Section", @"Years", nil];
     [self.filterActionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 

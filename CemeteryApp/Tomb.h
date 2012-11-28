@@ -41,6 +41,7 @@
 @property (strong, nonatomic) NSString* condition;
 @property (strong, nonatomic) NSString* veteran;
 @property (strong, nonatomic) NSString* uniqueId;
+
 -(id)initWithFirstName:(NSString*)aFirstName
            andLastName:(NSString*)aLastName
          andMiddleName:(NSString*)aMiddleName

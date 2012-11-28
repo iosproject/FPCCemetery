@@ -29,8 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.clearsSelectionOnViewWillAppear = NO;
     self.filterArray = [NSMutableArray array];
+    
     [filterArray addObject:@"All"];
     [filterArray addObject:@"Name"];
     [filterArray addObject:@"Section"];
@@ -78,8 +80,10 @@
     return cell;
 }
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (delegate != nil) {
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (delegate != nil)
+    {
         NSString *filterOption = [filterArray objectAtIndex:indexPath.row];
         [delegate filterSelected:filterOption];
     }
