@@ -104,7 +104,7 @@
          }
          else
          {
-             predicate = [NSPredicate predicateWithFormat:@"years CONTAINS[cd] %@",search];
+             predicate = [NSPredicate predicateWithFormat:@"years == %@",search];
          }
          [filterTombs filterUsingPredicate:predicate];
          return filterTombs;

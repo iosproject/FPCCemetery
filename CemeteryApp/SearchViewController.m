@@ -43,7 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.filterString = @"lastName";
+    self.filterString = @"All";
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        //code executed in the background
 //        
@@ -195,7 +195,7 @@
                                                     delegate:self
                                            cancelButtonTitle:@"Cancel"
                                       destructiveButtonTitle:nil
-                                           otherButtonTitles:@"All", @"Name",@"Date of Birth", @"Date of Death", @"Section", @"Years", nil];
+                                           otherButtonTitles:@"All", @"Name",@"Date of Birth", @"Date of Death", @"Section", @"Age", nil];
     [self.filterActionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
