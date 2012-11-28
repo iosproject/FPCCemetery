@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "FilterViewController.h"
 // comment
-@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate>
+@interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate> // FilterViewDelegate
 {
     
 
