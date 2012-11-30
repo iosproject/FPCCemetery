@@ -23,17 +23,11 @@
     self = [super init];
     if (self)
     {
-        //Connect to the JSON file on the local MAMP server
-        //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:8888/result.json"]]; //131.125.78.212
-        
-        //Connect to the JSON file on the EVE server
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
 
-        NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        NSError *jsonParsingError = nil;
+        NSData *response = [NSData dataWithContentsOfFile:filePath];
         jsonArray = [[NSMutableArray alloc] init];
-        jsonArray = [NSJSONSerialization JSONObjectWithData:response options:0 error:&jsonParsingError];
-        
+        jsonArray = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
         if(!jsonArray)
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could Not Retrieve Data"
