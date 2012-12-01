@@ -37,6 +37,10 @@
 {
     if([selectedTomb.middleName isEqual:nil] || [selectedTomb.middleName isEqual:NULL] || [selectedTomb.middleName isEqualToString:@""])
     {
+        if([selectedTomb.middleName length] == 1)
+        {
+            [selectedTomb.middleName stringByAppendingString:@"."];
+        }
         [self setTitle:[NSString stringWithFormat:@"%@ %@", selectedTomb.firstName, selectedTomb.lastName]];
     }
     else

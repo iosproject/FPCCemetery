@@ -634,7 +634,6 @@
 		3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5DB1610D52F0027640E /* MapViewController.m */; };
 		3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E41610DFDA0027640E /* MoreViewController.m */; };
 		3F8331BA16540CB100A51624 /* Map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8331B916540CB100A51624 /* Map2.png */; };
-		3F8331CE1655770B00A51624 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8331CD1655770A00A51624 /* FilterViewController.m */; };
 		3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F87BF331625D7D100938C3E /* CoreData.framework */; };
 		3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45177161CA7E20093329D /* Default-568h@2x.png */; };
 		3FA4517A161CA8C80093329D /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45179161CA8C80093329D /* Map.png */; };
@@ -1294,8 +1293,6 @@
 		3F76C5E31610DFDA0027640E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		3F76C5E41610DFDA0027640E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		3F8331B916540CB100A51624 /* Map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map2.png; sourceTree = "<group>"; };
-		3F8331CC1655770A00A51624 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterViewController.h; path = ../FilterViewController.h; sourceTree = "<group>"; };
-		3F8331CD1655770A00A51624 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterViewController.m; path = ../FilterViewController.m; sourceTree = "<group>"; };
 		3F87BF331625D7D100938C3E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FA45177161CA7E20093329D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FA45179161CA8C80093329D /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
@@ -2022,8 +2019,6 @@
 			isa = PBXGroup;
 			children = (
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
-				3F8331CC1655770A00A51624 /* FilterViewController.h */,
-				3F8331CD1655770A00A51624 /* FilterViewController.m */,
 				305C1CD216517F0B008F0496 /* SearchViewController.h */,
 				305C1CD316517F19008F0496 /* SearchViewController.m */,
 				305C1CCF16517AB4008F0496 /* TombDataManager.h */,
@@ -2761,7 +2756,6 @@
 				305C1CC916517987008F0496 /* Tomb.m in Sources */,
 				305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */,
 				305C1CD416517F19008F0496 /* SearchViewController.m in Sources */,
-				3F8331CE1655770B00A51624 /* FilterViewController.m in Sources */,
 				96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
