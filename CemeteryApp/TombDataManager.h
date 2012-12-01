@@ -12,13 +12,13 @@
 @interface TombDataManager : NSObject
 {
     NSMutableArray* tombs;
-    NSArray *jsonArray;
+   //NSArray *jsonArray;
     Tomb *tomb;
 }
 
 //@property (readonly)NSArray* tombs;
 @property(readonly)NSMutableArray *tombs;
-@property(readonly)NSArray *jsonArray;
+//@property(readonly)NSArray *jsonArray;
 @property (readwrite) bool didGetCols;
 
 +(TombDataManager *)instance;

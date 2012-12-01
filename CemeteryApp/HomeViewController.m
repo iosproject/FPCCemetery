@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "JSONHandler.h"
 
 @interface HomeViewController ()
 
@@ -14,16 +15,19 @@
 
 @end
 
+
 @implementation HomeViewController
 
 @synthesize imageView = _imageView;
 @synthesize textView = _textView;
 @synthesize images = _images;
+
 // just a comment
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+     //JSONHandler *db = [[JSONHandler alloc] init];
     [self setupSlideshow];
 }
 
