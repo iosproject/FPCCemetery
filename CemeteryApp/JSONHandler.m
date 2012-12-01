@@ -68,9 +68,7 @@
             {
                 jsonArray = [[NSArray alloc] initWithArray:clientJson];
             }
-        }
-        NSLog(@"%@",[jsonArray objectAtIndex:0]);
-        
+        }        
     }
     return self;
 }
