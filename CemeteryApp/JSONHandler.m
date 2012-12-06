@@ -21,18 +21,26 @@
         NSString *documentsDir = [pathArray objectAtIndex:0];
         NSString *localFile = [documentsDir stringByAppendingPathComponent:@"result.json"];        
         
-        NSArray *newClientJson = [[NSArray alloc] init];
         
+        
+        
+        NSArray *newClientJson = [[NSArray alloc] init];
+        NSData *newClientresponse = [NSData dataWithContentsOfFile:localFile];
+        
+        newClientJson = [NSJSONSerialization JSONObjectWithData:newClientresponse options:NSJSONReadingMutableContainers error:nil];
+        jsonArray = [[NSArray alloc] initWithArray:newClientJson];
+        
+        
+        /*
         //IF there is no local json file then we know we need to copy from the DB
         if(![[NSFileManager defaultManager] fileExistsAtPath:[documentsDir stringByAppendingPathComponent:@"result.json"]])
         {
             NSURL *url = [NSURL URLWithString:@"http://localhost:8888/result.json"];
-            NSData *data = [NSData dataWithContentsOfURL:url];               [data writeToFile:localFile atomically:YES];
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            [data writeToFile:localFile atomically:YES];
             
-            NSData *newClientresponse = [NSData dataWithContentsOfFile:localFile];
             
-            newClientJson = [NSJSONSerialization JSONObjectWithData:newClientresponse options:NSJSONReadingMutableContainers error:nil];
-            jsonArray = [[NSArray alloc] initWithArray:newClientJson];        }
+        }
         else
         {
             //We have a local version of the DB but is it the latest?
@@ -57,7 +65,8 @@
             {
                 //Copy from server to local
                 NSURL *url = [NSURL URLWithString:@"http://localhost:8888/result.json"];
-                NSData *data = [NSData dataWithContentsOfURL:url];               [data writeToFile:localFile atomically:YES];
+                NSData *data = [NSData dataWithContentsOfURL:url];
+                [data writeToFile:localFile atomically:YES];
                 
                 NSData *newClientresponse = [NSData dataWithContentsOfFile:localFile];
                 
@@ -68,7 +77,7 @@
             {
                 jsonArray = [[NSArray alloc] initWithArray:clientJson];
             }
-        }        
+        }*/        
     }
     return self;
 }

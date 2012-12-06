@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) UIAlertView *databaseCheckAlertView;
+@property (strong, nonatomic) UIActivityIndicatorView *loading;
 @end
