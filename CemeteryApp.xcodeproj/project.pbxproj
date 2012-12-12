@@ -12,7 +12,6 @@
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
 		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
 		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
-		3004DFEE164D6D4500FE434F /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = 3004DFED164D6D4500FE434F /* result.json */; };
 		30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30082E03164C8904007AAA80 /* DetailsViewController.m */; };
 		305C1CC916517987008F0496 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CC816517987008F0496 /* Tomb.m */; };
 		305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD016517AB4008F0496 /* TombDataManager.m */; };
@@ -635,7 +634,6 @@
 		3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5DB1610D52F0027640E /* MapViewController.m */; };
 		3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E41610DFDA0027640E /* MoreViewController.m */; };
 		3F8331BA16540CB100A51624 /* Map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8331B916540CB100A51624 /* Map2.png */; };
-		3F8331CE1655770B00A51624 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8331CD1655770A00A51624 /* FilterViewController.m */; };
 		3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F87BF331625D7D100938C3E /* CoreData.framework */; };
 		3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45177161CA7E20093329D /* Default-568h@2x.png */; };
 		3FA4517A161CA8C80093329D /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45179161CA8C80093329D /* Map.png */; };
@@ -650,6 +648,7 @@
 		3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */; };
 		3FA7D3651610B64800F132F3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D3641610B64800F132F3 /* HomeViewController.m */; };
 		3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */; };
+		96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96123F0D16695CC70091FD28 /* JSONHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -661,7 +660,6 @@
 		07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Retina.png; path = ../LaunchImage_Retina.png; sourceTree = "<group>"; };
 		07F31BEC161AAC4D00CAB198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		07F31BEE161AAC6000CAB198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		3004DFED164D6D4500FE434F /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
 		30082E02164C8904007AAA80 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../DetailsViewController.h; sourceTree = "<group>"; };
 		30082E03164C8904007AAA80 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../DetailsViewController.m; sourceTree = "<group>"; };
 		305C1CC716517987008F0496 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
@@ -1295,8 +1293,6 @@
 		3F76C5E31610DFDA0027640E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		3F76C5E41610DFDA0027640E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		3F8331B916540CB100A51624 /* Map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map2.png; sourceTree = "<group>"; };
-		3F8331CC1655770A00A51624 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterViewController.h; path = ../FilterViewController.h; sourceTree = "<group>"; };
-		3F8331CD1655770A00A51624 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterViewController.m; path = ../FilterViewController.m; sourceTree = "<group>"; };
 		3F87BF331625D7D100938C3E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FA45177161CA7E20093329D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FA45179161CA8C80093329D /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
@@ -1316,6 +1312,8 @@
 		3FA7D3641610B64800F132F3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
+		96123F0C16695CC70091FD28 /* JSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHandler.h; sourceTree = "<group>"; };
+		96123F0D16695CC70091FD28 /* JSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2021,8 +2019,6 @@
 			isa = PBXGroup;
 			children = (
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
-				3F8331CC1655770A00A51624 /* FilterViewController.h */,
-				3F8331CD1655770A00A51624 /* FilterViewController.m */,
 				305C1CD216517F0B008F0496 /* SearchViewController.h */,
 				305C1CD316517F19008F0496 /* SearchViewController.m */,
 				305C1CCF16517AB4008F0496 /* TombDataManager.h */,
@@ -2043,8 +2039,9 @@
 				3FA7D3641610B64800F132F3 /* HomeViewController.m */,
 				07E81A9F16233DB400790930 /* ImageGalleryViewController.h */,
 				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
-				3004DFED164D6D4500FE434F /* result.json */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
+				96123F0C16695CC70091FD28 /* JSONHandler.h */,
+				96123F0D16695CC70091FD28 /* JSONHandler.m */,
 			);
 			path = CemeteryApp;
 			sourceTree = "<group>";
@@ -2738,7 +2735,6 @@
 				309EBD9816488B2A00F7386B /* ssimage02.png in Resources */,
 				309EBD9916488B2A00F7386B /* ssimage03.png in Resources */,
 				309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */,
-				3004DFEE164D6D4500FE434F /* result.json in Resources */,
 				3F8331BA16540CB100A51624 /* Map2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2760,7 +2756,7 @@
 				305C1CC916517987008F0496 /* Tomb.m in Sources */,
 				305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */,
 				305C1CD416517F19008F0496 /* SearchViewController.m in Sources */,
-				3F8331CE1655770B00A51624 /* FilterViewController.m in Sources */,
+				96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
