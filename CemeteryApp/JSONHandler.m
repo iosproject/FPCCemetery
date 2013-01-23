@@ -31,11 +31,11 @@
         jsonArray = [[NSArray alloc] initWithArray:newClientJson];
         
         
-        /*
+        
         //IF there is no local json file then we know we need to copy from the DB
         if(![[NSFileManager defaultManager] fileExistsAtPath:[documentsDir stringByAppendingPathComponent:@"result.json"]])
         {
-            NSURL *url = [NSURL URLWithString:@"http://localhost:8888/result.json"];
+            NSURL *url = [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"];
             NSData *data = [NSData dataWithContentsOfURL:url];
             [data writeToFile:localFile atomically:YES];
             
@@ -45,7 +45,7 @@
         {
             //We have a local version of the DB but is it the latest?
             //Check for the updated version
-            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:8888/result.json"]];
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]];
             NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
             NSError *error = nil;
             NSArray *serverJson = [[NSArray alloc] init];
@@ -77,7 +77,7 @@
             {
                 jsonArray = [[NSArray alloc] initWithArray:clientJson];
             }
-        }*/        
+        }
     }
     return self;
 }

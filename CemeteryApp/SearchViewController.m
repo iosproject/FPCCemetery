@@ -48,7 +48,7 @@
 //        NSData* tombData = nil;
 //        
 //        // read data from online source
-//        tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result.json"]];
+//        tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]];
 //        
 //        if (!tombData) {
 //            // read data from local file
