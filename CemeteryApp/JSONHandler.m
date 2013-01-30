@@ -64,7 +64,9 @@
             if([[clientdict objectForKey:@"LastUpdated"] intValue] < [[serverdict objectForKey:@"LastUpdated"] intValue])
             {
                 //Copy from server to local
-                NSURL *url = [NSURL URLWithString:@"http://localhost:8888/result.json"];
+                //NSURL *url = [NSURL URLWithString:@"http://localhost:8888/result.json"];
+                NSURL *url = [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"];
+
                 NSData *data = [NSData dataWithContentsOfURL:url];
                 [data writeToFile:localFile atomically:YES];
                 
