@@ -24,11 +24,15 @@
 @synthesize databaseCheckAlertView;
 @synthesize loading;
 
-// just a comment
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait" message:@"Checking server for updates..." delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    
+    databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait"
+                                                        message:@"Checking server for updates..."
+                                                       delegate:self
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:nil, nil];
     loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     //loading.frame = CGRectMake(150, 150, 16, 16);
     loading.center = CGPointMake(139.5, 90.5);
@@ -71,15 +75,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+#define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
+#define LOCAL_FILE_NAME @"result.json"
+
 - (void)updateLocalJSONFile
 {
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [pathArray objectAtIndex:0];
-    NSString *localFile = [documentsDir stringByAppendingPathComponent:@"result.json"];
+    NSString *localFile = [documentsDir stringByAppendingPathComponent:LOCAL_FILE_NAME];
     
-    if(![[NSFileManager defaultManager] fileExistsAtPath:[documentsDir stringByAppendingPathComponent:@"result.json"]])
+    if(![[NSFileManager defaultManager] fileExistsAtPath:[documentsDir stringByAppendingPathComponent:LOCAL_FILE_NAME]])
     {
-        NSURL *url = [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"];
+        NSURL *url = [NSURL URLWithString:FILE_URL];
         NSData *data = [NSData dataWithContentsOfURL:url];
         [data writeToFile:localFile atomically:YES];
     }
@@ -87,7 +94,7 @@
     {
         //We have a local version of the DB but is it the latest?
         //Check for the updated version
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:FILE_URL]];
         NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
         NSError *error = nil;
         NSArray *serverJson = [[NSArray alloc] init];
@@ -107,7 +114,7 @@
         {
             [databaseCheckAlertView setMessage:@"Database updates being applied"];
             //Copy from server to local
-            NSURL *url = [NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"];
+            NSURL *url = [NSURL URLWithString:FILE_URL];
             NSData *data = [NSData dataWithContentsOfURL:url];
             [data writeToFile:localFile atomically:YES];
             [databaseCheckAlertView setMessage:@"Database updated"];

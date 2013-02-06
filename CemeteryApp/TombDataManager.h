@@ -22,6 +22,7 @@
 @property (readwrite) bool didGetCols;
 
 +(TombDataManager *)instance;
+
 -(NSMutableArray *)filterTombs:(NSString *)search:(NSString *)filter;
 
 
