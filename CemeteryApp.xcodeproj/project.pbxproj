@@ -715,6 +715,7 @@
 		3FA7D33F1610B64700F132F3 = {
 			isa = PBXGroup;
 			children = (
+				07C8E4A016CC294A000CC940 /* home_quote1.png */,
 				3F87BF331625D7D100938C3E /* CoreData.framework */,
 				3F1FDAAB16137870008C52DE /* Images */,
 				3F1FDAB316137870008C52DE /* TWG Retina Icons */,
@@ -767,6 +768,8 @@
 				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
 				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
 				3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */,
+				07C8E49D16CC1B88000CC940 /* AboutUsViewController.h */,
+				07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */,
 				3FFB6A8F16790E6500FCC969 /* result.json */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
 			);
@@ -1061,6 +1064,7 @@
 				305C1CD416517F19008F0496 /* SearchViewController.m in Sources */,
 				96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */,
 				3F3D444716B9CA7C00A760DC /* HomeViewController.m in Sources */,
+				07C8E49F16CC1B88000CC940 /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
