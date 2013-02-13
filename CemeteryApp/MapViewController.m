@@ -26,7 +26,7 @@
 	//[scroll release];
     
 }
-//stupid xcode
+
 - (void)viewDidUnload {
 	//[image release], image = nil;
 }
@@ -59,7 +59,7 @@
 #pragma mark UIScrollViewDelegate
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    image.frame = [self centeredFrameForScrollView:scrollView andUIView:image];;
+    image.frame = [self centeredFrameForScrollView:scrollView andUIView:image];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
