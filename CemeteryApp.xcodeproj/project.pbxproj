@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C8E49B16CC1253000CC940 /* home_quote1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C8E49A16CC1253000CC940 /* home_quote1.png */; };
 		07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E81AA016233DB400790930 /* ImageGalleryViewController.m */; };
 		07F31BEA161AAC3700CAB198 /* LaunchImage_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */; };
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
@@ -232,7 +231,6 @@
 /* Begin PBXFileReference section */
 		0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon_Normal.png; path = ../AppIcon_Normal.png; sourceTree = "<group>"; };
 		0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon_Retina.png; path = ../AppIcon_Retina.png; sourceTree = "<group>"; };
-		07C8E49A16CC1253000CC940 /* home_quote1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_quote1.png; path = "../../../Mobile App/Graphics/Home/home_quote1.png"; sourceTree = "<group>"; };
 		07E81A9F16233DB400790930 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
 		07E81AA016233DB400790930 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
 		07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Normal.png; path = ../LaunchImage_Normal.png; sourceTree = "<group>"; };
@@ -511,7 +509,6 @@
 				3FA62F61161A1506003F52D3 /* ss_img1.png */,
 				3FA62F62161A1506003F52D3 /* ss_img2.png */,
 				3FA62F63161A1506003F52D3 /* ss_img3.png */,
-				07C8E49A16CC1253000CC940 /* home_quote1.png */,
 				3F1FDAB116137870008C52DE /* HomePic.JPG */,
 				3F1FDAB216137870008C52DE /* IMG_2089.JPG */,
 			);
@@ -1043,7 +1040,6 @@
 				309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */,
 				3F8331BA16540CB100A51624 /* Map2.png in Resources */,
 				3FFB6A9016790E6500FCC969 /* result.json in Resources */,
-				07C8E49B16CC1253000CC940 /* home_quote1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
