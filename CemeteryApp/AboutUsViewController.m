@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	[scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,500)];
+    [scroller setContentSize:CGSizeMake(320,300)];
 }
 
 - (void)didReceiveMemoryWarning
