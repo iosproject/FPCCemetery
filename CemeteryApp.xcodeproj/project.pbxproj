@@ -235,7 +235,7 @@
 		0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon_Retina.png; path = ../AppIcon_Retina.png; sourceTree = "<group>"; };
 		07C8E49D16CC1B88000CC940 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
-		07C8E4A016CC294A000CC940 /* home_quote1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_quote1.png; sourceTree = "<group>"; };
+		07C8E4A016CC294A000CC940 /* home_quote1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_quote1.png; path = ../home_quote1.png; sourceTree = "<group>"; };
 		07E81A9F16233DB400790930 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
 		07E81AA016233DB400790930 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
 		07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Normal.png; path = ../LaunchImage_Normal.png; sourceTree = "<group>"; };
@@ -492,6 +492,7 @@
 		3F1FDAAB16137870008C52DE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07C8E4A016CC294A000CC940 /* home_quote1.png */,
 				3FA45177161CA7E20093329D /* Default-568h@2x.png */,
 				07F31BEE161AAC6000CAB198 /* Default@2x.png */,
 				07F31BEC161AAC4D00CAB198 /* Default.png */,
@@ -720,7 +721,6 @@
 		3FA7D33F1610B64700F132F3 = {
 			isa = PBXGroup;
 			children = (
-				07C8E4A016CC294A000CC940 /* home_quote1.png */,
 				3F87BF331625D7D100938C3E /* CoreData.framework */,
 				3F1FDAAB16137870008C52DE /* Images */,
 				3F1FDAB316137870008C52DE /* TWG Retina Icons */,
