@@ -11,5 +11,4 @@
 @interface AboutUsViewController : UIViewController {
     IBOutlet UIScrollView *scroller;
 }
-
 @end

@@ -30,7 +30,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_quote1.png" id="5Sd-YK-rKW">
-                                <rect key="frame" x="10" y="306" width="300" height="99"/>
+                                <rect key="frame" x="10" y="305" width="300" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -395,9 +395,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iHx-EN-Lt6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sMu-9w-X6m">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="303"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" id="Oiw-mY-oG3">
                                         <rect key="frame" x="10" y="68" width="300" height="857"/>
@@ -438,9 +438,6 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About Us" id="2Vp-AN-8FB"/>
-                    <connections>
-                        <outlet property="scroller" destination="iHx-EN-Lt6" id="hIE-xJ-J26"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6d-eT-rLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
