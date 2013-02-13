@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C8E49F16CC1B88000CC940 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */; };
-		07C8E4A116CC294A000CC940 /* home_quote1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C8E4A016CC294A000CC940 /* home_quote1.png */; };
 		07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E81AA016233DB400790930 /* ImageGalleryViewController.m */; };
 		07F31BEA161AAC3700CAB198 /* LaunchImage_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */; };
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
@@ -1048,7 +1046,6 @@
 				309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */,
 				3F8331BA16540CB100A51624 /* Map2.png in Resources */,
 				3FFB6A9016790E6500FCC969 /* result.json in Resources */,
-				07C8E4A116CC294A000CC940 /* home_quote1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController <UIGestureRecognizerDelegate> 
+@interface HomeViewController : UIViewController <UIScrollViewDelegate>  //<UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView2;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, retain) NSArray *imgViews;
+@property (nonatomic, retain) NSTimer *timer;
 @property (strong, nonatomic) UIAlertView *databaseCheckAlertView;
 @property (strong, nonatomic) UIActivityIndicatorView *loading;
 @end
