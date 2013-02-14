@@ -107,6 +107,7 @@
         cell.textLabel.text = [NSString stringWithFormat: @"%@ %@ %@", tomb.firstName, tomb.middleName ,tomb.lastName, nil];
     }
     
+
     if(![tomb.birthDate isEqualToString:@""] && ![tomb.deathDate isEqualToString:@""])
     {
         cell.detailTextLabel.text = [NSString stringWithFormat: @"%@ - %@", [tomb.birthDate substringToIndex:4], [tomb.deathDate substringToIndex:4], nil];
@@ -115,6 +116,7 @@
     {
         cell.detailTextLabel.text = @"";
     }
+    
     // Configure the cell.
     return cell;
 }
