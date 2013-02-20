@@ -15,7 +15,7 @@
 @implementation DetailsViewController
 
 @synthesize selectedIndex, selectedTomb;
-@synthesize textView = _textView;
+@synthesize textView = _textView, bornTextField = _bornTextField, diedTextField = _diedTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +30,30 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [_textView setText: [NSString stringWithFormat:@"\nID: %@\nSection: %@\nDate of Birth: %@\nDate of Death: %@\nPrefix: %@\nSuffix: %@\nAge: %@\nMonths: %@\nNotes: %@\nSexton's Notes: %@\n\nEpitaph: %@\nReference: %@\nTour: %@\nInternet Link: %@\nSandstone: %@\nCondition: %@\nVeteran  \n\n%@", selectedTomb.tombId, selectedTomb.section, selectedTomb.birthDate, selectedTomb.deathDate, selectedTomb.prefix, selectedTomb.suffix, selectedTomb.years, selectedTomb.months, selectedTomb.notes, selectedTomb.sextonsNotes, selectedTomb.epitaph, selectedTomb.ref, selectedTomb.tour, selectedTomb.internet, selectedTomb.sandstone, selectedTomb.condition, selectedTomb.veteran ,nil]];
+    [_bornTextField setText:selectedTomb.birthDate];
+    [_diedTextField setText:selectedTomb.deathDate];
+    [_sectionTextField setText:selectedTomb.section];
+    [_ageTextField setText:selectedTomb.years];
+    
+    
+    [_textView setText: [NSString stringWithFormat:@"%@", selectedTomb.epitaph,nil]];
 }
+
+-(NSString*)calculateAge
+{
+    if ([selectedTomb.birthDate isEqualToString:@"n/a"]) {
+        return @"n/a";
+    }
+    else
+    {
+        int age = 0;
+        NSString *ageString = [NSString stringWithFormat:@"%d", age];
+        return ageString;
+    }
+}
+
+// DATE FORMAT
+// YYYY-MM-DD
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -58,6 +80,10 @@
 
 - (void)viewDidUnload {
     [self setTextView:nil];
+    [self setBornTextField:nil];
+    [self setDiedTextField:nil];
+    [self setAgeTextField:nil];
+    [self setSectionTextField:nil];
     [super viewDidUnload];
 }
 @end

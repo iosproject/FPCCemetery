@@ -19,4 +19,9 @@
 @property (nonatomic, retain) Tomb *selectedTomb;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (strong, nonatomic) IBOutlet UITextField *bornTextField;
+@property (strong, nonatomic) IBOutlet UITextField *diedTextField;
+@property (strong, nonatomic) IBOutlet UITextField *ageTextField;
+@property (strong, nonatomic) IBOutlet UITextField *sectionTextField;
+
 @end
