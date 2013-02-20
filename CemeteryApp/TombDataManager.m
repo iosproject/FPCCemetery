@@ -22,30 +22,11 @@
 - (id)init {
     self = [super init];
     if (self)
-    {     JSONHandler *db = [[JSONHandler alloc] init];
-        
-        /*
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
-
-        NSData *response = [NSData dataWithContentsOfFile:filePath];
-        jsonArray = [[NSMutableArray alloc] init];
-        jsonArray = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
-         
-        if(db.jsonArray)
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could Not Retrieve Data"
-                                                            message:@"The server is currently unavailable."
-                                                           delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:@"Retry",nil];
-            [alert show];
-        }
-        */
+    {
+        JSONHandler *db = [[JSONHandler alloc] init];
         NSDictionary *dict = [[NSDictionary alloc] init];
         tombs = [[NSMutableArray alloc]init];
         NSArray *columns = [[NSArray alloc] init];
-        
-        //[dict objectForKey:@"DOB"]
         
         for (int i =1; i < [db.jsonArray count]; i++)
         {
