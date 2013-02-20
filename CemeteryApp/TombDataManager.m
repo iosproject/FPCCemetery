@@ -95,7 +95,7 @@
     return instance;
 }
 
--(NSMutableArray *)filterTombs:(NSString *)search:(NSString *)filter
+-(NSMutableArray *)filterTombs:(NSString *)search withFilter:(NSString *)filter
  {
      if (search && [search length] > 0)
      {
@@ -104,7 +104,7 @@
          NSPredicate *predicate;
          if([filter isEqualToString:@"All"])
          {
-            predicate = [NSPredicate predicateWithFormat:@"(lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search];
+            predicate = [NSPredicate predicateWithFormat:@"(fullName CONTAINS[cd] %@) OR (firstAndLastName CONTAINS[cd] %@) OR (firstName CONTAINS[cd] %@) OR (lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search,search,search,search];
          }
          else if([filter isEqualToString:@"Name"])
          {

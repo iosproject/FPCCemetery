@@ -9,7 +9,7 @@
 #import "Tomb.h"
 
 @implementation Tomb
-@synthesize firstName, lastName, middleName;
+@synthesize firstName, lastName, middleName, fullName, firstAndLastName;
 @synthesize birthDate, deathDate;
 @synthesize prefix, suffix, ref, tour, internet;
 @synthesize notes, sextonsNotes;
@@ -44,6 +44,8 @@
         self.firstName = aFirstName;
         self.lastName = aLastName;
         self.middleName = aMiddleName;
+        self.fullName = [NSString stringWithFormat:@"%@ %@ %@", self.firstName, self.middleName, self.lastName];
+        self.firstAndLastName = [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
         self.birthDate = aBirthDate;
         self.deathDate = aDeathDate;
         self.prefix = aPrefix;

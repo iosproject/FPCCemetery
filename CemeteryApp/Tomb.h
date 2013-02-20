@@ -23,6 +23,8 @@
 @property (strong, nonatomic) NSString* firstName;
 @property (strong, nonatomic) NSString* lastName;
 @property (strong, nonatomic) NSString* middleName;
+@property (strong, nonatomic) NSString* firstAndLastName;
+@property (strong, nonatomic) NSString* fullName;
 @property (strong, nonatomic) NSString* deathDate;
 @property (strong, nonatomic) NSString* birthDate;
 @property (strong, nonatomic) NSString* prefix;
