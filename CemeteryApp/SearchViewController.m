@@ -82,7 +82,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[TombDataManager instance]filterTombs:searchString:filterString]count];
+    return [[[TombDataManager instance]filterTombs:searchString withFilter:filterString]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,7 +93,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString :filterString]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString withFilter:filterString]objectAtIndex:indexPath.row];
     if([tomb.middleName isEqual:nil] || [tomb.middleName isEqual:NULL] || [tomb.middleName isEqualToString:@""])
     {
         cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
@@ -138,7 +138,7 @@
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
         //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
-        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString :filterString]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString withFilter:filterString]objectAtIndex:selectedIndex]];
     }
 }
 

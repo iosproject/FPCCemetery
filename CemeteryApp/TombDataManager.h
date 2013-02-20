@@ -23,7 +23,7 @@
 
 +(TombDataManager *)instance;
 
--(NSMutableArray *)filterTombs:(NSString *)search:(NSString *)filter;
+-(NSMutableArray *)filterTombs:(NSString *)search withFilter:(NSString *)filter;
 
 
 @end
