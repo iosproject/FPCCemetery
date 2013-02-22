@@ -92,7 +92,7 @@
          NSPredicate *predicate;
          if([filter isEqualToString:@"All"])
          {
-            predicate = [NSPredicate predicateWithFormat:@"(fullName CONTAINS[cd] %@) OR (firstAndLastName CONTAINS[cd] %@) OR (firstName CONTAINS[cd] %@) OR (lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search,search,search,search];
+            predicate = [NSPredicate predicateWithFormat:@"(fullName CONTAINS[cd] %@) OR (firstAndLastName CONTAINS[cd] %@) OR (firstName CONTAINS[cd] %@) OR (lastName CONTAINS[cd] %@) OR (birthDate CONTAINS[cd] %@) OR (deathDate CONTAINS[cd] %@) OR (section CONTAINS[cd] %@)",search,search,search,search,search,search,search];
          }
          else if([filter isEqualToString:@"Name"])
          {

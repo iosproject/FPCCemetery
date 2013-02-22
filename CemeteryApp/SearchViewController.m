@@ -42,6 +42,7 @@
 {
     [super viewDidLoad];
     self.filterString = @"All";
+    //self.navigationItem.backBarButtonItem.title = @"Back";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

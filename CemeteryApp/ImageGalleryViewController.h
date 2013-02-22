@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageGalleryViewController : UIViewController
-
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
+@interface ImageGalleryViewController : UICollectionViewController
+@property (strong, nonatomic) NSMutableArray *allImages;
 @end

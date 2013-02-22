@@ -34,24 +34,33 @@ diedTextField = _diedTextField;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
         
-    
+    [self.scrollView setContentSize:CGSizeMake(320, 455)];
     [_bornTextField setText:selectedTomb.birthDate];
     [_diedTextField setText:selectedTomb.deathDate];
     [_sectionTextField setText:selectedTomb.section];
-    [_ageTextField setText:selectedTomb.years];
     
+    if ([selectedTomb.years isEqualToString:@"0"])
+    {
+        [_ageTextField setText:[NSString stringWithFormat:@"%@ months", selectedTomb.months]];
+    }
+    else if ([selectedTomb.birthDate isEqualToString:@"n/a"])
+    {
+        [_ageTextField setText:@"n/a"];
+    }
+    else if ([selectedTomb.birthDate isEqualToString:@" "])
+    {
+        [_ageTextField setText:@"n/a"];
+    }
+    else
+        [_ageTextField setText:[NSString stringWithFormat:@"%@ years", selectedTomb.years]];
     
     [_textView setText: [NSString stringWithFormat:@"%@", selectedTomb.epitaph,nil]];
-     
-    
-    
+    [self.scrollView flashScrollIndicators];
 }
-
-// DATE FORMAT
-// YYYY-MM-DD
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // set the tiitle of the navigation bar
     if([selectedTomb.middleName isEqual:nil] || [selectedTomb.middleName isEqual:NULL] || [selectedTomb.middleName isEqualToString:@""])
     {
         if([selectedTomb.middleName length] == 1)
