@@ -77,6 +77,7 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
 //
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //NSLog(@"prepare for segue");
     if ([[segue identifier] isEqualToString:@"showImageDetail"])
     {
         NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
@@ -86,7 +87,7 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
          NSString *pathToImage = [[NSBundle mainBundle] pathForResource:imageNameToLoad ofType:@"JPG"];
          UIImage *image = [[UIImage alloc] initWithContentsOfFile:pathToImage];*/ // needs further investigation
         
-        UIImage *image2 = [UIImage imageNamed:_allImages[selectedIndexPath.row]];
+        UIImage *image2 = [UIImage imageNamed:self.allImages[selectedIndexPath.row]];
         
         ImageDetailViewController *imageDetailViewController = [segue destinationViewController];
         imageDetailViewController.image = image2;
