@@ -19,45 +19,52 @@
 //@synthesize jsonArray;
 @synthesize didGetCols;
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     if (self)
     {
-        JSONHandler *db = [[JSONHandler alloc] init];
-        NSDictionary *dict = [[NSDictionary alloc] init];
-        tombs = [[NSMutableArray alloc]init];
-        NSArray *columns = [[NSArray alloc] init];
+        [self loadTombs];
         
-        for (int i =1; i < [db.jsonArray count]; i++)
-        {
-            dict = [db.jsonArray objectAtIndex:i];
-            columns = [TombDataManager getDBColumns:dict];
-            tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]
-                                      andLastName:[dict objectForKey:@"LastName"]
-                                    andMiddleName:[dict objectForKey:@"Middle"]
-                                     andBirthDate:([[dict objectForKey:@"DOB"] isEqualToString:@""]) ? @"n/a " : [dict objectForKey:@"DOB"]
-                                     andDeathDate:([[dict objectForKey:@"DOD"] isEqualToString:@""]) ? @"n/a " : [dict objectForKey:@"DOD"]
-                                        andPrefix:[dict objectForKey:@"Prefix"]
-                                        andSuffix:[dict objectForKey:@"Suffix"]
-                                           andRef:[dict objectForKey:@"Ref"]
-                                          andTour:[dict objectForKey:@"Tour"]
-                                      andInternet:[dict objectForKey:@"InternetLink"]
-                                         andNotes:[dict objectForKey:@"Notes"]
-                                  andSextonsNotes:[dict objectForKey:@"SextonsNotes"]
-                                       andEpitaph:[dict objectForKey:@"Epitaph"]
-                                       andSection:[dict objectForKey:@"Section"]
-                                            andID:[dict objectForKey:@"ID"]
-                                      andSandston:[dict objectForKey:@"Sandstone"]
-                                         andYears:[dict objectForKey:@"Years"]
-                                        andMonths:[dict objectForKey:@"Months"]
-                                     andCondition:[dict objectForKey:@"Condition"]
-                                       andVeteran:[dict objectForKey:@"Veteran"]
-                                      andUniqueId:[dict objectForKey:@"UID"]];
-                                       
-            [tombs addObject:tomb];
-        }
     }
     return self;
+}
+
+-(void)loadTombs
+{
+    JSONHandler *db = [[JSONHandler alloc] init];
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    tombs = [[NSMutableArray alloc]init];
+    NSArray *columns = [[NSArray alloc] init];
+    
+    for (int i =1; i < [db.jsonArray count]; i++)
+    {
+        dict = [db.jsonArray objectAtIndex:i];
+        columns = [TombDataManager getDBColumns:dict];
+        tomb = [[Tomb alloc]initWithFirstName:[dict objectForKey:@"FirstName"]
+                                  andLastName:[dict objectForKey:@"LastName"]
+                                andMiddleName:[dict objectForKey:@"Middle"]
+                                 andBirthDate:([[dict objectForKey:@"DOB"] isEqualToString:@""]) ? @"n/a " : [dict objectForKey:@"DOB"]
+                                 andDeathDate:([[dict objectForKey:@"DOD"] isEqualToString:@""]) ? @"n/a " : [dict objectForKey:@"DOD"]
+                                    andPrefix:[dict objectForKey:@"Prefix"]
+                                    andSuffix:[dict objectForKey:@"Suffix"]
+                                       andRef:[dict objectForKey:@"Ref"]
+                                      andTour:[dict objectForKey:@"Tour"]
+                                  andInternet:[dict objectForKey:@"InternetLink"]
+                                     andNotes:[dict objectForKey:@"Notes"]
+                              andSextonsNotes:[dict objectForKey:@"SextonsNotes"]
+                                   andEpitaph:[dict objectForKey:@"Epitaph"]
+                                   andSection:[dict objectForKey:@"Section"]
+                                        andID:[dict objectForKey:@"ID"]
+                                  andSandston:[dict objectForKey:@"Sandstone"]
+                                     andYears:([[dict objectForKey:@"DOB"] isEqualToString:@""]) ? @"n/a " : [dict objectForKey:@"Years"]
+                                    andMonths:([[dict objectForKey:@"DOB"] isEqualToString:@""]) ? @"n/a " : [dict objectForKey:@"Months"]
+                                 andCondition:[dict objectForKey:@"Condition"]
+                                   andVeteran:[dict objectForKey:@"Veteran"]
+                                  andUniqueId:[dict objectForKey:@"UID"]];
+        
+        [tombs addObject:tomb];
+    }
 }
 
 - (NSString *)description

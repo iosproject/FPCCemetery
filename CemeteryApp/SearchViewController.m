@@ -42,38 +42,7 @@
 {
     [super viewDidLoad];
     self.filterString = @"All";
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        //code executed in the background
-//        
-//        NSData* tombData = nil;
-//        
-//        // read data from online source
-//        tombData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://eve.kean.edu/~jplisojo/result2.json"]];
-//        
-//        if (!tombData) {
-//            // read data from local file
-//            NSLog(@"Local DB");
-//            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"result" ofType:@"json"];
-//            NSError *error = nil;
-//            tombData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-//        }
-//        
-//        // fetch the data
-//        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:tombData waitUntilDone:YES];
-//    });
 }
-
-//#define dbName @"Tombs"
-//
-//- (void)fetchedData:(NSData *)responseData
-//{
-//    NSError *error;
-//    json = [NSJSONSerialization JSONObjectWithData:responseData
-//                                                         options:kNilOptions
-//                                                           error:&error];
-//    jsonData = [json objectForKey:dbName];
-//    [self.searchTableView reloadData];
-//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -82,17 +51,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    //NSLog(@"number of rows in secton");
     return [[[TombDataManager instance]filterTombs:searchString withFilter:filterString]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //NSLog(@"cell for row at index path");
     static NSString *CellIdentifier = @"name cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    
     Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString withFilter:filterString]objectAtIndex:indexPath.row];
     if([tomb.middleName isEqual:nil] || [tomb.middleName isEqual:NULL] || [tomb.middleName isEqualToString:@""])
     {
@@ -137,7 +109,6 @@
     {
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-        //[vc setSelectedTomb: [[[TombDataManager instance]tombs]objectAtIndex:selectedIndex]];
         [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString withFilter:filterString]objectAtIndex:selectedIndex]];
     }
 }

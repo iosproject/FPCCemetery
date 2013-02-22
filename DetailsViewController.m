@@ -14,8 +14,11 @@
 
 @implementation DetailsViewController
 
-@synthesize selectedIndex, selectedTomb;
-@synthesize textView = _textView, bornTextField = _bornTextField, diedTextField = _diedTextField;
+@synthesize selectedTomb, selectedIndex;
+@synthesize scrollView = _scrollView;
+@synthesize textView = _textView,
+bornTextField = _bornTextField,
+diedTextField = _diedTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +33,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+        
+    
     [_bornTextField setText:selectedTomb.birthDate];
     [_diedTextField setText:selectedTomb.deathDate];
     [_sectionTextField setText:selectedTomb.section];
@@ -37,19 +42,9 @@
     
     
     [_textView setText: [NSString stringWithFormat:@"%@", selectedTomb.epitaph,nil]];
-}
-
--(NSString*)calculateAge
-{
-    if ([selectedTomb.birthDate isEqualToString:@"n/a"]) {
-        return @"n/a";
-    }
-    else
-    {
-        int age = 0;
-        NSString *ageString = [NSString stringWithFormat:@"%d", age];
-        return ageString;
-    }
+     
+    
+    
 }
 
 // DATE FORMAT
@@ -79,11 +74,7 @@
 }
 
 - (void)viewDidUnload {
-    [self setTextView:nil];
-    [self setBornTextField:nil];
-    [self setDiedTextField:nil];
-    [self setAgeTextField:nil];
-    [self setSectionTextField:nil];
-    [super viewDidUnload];
+    [self setScrollView:nil];
+       [super viewDidUnload];
 }
 @end

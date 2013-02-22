@@ -13,7 +13,6 @@
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
 		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
 		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
-		3007287F16D66213004EE516 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3007287E16D66213004EE516 /* DetailView.m */; };
 		30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30082E03164C8904007AAA80 /* DetailsViewController.m */; };
 		305C1CC916517987008F0496 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CC816517987008F0496 /* Tomb.m */; };
 		305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD016517AB4008F0496 /* TombDataManager.m */; };
@@ -242,8 +241,6 @@
 		07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Retina.png; path = ../LaunchImage_Retina.png; sourceTree = "<group>"; };
 		07F31BEC161AAC4D00CAB198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		07F31BEE161AAC6000CAB198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		3007287D16D66213004EE516 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
-		3007287E16D66213004EE516 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		30082E02164C8904007AAA80 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../DetailsViewController.h; sourceTree = "<group>"; };
 		30082E03164C8904007AAA80 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../DetailsViewController.m; sourceTree = "<group>"; };
 		305C1CC716517987008F0496 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
@@ -755,9 +752,9 @@
 		3FA7D3541610B64700F132F3 /* CemeteryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				3F3D444616B9CA7C00A760DC /* HomeViewController.m */,
 				3F3D444816B9CA8700A760DC /* HomeViewController.h */,
-				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				305C1CD216517F0B008F0496 /* SearchViewController.h */,
 				305C1CD316517F19008F0496 /* SearchViewController.m */,
 				96123F0C16695CC70091FD28 /* JSONHandler.h */,
@@ -766,8 +763,6 @@
 				305C1CD016517AB4008F0496 /* TombDataManager.m */,
 				30082E02164C8904007AAA80 /* DetailsViewController.h */,
 				30082E03164C8904007AAA80 /* DetailsViewController.m */,
-				3007287D16D66213004EE516 /* DetailView.h */,
-				3007287E16D66213004EE516 /* DetailView.m */,
 				305C1CC716517987008F0496 /* Tomb.h */,
 				305C1CC816517987008F0496 /* Tomb.m */,
 				3F76C5DA1610D52F0027640E /* MapViewController.h */,
@@ -1076,7 +1071,6 @@
 				96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */,
 				3F3D444716B9CA7C00A760DC /* HomeViewController.m in Sources */,
 				07C8E4A616CC3A37000CC940 /* AboutUsViewController.m in Sources */,
-				3007287F16D66213004EE516 /* DetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
