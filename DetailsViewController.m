@@ -14,8 +14,11 @@
 
 @implementation DetailsViewController
 
-@synthesize selectedIndex, selectedTomb;
-@synthesize textView = _textView;
+@synthesize selectedTomb, selectedIndex;
+@synthesize scrollView = _scrollView;
+@synthesize textView = _textView,
+bornTextField = _bornTextField,
+diedTextField = _diedTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,11 +33,34 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [_textView setText: [NSString stringWithFormat:@"\nID: %@\nSection: %@\nDate of Birth: %@\nDate of Death: %@\nPrefix: %@\nSuffix: %@\nAge: %@\nMonths: %@\nNotes: %@\nSexton's Notes: %@\n\nEpitaph: %@\nReference: %@\nTour: %@\nInternet Link: %@\nSandstone: %@\nCondition: %@\nVeteran  \n\n%@", selectedTomb.tombId, selectedTomb.section, selectedTomb.birthDate, selectedTomb.deathDate, selectedTomb.prefix, selectedTomb.suffix, selectedTomb.years, selectedTomb.months, selectedTomb.notes, selectedTomb.sextonsNotes, selectedTomb.epitaph, selectedTomb.ref, selectedTomb.tour, selectedTomb.internet, selectedTomb.sandstone, selectedTomb.condition, selectedTomb.veteran ,nil]];
+        
+    [self.scrollView setContentSize:CGSizeMake(320, 455)];
+    [_bornTextField setText:selectedTomb.birthDate];
+    [_diedTextField setText:selectedTomb.deathDate];
+    [_sectionTextField setText:selectedTomb.section];
+    
+    if ([selectedTomb.years isEqualToString:@"0"])
+    {
+        [_ageTextField setText:[NSString stringWithFormat:@"%@ months", selectedTomb.months]];
+    }
+    else if ([selectedTomb.birthDate isEqualToString:@"n/a"])
+    {
+        [_ageTextField setText:@"n/a"];
+    }
+    else if ([selectedTomb.birthDate isEqualToString:@" "])
+    {
+        [_ageTextField setText:@"n/a"];
+    }
+    else
+        [_ageTextField setText:[NSString stringWithFormat:@"%@ years", selectedTomb.years]];
+    
+    [_textView setText: [NSString stringWithFormat:@"%@", selectedTomb.epitaph,nil]];
+    [self.scrollView flashScrollIndicators];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // set the tiitle of the navigation bar
     if([selectedTomb.middleName isEqual:nil] || [selectedTomb.middleName isEqual:NULL] || [selectedTomb.middleName isEqualToString:@""])
     {
         if([selectedTomb.middleName length] == 1)
@@ -57,7 +83,7 @@
 }
 
 - (void)viewDidUnload {
-    [self setTextView:nil];
-    [super viewDidUnload];
+    [self setScrollView:nil];
+       [super viewDidUnload];
 }
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9ko-DT-48R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9ko-DT-48R">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,11 +9,11 @@
             <objects>
                 <viewController id="2" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pH7-wH-Thu">
-                                <rect key="frame" x="0.0" y="44" width="320" height="260"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="348"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                             <pageControl userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Gec-sD-Af2">
@@ -31,7 +31,7 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_quote1.png" id="5Sd-YK-rKW">
-                                <rect key="frame" x="0.0" y="305" width="320" height="106"/>
+                                <rect key="frame" x="0.0" y="305" width="320" height="194"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -45,14 +45,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2043" y="-893"/>
+            <point key="canvasLocation" x="-2043" y="-993"/>
         </scene>
         <!--Map View Controller - Map-->
         <scene sceneID="NsH-1o-vXd">
             <objects>
                 <viewController id="UUQ-qR-QNa" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ejm-Vp-mlf">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     </view>
@@ -60,14 +60,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQH-4W-wuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2043" y="-275"/>
+            <point key="canvasLocation" x="-2043" y="-347"/>
         </scene>
         <!--Search View Controller - Search - All-->
         <scene sceneID="BOy-Qg-dst">
             <objects>
                 <viewController id="nyC-6H-BzA" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N06-lP-bYS">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" barStyle="blackOpaque" placeholder="Search anything" id="qDA-wl-FTV">
@@ -84,7 +84,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="80S-Wa-S7Q">
-                                <rect key="frame" x="0.0" y="44" width="320" height="323"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -126,6 +126,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search - All" id="5LC-i9-vqX">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="oHp-4f-JjJ"/>
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="DfS-Sw-LyO">
                             <connections>
                                 <action selector="filterButton:" destination="nyC-6H-BzA" id="uMK-I9-XDw"/>
@@ -144,14 +145,14 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-1303" y="324"/>
+            <point key="canvasLocation" x="-1303" y="172"/>
         </scene>
         <!--Table View Controller - More-->
         <scene sceneID="GQ5-hN-qss">
             <objects>
                 <tableViewController id="izR-cz-eg3" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oD1-Jm-sfQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <sections>
@@ -196,7 +197,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="nOK-GN-cmi" kind="push" id="2mX-Dj-20O"/>
+                                            <segue destination="gIO-A0-mUY" kind="push" id="1JP-lq-ZhD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="lVl-YD-9bq" style="IBUITableViewCellStyleDefault" id="hsL-OD-WBD">
@@ -251,31 +252,87 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOt-mT-hOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2033" y="892"/>
+            <point key="canvasLocation" x="-2033" y="1040"/>
         </scene>
-        <!--Image Gallery View Controller - Image Gallery-->
-        <scene sceneID="MA0-0I-EyN">
+        <!--Image Gallery View Controller-->
+        <scene sceneID="OfS-hq-G47">
             <objects>
-                <viewController id="nOK-GN-cmi" customClass="ImageGalleryViewController" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="PZc-9l-wui">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                    </imageView>
-                    <navigationItem key="navigationItem" title="Image Gallery" id="Yfd-kz-iUy"/>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="gIO-A0-mUY" customClass="ImageGalleryViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ShR-HS-YXb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g1Y-Oj-gbf">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellID" id="DzH-j9-hVJ" customClass="Cell">
+                                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Vge-wn-qZ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="77" height="77"/>
+                                <connections>
+                                    <outlet property="image" destination="Vge-wn-qZ0" id="5es-Ow-tp3"/>
+                                    <segue destination="j8j-FN-y8W" kind="push" identifier="showImageDetail" id="tS4-2w-jp4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gIO-A0-mUY" id="hQi-iu-Fti"/>
+                            <outlet property="delegate" destination="gIO-A0-mUY" id="kT6-4u-QiD"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="3ax-cm-zh9"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkF-YA-9Qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1303" y="1560"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="YDt-cF-nTD">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailView" id="j8j-FN-y8W" customClass="ImageDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYh-2T-Mht">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="p6V-SF-H8L">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6rm-1Z-MMD"/>
                     <connections>
-                        <outlet property="imageView" destination="PZc-9l-wui" id="0CN-GW-lab"/>
+                        <outlet property="imageView" destination="p6V-SF-H8L" id="m05-li-tnm"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dl-0e-XvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9m-Wa-Or3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1297" y="1460"/>
+            <point key="canvasLocation" x="-703" y="1560"/>
         </scene>
         <!--View Controller - Contact Us-->
         <scene sceneID="Hjn-7h-xDP">
             <objects>
                 <viewController id="CgK-Mk-aWf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQJ-jR-KXH">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" id="Srh-TC-Jbp">
@@ -381,44 +438,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqL-1G-nER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1299" y="2027"/>
+            <point key="canvasLocation" x="-1283" y="2253"/>
         </scene>
         <!--About Us View Controller - About Us-->
         <scene sceneID="Bah-eG-m5k">
             <objects>
                 <viewController id="6ez-Wf-NMc" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sGQ-7F-DqP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" id="mm4-GY-GQs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.96643597150000005" green="0.96643597150000005" blue="0.96643597150000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
-                                    <fragment content=" THE BURIAL GROUNDS of Elizabeth  ">
+                                    <fragment content=" THE BURIAL GROUNDS  of Elizabeth">
                                         <attributes>
                                             <font key="NSFont" size="18" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">With over 2000 individuals interred, The First Presbyterian Church Burial Grounds holds the remains of some of the most influential men and women in Elizabeth, New Jersey, and United States history. 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" headerLevel="2"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
+With over 2000 individuals interred, The First Presbyterian Church Burial Grounds holds the remains of some of the most influential men and women in Elizabeth, New Jersey, and United States history. 
+
 With some markers dating back to the late 17th century, and spanning to the late 19th century, the grounds contain: leaders of the revolution, soldiers and officers who fought in the Revolutionary War, War of 1812, and Civil War, pioneers in education and state and local heroes.
 
 The First Presbyterian Burial Grounds are a perfect place to learn about the history of our city and state through the individuals who helped build, expand and defend them.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -431,41 +482,113 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6d-eT-rLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303" y="2616"/>
+            <point key="canvasLocation" x="-1295" y="2974"/>
         </scene>
         <!--Details View Controller - DetailsViewController-->
         <scene sceneID="s6f-rB-PMi">
             <objects>
                 <viewController title="DetailsViewController" id="TPl-yk-6DR" customClass="DetailsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VVV-vv-jqd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="cIR-Mo-ONq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text View" textAlignment="center" id="E1L-14-izY">
-                                <rect key="frame" x="0.0" y="0.0" width="321" height="367"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="CU9-qt-CIN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="BORN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bfZ-xH-3dM">
+                                        <rect key="frame" x="20" y="20" width="125" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DIED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9p-EX-vWg">
+                                        <rect key="frame" x="175" y="20" width="125" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6oL-Uf-Qn0">
+                                        <rect key="frame" x="20" y="81" width="125" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SECTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kmj-k3-Og6">
+                                        <rect key="frame" x="175" y="81" width="125" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EPITAPH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JKK-hm-Pou">
+                                        <rect key="frame" x="98" y="149" width="125" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="ZiR-bX-NdZ">
+                                        <rect key="frame" x="20" y="43" width="125" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="B9M-0k-fA4">
+                                        <rect key="frame" x="175" y="43" width="125" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="rWJ-Rv-cDb">
+                                        <rect key="frame" x="20" y="104" width="125" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="YE9-b8-Ou5">
+                                        <rect key="frame" x="175" y="104" width="125" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="81G-4n-fcE">
+                                        <rect key="frame" x="20" y="181" width="280" height="254"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z8g-eW-bWl"/>
+                    <navigationItem key="navigationItem" id="z8g-eW-bWl">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LqN-ng-EHr"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="textView" destination="E1L-14-izY" id="Abr-H4-ebW"/>
+                        <outlet property="ageTextField" destination="rWJ-Rv-cDb" id="K3C-JG-7jd"/>
+                        <outlet property="bornTextField" destination="ZiR-bX-NdZ" id="cO6-8V-Kqy"/>
+                        <outlet property="diedTextField" destination="B9M-0k-fA4" id="ces-QG-TJN"/>
+                        <outlet property="scrollView" destination="CU9-qt-CIN" id="e6S-5L-142"/>
+                        <outlet property="sectionTextField" destination="YE9-b8-Ou5" id="h4L-c4-aPF"/>
+                        <outlet property="textView" destination="81G-4n-fcE" id="wsg-nz-b1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8m-PQ-Xdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-773" y="324"/>
+            <point key="canvasLocation" x="-693" y="172"/>
         </scene>
         <!--View Controller - Plan Your Visit-->
         <scene sceneID="RjR-dz-WJw">
             <objects>
                 <viewController id="4am-XH-7P9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7JI-W8-ggc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hours of Operation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fr5-av-qv4">
@@ -568,7 +691,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sph-jh-def" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2503" y="892"/>
+            <point key="canvasLocation" x="-2471" y="1040"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tl6-D9-ywf">
@@ -609,7 +732,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pM-Sc-ulk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2033" y="314"/>
+            <point key="canvasLocation" x="-2025" y="354"/>
         </scene>
     </scenes>
     <resources>
@@ -624,9 +747,20 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
             </relationships>
         </class>
+        <class className="Cell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Cell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
         <class className="DetailsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailsViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="ageTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="bornTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="diedTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sectionTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -638,11 +772,14 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <relationship kind="outlet" name="scrollView2" candidateClass="UIScrollView"/>
             </relationships>
         </class>
-        <class className="ImageGalleryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageGalleryViewController.h"/>
+        <class className="ImageDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="ImageGalleryViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageGalleryViewController.h"/>
         </class>
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
@@ -655,10 +792,22 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <relationship kind="outlet" name="searchTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
