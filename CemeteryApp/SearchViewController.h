@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TombDataManager.h"
+
 // comment
 @interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate> // FilterViewDelegate
 {
@@ -19,6 +21,10 @@
 @property (strong, nonatomic) UIButton *filterButton;
 @property (strong, nonatomic) UIActionSheet *filterActionSheet;
 @property (strong, nonatomic) NSString *filterString;
+@property (strong, nonatomic) TombDataManager *tombDM;
 
 -(IBAction)filterButton:(id)sender;
++(SearchViewController *)instance;
+-(void)refresh;
+
 @end

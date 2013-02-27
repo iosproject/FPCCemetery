@@ -11,9 +11,7 @@
 
 @interface HomeViewController ()
 @property (nonatomic) int w;
-
 @property (nonatomic, strong) NSMutableArray *images;
-
 @end
 
 
@@ -31,22 +29,28 @@
 {
     [super viewDidLoad];
     
-    databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait"
-                                                        message:@"Checking server for updates..."
-                                                       delegate:self
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:nil, nil];
-    loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    //loading.frame = CGRectMake(150, 150, 16, 16);
-    loading.center = CGPointMake(139.5, 90.5);
-    [databaseCheckAlertView addSubview:loading];
-    [loading startAnimating];
-    [databaseCheckAlertView show];
-    [self updateLocalJSONFile];
-	// Do any additional setup after loading the view, typically from a nib.
-     //JSONHandler *db = [[JSONHandler alloc] init];
- 
-    [self setupSlideShow];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //[self doSomeLongTask]; // 1
+        //databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait"
+          //                                                  message:@"Checking server for updates..."
+            //                                               delegate:self
+              //                                    cancelButtonTitle:nil
+                //                                  otherButtonTitles:nil, nil];
+        loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        loading.center = CGPointMake(139.5, 90.5);
+        [databaseCheckAlertView addSubview:loading];
+        [loading startAnimating];
+        [databaseCheckAlertView show];
+        [self updateLocalJSONFile];
+        
+       
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //[self longTaskDidFinish]; // 2
+            //[self.view setNeedsDisplay];
+        });
+    });
+
+     [self setupSlideShow];
 }
 
 
