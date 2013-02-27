@@ -39,22 +39,7 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
                   @"13_full.jpg",
                   @"14_full.jpg",
                   @"15_full.jpg",
-                  @"16_full.jpg",
-                  @"17_full.jpg",
-                  @"18_full.jpg",
-                  @"19_full.jpg",
-                  @"20_full.jpg",
-                  @"21_full.jpg",
-                  @"22_full.jpg",
-                  @"23_full.jpg",
-                  @"24_full.jpg",
-                  @"25_full.jpg",
-                  @"26_full.jpg",
-                  @"27_full.jpg",
-                  @"28_full.jpg",
-                  @"29_full.jpg",
-                  @"30_full.jpg",
-                  @"31_full.jpg"] mutableCopy];
+                  @"16_full.jpg"] mutableCopy];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section;
