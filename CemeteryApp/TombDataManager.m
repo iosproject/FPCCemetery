@@ -22,20 +22,20 @@
     self = [super init];
     if (self)
     {
-        
+        /*
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             // 1
             [self buildTombObjects];
-            NSLog(@"in seperate thread");
+            //NSLog(@"in seperate thread");
             dispatch_async(dispatch_get_main_queue(), ^{
                // 2
                 SearchViewController *svc = [SearchViewController instance];
                 [svc refresh];
-                NSLog(@"in main thread");
+                //NSLog(@"in main thread");
             });
         });
-        
-         //[self buildTombObjects];
+        */
+         [self buildTombObjects];
         
         
     }

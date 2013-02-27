@@ -9,8 +9,11 @@
 #import "HomeViewController.h"
 #import "JSONHandler.h"
 
+#define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
+#define LOCAL_FILE_NAME @"result.json"
+
 @interface HomeViewController ()
-@property (nonatomic) int w;
+@property (nonatomic) int width;
 @property (nonatomic, strong) NSMutableArray *images;
 @end
 
@@ -20,7 +23,7 @@
 @synthesize scrollView = _scrollView, scrollView2 = _scrollView2;
 @synthesize pageControl = _pageControl;
 @synthesize imgViews = _imgViews;
-@synthesize w;
+@synthesize width;
 @synthesize timer = _timer;
 @synthesize databaseCheckAlertView;
 @synthesize loading;
@@ -29,8 +32,8 @@
 {
     [super viewDidLoad];
     
+    // begin updating local JSON file on seperate thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //[self doSomeLongTask]; // 1
         //databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait"
           //                                                  message:@"Checking server for updates..."
             //                                               delegate:self
@@ -43,16 +46,14 @@
         [databaseCheckAlertView show];
         [self updateLocalJSONFile];
         
-       
+        // return to main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            //[self longTaskDidFinish]; // 2
-            //[self.view setNeedsDisplay];
+            // do nothing after updating local JSON file
         });
     });
 
      [self setupSlideShow];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -60,11 +61,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-#define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
-#define LOCAL_FILE_NAME @"result.json"
-
 - (void)updateLocalJSONFile
 {
+    //NSLog(@"updating local json file");
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [pathArray objectAtIndex:0];
     NSString *localFile = [documentsDir stringByAppendingPathComponent:LOCAL_FILE_NAME];
@@ -107,9 +106,10 @@
     }
     [loading stopAnimating];
     [databaseCheckAlertView dismissWithClickedButtonIndex:-1 animated:YES];
-    
+    //NSLog(@"done updating local json");
 }
 
+// setup the home tab slideshow
 - (void)setupSlideShow
 {
     UIImage *img1 = [UIImage imageNamed:@"ssimage01.png"];
@@ -125,8 +125,6 @@
     
     _imgViews = [NSArray arrayWithObjects:imageView1, imageView2, imageView3, imageView4, nil];
     
-    
-    //UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView2 = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView2.pagingEnabled = YES;
     self.scrollView2.bounces = NO;
@@ -137,6 +135,7 @@
     
     
     [self.scrollView addSubview: self.scrollView2];
+    
     CGRect cRect = imageView1.bounds;
     UIImageView *cView;
     for (int i = 0; i < _imgViews.count; i++)
@@ -149,30 +148,23 @@
     self.scrollView2.contentSize = CGSizeMake(cRect.origin.x, self.scrollView2.bounds.size.height);
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
-
 }
-
 
 - (void) onTimer
 {
-    // Updates the variable w, adding 320
-    if (w >= 320*3) {
-        w=0;
+    // Updates the variable width, adding 320
+    if (width >= 320*3) {
+        width = 0;
     }
     else
-        w += 320;
+        width += 320;
     
     //This makes the scrollView scroll to the desired position
-    [self.scrollView2 setContentOffset:CGPointMake(w, 0) animated:YES];
+    [self.scrollView2 setContentOffset:CGPointMake(width, 0) animated:YES];
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+-(void)resetTimer:(id)sender
 {
-    //NSLog(@"did end decelerating");
-    //scrollView.contentOffset.x = CGPointMake(scrollView.bounds.size.width, 0);
-}
-
--(void)resetTimer:(id)sender {
     [_timer invalidate];
     _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
 }
@@ -183,11 +175,8 @@
     float fractionalPage = scrollView.contentOffset.x / pageWidth;
     NSInteger page = lround(fractionalPage);
     self.pageControl.currentPage = page;
-    w = page*320;
+    width = page*320;
     [self resetTimer:self.timer];
 }
-
-
-
 
 @end

@@ -22,7 +22,6 @@
 @synthesize filterButton = _filterButton;
 @synthesize filterActionSheet = _filterActionSheet;
 @synthesize filterString = _filterString;
-@synthesize tombDM = _tombDM;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

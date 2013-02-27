@@ -21,7 +21,6 @@
 @property (strong, nonatomic) UIButton *filterButton;
 @property (strong, nonatomic) UIActionSheet *filterActionSheet;
 @property (strong, nonatomic) NSString *filterString;
-@property (strong, nonatomic) TombDataManager *tombDM;
 
 -(IBAction)filterButton:(id)sender;
 +(SearchViewController *)instance;
