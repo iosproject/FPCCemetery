@@ -14,8 +14,6 @@
 		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
 		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
 		30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30082E03164C8904007AAA80 /* DetailsViewController.m */; };
-		3024B2AE16D7FEA9007FDB0B /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3024B2AB16D7FEA8007FDB0B /* Cell.m */; };
-		3024B2AF16D7FEA9007FDB0B /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3024B2AD16D7FEA8007FDB0B /* CustomCellBackground.m */; };
 		3024B2F216D80048007FDB0B /* 0_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3024B2B116D80047007FDB0B /* 0_full.JPG */; };
 		3024B2F316D80048007FDB0B /* 10_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3024B2B216D80047007FDB0B /* 10_full.JPG */; };
 		3024B2F416D80048007FDB0B /* 11_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3024B2B316D80047007FDB0B /* 11_full.JPG */; };
@@ -292,6 +290,8 @@
 		3FA7D3591610B64700F132F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D3571610B64700F132F3 /* InfoPlist.strings */; };
 		3FA7D35B1610B64800F132F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D35A1610B64800F132F3 /* main.m */; };
 		3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */; };
+		3FDDE63E16DBD50200F5F888 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE63B16DBD50200F5F888 /* Cell.m */; };
+		3FDDE63F16DBD50200F5F888 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */; };
 		3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */; };
 		3FFB6A9016790E6500FCC969 /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB6A8F16790E6500FCC969 /* result.json */; };
 		96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96123F0D16695CC70091FD28 /* JSONHandler.m */; };
@@ -310,10 +310,6 @@
 		07F31BEE161AAC6000CAB198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		30082E02164C8904007AAA80 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../DetailsViewController.h; sourceTree = "<group>"; };
 		30082E03164C8904007AAA80 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../DetailsViewController.m; sourceTree = "<group>"; };
-		3024B2AA16D7FEA8007FDB0B /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cell.h; path = "../../../../Downloads/CollectionView-Simple/CollectionView/Cell.h"; sourceTree = "<group>"; };
-		3024B2AB16D7FEA8007FDB0B /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cell.m; path = "../../../../Downloads/CollectionView-Simple/CollectionView/Cell.m"; sourceTree = "<group>"; };
-		3024B2AC16D7FEA8007FDB0B /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCellBackground.h; path = "../../../../Downloads/CollectionView-Simple/CollectionView/CustomCellBackground.h"; sourceTree = "<group>"; };
-		3024B2AD16D7FEA8007FDB0B /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCellBackground.m; path = "../../../../Downloads/CollectionView-Simple/CollectionView/CustomCellBackground.m"; sourceTree = "<group>"; };
 		3024B2B116D80047007FDB0B /* 0_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_full.JPG; sourceTree = "<group>"; };
 		3024B2B216D80047007FDB0B /* 10_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_full.JPG; sourceTree = "<group>"; };
 		3024B2B316D80047007FDB0B /* 11_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_full.JPG; sourceTree = "<group>"; };
@@ -604,6 +600,10 @@
 		3FA7D35A1610B64800F132F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FA7D35C1610B64800F132F3 /* CemeteryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CemeteryApp-Prefix.pch"; sourceTree = "<group>"; };
 		3FA7D3611610B64800F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3FDDE63A16DBD50200F5F888 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		3FDDE63B16DBD50200F5F888 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
+		3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
 		3FFB6A8F16790E6500FCC969 /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
@@ -969,6 +969,10 @@
 		3FA7D3541610B64700F132F3 /* CemeteryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FDDE63A16DBD50200F5F888 /* Cell.h */,
+				3FDDE63B16DBD50200F5F888 /* Cell.m */,
+				3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */,
+				3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */,
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				3F3D444816B9CA8700A760DC /* HomeViewController.h */,
 				3F3D444616B9CA7C00A760DC /* HomeViewController.m */,
@@ -990,10 +994,6 @@
 				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
 				3024B33216D80578007FDB0B /* ImageDetailViewController.h */,
 				3024B33316D80578007FDB0B /* ImageDetailViewController.m */,
-				3024B2AA16D7FEA8007FDB0B /* Cell.h */,
-				3024B2AB16D7FEA8007FDB0B /* Cell.m */,
-				3024B2AC16D7FEA8007FDB0B /* CustomCellBackground.h */,
-				3024B2AD16D7FEA8007FDB0B /* CustomCellBackground.m */,
 				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
 				3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */,
 				07C8E49D16CC1B88000CC940 /* AboutUsViewController.h */,
@@ -1358,9 +1358,9 @@
 				96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */,
 				3F3D444716B9CA7C00A760DC /* HomeViewController.m in Sources */,
 				07C8E4A616CC3A37000CC940 /* AboutUsViewController.m in Sources */,
-				3024B2AE16D7FEA9007FDB0B /* Cell.m in Sources */,
-				3024B2AF16D7FEA9007FDB0B /* CustomCellBackground.m in Sources */,
 				3024B33416D80578007FDB0B /* ImageDetailViewController.m in Sources */,
+				3FDDE63E16DBD50200F5F888 /* Cell.m in Sources */,
+				3FDDE63F16DBD50200F5F888 /* CustomCellBackground.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

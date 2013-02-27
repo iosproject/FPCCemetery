@@ -11,3 +11,5 @@
 @interface ImageGalleryViewController : UICollectionViewController
 @property (strong, nonatomic) NSMutableArray *allImages;
 @end
+
+
