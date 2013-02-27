@@ -9,14 +9,8 @@
 #import "SearchViewController.h"
 #import "DetailsViewController.h"
 #import "Tomb.h"
-#import "TombDataManager.h"
 
 @interface SearchViewController ()
-//{
-//    NSMutableArray *jsonData;
-//    NSDictionary *json;
-//    NSArray *tombs;
-//}
 
 @end
 
@@ -24,10 +18,10 @@
 
 @synthesize searchTableView = _searchTableView;
 @synthesize searchBar = _searchBar;
-@synthesize searchString;
-@synthesize filterButton;
-@synthesize filterActionSheet;
-@synthesize filterString;
+@synthesize searchString = _searchString;
+@synthesize filterButton = _filterButton;
+@synthesize filterActionSheet = _filterActionSheet;
+@synthesize filterString = _filterString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,11 +32,30 @@
     return self;
 }
 
+-(void)refresh
+{
+    [self.searchTableView reloadData];
+    [self.view setNeedsDisplay];
+}
+
++(SearchViewController *)instance
+{
+    static SearchViewController* instance = nil;
+    
+    if (!instance)
+    {
+        instance = [[SearchViewController alloc]init];
+    }
+    return instance;
+}
+
+
 - (void)viewDidLoad
 {
+    //NSLog(@"view did load");
     [super viewDidLoad];
     self.filterString = @"All";
-    //self.navigationItem.backBarButtonItem.title = @"Back";
+    //self.tombDM = [[TombDataManager alloc] init];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -53,7 +66,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //NSLog(@"number of rows in secton");
-    return [[[TombDataManager instance]filterTombs:searchString withFilter:filterString]count];
+    return [[[TombDataManager instance]filterTombs:_searchString withFilter:_filterString]count];
+    //return [[self.tombDM filterTombs:searchString withFilter:filterString]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,7 +80,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    Tomb *tomb = [[[TombDataManager instance]filterTombs:searchString withFilter:filterString]objectAtIndex:indexPath.row];
+    Tomb *tomb = [[[TombDataManager instance]filterTombs:_searchString withFilter:_filterString]objectAtIndex:indexPath.row];
     if([tomb.middleName isEqual:nil] || [tomb.middleName isEqual:NULL] || [tomb.middleName isEqualToString:@""])
     {
         cell.textLabel.text = [NSString stringWithFormat: @"%@ %@", tomb.firstName, tomb.lastName, nil];
@@ -110,13 +124,13 @@
     {
         DetailsViewController *vc = [segue destinationViewController];
         NSInteger selectedIndex = [[self.searchTableView indexPathForSelectedRow] row];
-        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:searchString withFilter:filterString]objectAtIndex:selectedIndex]];
+        [vc setSelectedTomb:[[[TombDataManager instance]filterTombs:_searchString withFilter:_filterString]objectAtIndex:selectedIndex]];
     }
 }
 
 - (void)updateSearchString:(NSString*)aSearchString
 {
-    searchString = [[NSString alloc]initWithString:aSearchString];
+    _searchString = [[NSString alloc]initWithString:aSearchString];
     [self.searchTableView reloadData];
 }
 
@@ -163,7 +177,7 @@
 {
     [self.searchBar resignFirstResponder];
     
-    filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Search Filter"
+    _filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Search Filter"
                                                     delegate:self
                                            cancelButtonTitle:@"Cancel"
                                       destructiveButtonTitle:nil

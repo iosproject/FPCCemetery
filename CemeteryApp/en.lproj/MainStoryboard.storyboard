@@ -755,7 +755,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         </scene>
     </scenes>
     <resources>
-        <image name="globe_24.png" width="24" height="24"/>
+        <image name="globe_24.png" width="16" height="16"/>
         <image name="home_quote1.png" width="320" height="130"/>
         <image name="icon_home.png" width="30" height="30"/>
     </resources>

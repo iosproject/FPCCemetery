@@ -9,14 +9,12 @@
 #import "TombDataManager.h"
 #import "Tomb.h"
 #import "JSONHandler.h"
-@implementation TombDataManager
-{
+#import "SearchViewController.h"
 
-    
-}
+
+@implementation TombDataManager
 
 @synthesize tombs;
-//@synthesize jsonArray;
 @synthesize didGetCols;
 
 - (id)init
@@ -24,13 +22,27 @@
     self = [super init];
     if (self)
     {
-        [self loadTombs];
+        /*
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            // 1
+            [self buildTombObjects];
+            //NSLog(@"in seperate thread");
+            dispatch_async(dispatch_get_main_queue(), ^{
+               // 2
+                SearchViewController *svc = [SearchViewController instance];
+                [svc refresh];
+                //NSLog(@"in main thread");
+            });
+        });
+        */
+         [self buildTombObjects];
+        
         
     }
     return self;
 }
 
--(void)loadTombs
+-(void)buildTombObjects
 {
     JSONHandler *db = [[JSONHandler alloc] init];
     NSDictionary *dict = [[NSDictionary alloc] init];
@@ -83,6 +95,7 @@
     return instance;
 }
 
+// filter the tombs according to user selection
 -(NSMutableArray *)filterTombs:(NSString *)search withFilter:(NSString *)filter
  {
      if (search && [search length] > 0)
