@@ -79,6 +79,9 @@
 		3024B33016D80048007FDB0B /* 8.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3024B2F016D80048007FDB0B /* 8.JPG */; };
 		3024B33116D80048007FDB0B /* 9.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3024B2F116D80048007FDB0B /* 9.JPG */; };
 		3024B33416D80578007FDB0B /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3024B33316D80578007FDB0B /* ImageDetailViewController.m */; };
+		3030A72516DE8C3600ADD02F /* globe_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72216DE8C3600ADD02F /* globe_24.png */; };
+		3030A72616DE8C3600ADD02F /* globe_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72316DE8C3600ADD02F /* globe_48.png */; };
+		3030A72716DE8C3600ADD02F /* globe_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72416DE8C3600ADD02F /* globe_64.png */; };
 		305C1CC916517987008F0496 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CC816517987008F0496 /* Tomb.m */; };
 		305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD016517AB4008F0496 /* TombDataManager.m */; };
 		305C1CD416517F19008F0496 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD316517F19008F0496 /* SearchViewController.m */; };
@@ -363,6 +366,9 @@
 		3024B2F116D80048007FDB0B /* 9.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.JPG; sourceTree = "<group>"; };
 		3024B33216D80578007FDB0B /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		3024B33316D80578007FDB0B /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
+		3030A72216DE8C3600ADD02F /* globe_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_24.png; sourceTree = "<group>"; };
+		3030A72316DE8C3600ADD02F /* globe_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_48.png; sourceTree = "<group>"; };
+		3030A72416DE8C3600ADD02F /* globe_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_64.png; sourceTree = "<group>"; };
 		305C1CC716517987008F0496 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
 		305C1CC816517987008F0496 /* Tomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomb.m; sourceTree = "<group>"; };
 		305C1CCF16517AB4008F0496 /* TombDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TombDataManager.h; sourceTree = "<group>"; };
@@ -721,6 +727,9 @@
 				3F1FDBBB16137870008C52DE /* magnifier_24.png */,
 				3F1FDBBC16137870008C52DE /* magnifier_48.png */,
 				3F1FDBBD16137870008C52DE /* magnifier_64.png */,
+				3030A72216DE8C3600ADD02F /* globe_24.png */,
+				3030A72316DE8C3600ADD02F /* globe_48.png */,
+				3030A72416DE8C3600ADD02F /* globe_64.png */,
 			);
 			path = "TWG Retina Icons";
 			sourceTree = "<group>";
@@ -1284,6 +1293,9 @@
 				3024B32F16D80048007FDB0B /* 7.JPG in Resources */,
 				3024B33016D80048007FDB0B /* 8.JPG in Resources */,
 				3024B33116D80048007FDB0B /* 9.JPG in Resources */,
+				3030A72516DE8C3600ADD02F /* globe_24.png in Resources */,
+				3030A72616DE8C3600ADD02F /* globe_48.png in Resources */,
+				3030A72716DE8C3600ADD02F /* globe_64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
