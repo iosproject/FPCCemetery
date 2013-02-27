@@ -91,25 +91,12 @@
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB116137870008C52DE /* HomePic.JPG */; };
 		3F1FDD1B16137871008C52DE /* IMG_2089.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAB216137870008C52DE /* IMG_2089.JPG */; };
-		3F1FDD9516137871008C52DE /* clock_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDB2D16137870008C52DE /* clock_24.png */; };
-		3F1FDD9616137871008C52DE /* clock_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDB2E16137870008C52DE /* clock_48.png */; };
-		3F1FDD9716137871008C52DE /* clock_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDB2F16137870008C52DE /* clock_64.png */; };
-		3F1FDDFE16137871008C52DE /* globe_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDB9616137870008C52DE /* globe_24.png */; };
-		3F1FDDFF16137871008C52DE /* globe_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDB9716137870008C52DE /* globe_48.png */; };
-		3F1FDE0016137871008C52DE /* globe_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDB9816137870008C52DE /* globe_64.png */; };
 		3F1FDE0A16137871008C52DE /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA216137870008C52DE /* home_24.png */; };
 		3F1FDE0B16137871008C52DE /* home_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA316137870008C52DE /* home_48.png */; };
 		3F1FDE0C16137871008C52DE /* home_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA416137870008C52DE /* home_64.png */; };
-		3F1FDE0D16137871008C52DE /* How to change color.psd in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA516137870008C52DE /* How to change color.psd */; };
 		3F1FDE2316137871008C52DE /* magnifier_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBBB16137870008C52DE /* magnifier_24.png */; };
 		3F1FDE2416137871008C52DE /* magnifier_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBBC16137870008C52DE /* magnifier_48.png */; };
 		3F1FDE2516137871008C52DE /* magnifier_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBBD16137870008C52DE /* magnifier_64.png */; };
-		3F1FDE4D16137871008C52DE /* phone_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBE516137870008C52DE /* phone_24.png */; };
-		3F1FDE4E16137871008C52DE /* phone_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBE616137870008C52DE /* phone_48.png */; };
-		3F1FDE4F16137871008C52DE /* phone_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBE716137870008C52DE /* phone_64.png */; };
-		3F1FDE5016137871008C52DE /* photo_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBE816137870008C52DE /* photo_24.png */; };
-		3F1FDE5116137871008C52DE /* photo_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBE916137870008C52DE /* photo_48.png */; };
-		3F1FDE5216137871008C52DE /* photo_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBEA16137870008C52DE /* photo_64.png */; };
 		3F1FDED916137871008C52DE /* Home_Cem1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7216137871008C52DE /* Home_Cem1.jpeg */; };
 		3F1FDEDA16137871008C52DE /* how_to_change_colors.psd in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7316137871008C52DE /* how_to_change_colors.psd */; };
 		3F1FDEDB16137871008C52DE /* icon_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC7416137871008C52DE /* icon_add.png */; };
@@ -394,25 +381,12 @@
 		3F1FDAB016137870008C52DE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3F1FDAB116137870008C52DE /* HomePic.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HomePic.JPG; sourceTree = "<group>"; };
 		3F1FDAB216137870008C52DE /* IMG_2089.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2089.JPG; sourceTree = "<group>"; };
-		3F1FDB2D16137870008C52DE /* clock_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_24.png; sourceTree = "<group>"; };
-		3F1FDB2E16137870008C52DE /* clock_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_48.png; sourceTree = "<group>"; };
-		3F1FDB2F16137870008C52DE /* clock_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_64.png; sourceTree = "<group>"; };
-		3F1FDB9616137870008C52DE /* globe_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_24.png; sourceTree = "<group>"; };
-		3F1FDB9716137870008C52DE /* globe_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_48.png; sourceTree = "<group>"; };
-		3F1FDB9816137870008C52DE /* globe_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_64.png; sourceTree = "<group>"; };
 		3F1FDBA216137870008C52DE /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_24.png; sourceTree = "<group>"; };
 		3F1FDBA316137870008C52DE /* home_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_48.png; sourceTree = "<group>"; };
 		3F1FDBA416137870008C52DE /* home_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_64.png; sourceTree = "<group>"; };
-		3F1FDBA516137870008C52DE /* How to change color.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "How to change color.psd"; sourceTree = "<group>"; };
 		3F1FDBBB16137870008C52DE /* magnifier_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifier_24.png; sourceTree = "<group>"; };
 		3F1FDBBC16137870008C52DE /* magnifier_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifier_48.png; sourceTree = "<group>"; };
 		3F1FDBBD16137870008C52DE /* magnifier_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifier_64.png; sourceTree = "<group>"; };
-		3F1FDBE516137870008C52DE /* phone_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_24.png; sourceTree = "<group>"; };
-		3F1FDBE616137870008C52DE /* phone_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_48.png; sourceTree = "<group>"; };
-		3F1FDBE716137870008C52DE /* phone_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_64.png; sourceTree = "<group>"; };
-		3F1FDBE816137870008C52DE /* photo_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_24.png; sourceTree = "<group>"; };
-		3F1FDBE916137870008C52DE /* photo_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_48.png; sourceTree = "<group>"; };
-		3F1FDBEA16137870008C52DE /* photo_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_64.png; sourceTree = "<group>"; };
 		3F1FDC7116137871008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDC7216137871008C52DE /* Home_Cem1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Cem1.jpeg; sourceTree = "<group>"; };
 		3F1FDC7316137871008C52DE /* how_to_change_colors.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = how_to_change_colors.psd; sourceTree = "<group>"; };
@@ -741,25 +715,12 @@
 		3F1FDAB316137870008C52DE /* TWG Retina Icons */ = {
 			isa = PBXGroup;
 			children = (
-				3F1FDB2D16137870008C52DE /* clock_24.png */,
-				3F1FDB2E16137870008C52DE /* clock_48.png */,
-				3F1FDB2F16137870008C52DE /* clock_64.png */,
-				3F1FDB9616137870008C52DE /* globe_24.png */,
-				3F1FDB9716137870008C52DE /* globe_48.png */,
-				3F1FDB9816137870008C52DE /* globe_64.png */,
 				3F1FDBA216137870008C52DE /* home_24.png */,
 				3F1FDBA316137870008C52DE /* home_48.png */,
 				3F1FDBA416137870008C52DE /* home_64.png */,
-				3F1FDBA516137870008C52DE /* How to change color.psd */,
 				3F1FDBBB16137870008C52DE /* magnifier_24.png */,
 				3F1FDBBC16137870008C52DE /* magnifier_48.png */,
 				3F1FDBBD16137870008C52DE /* magnifier_64.png */,
-				3F1FDBE516137870008C52DE /* phone_24.png */,
-				3F1FDBE616137870008C52DE /* phone_48.png */,
-				3F1FDBE716137870008C52DE /* phone_64.png */,
-				3F1FDBE816137870008C52DE /* photo_24.png */,
-				3F1FDBE916137870008C52DE /* photo_48.png */,
-				3F1FDBEA16137870008C52DE /* photo_64.png */,
 			);
 			path = "TWG Retina Icons";
 			sourceTree = "<group>";
@@ -969,11 +930,11 @@
 		3FA7D3541610B64700F132F3 /* CemeteryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				3FDDE63A16DBD50200F5F888 /* Cell.h */,
 				3FDDE63B16DBD50200F5F888 /* Cell.m */,
 				3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */,
 				3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */,
-				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
 				3F3D444816B9CA8700A760DC /* HomeViewController.h */,
 				3F3D444616B9CA7C00A760DC /* HomeViewController.m */,
 				305C1CD216517F0B008F0496 /* SearchViewController.h */,
@@ -1073,25 +1034,12 @@
 				3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */,
 				3F1FDD1A16137871008C52DE /* HomePic.JPG in Resources */,
 				3F1FDD1B16137871008C52DE /* IMG_2089.JPG in Resources */,
-				3F1FDD9516137871008C52DE /* clock_24.png in Resources */,
-				3F1FDD9616137871008C52DE /* clock_48.png in Resources */,
-				3F1FDD9716137871008C52DE /* clock_64.png in Resources */,
-				3F1FDDFE16137871008C52DE /* globe_24.png in Resources */,
-				3F1FDDFF16137871008C52DE /* globe_48.png in Resources */,
-				3F1FDE0016137871008C52DE /* globe_64.png in Resources */,
 				3F1FDE0A16137871008C52DE /* home_24.png in Resources */,
 				3F1FDE0B16137871008C52DE /* home_48.png in Resources */,
 				3F1FDE0C16137871008C52DE /* home_64.png in Resources */,
-				3F1FDE0D16137871008C52DE /* How to change color.psd in Resources */,
 				3F1FDE2316137871008C52DE /* magnifier_24.png in Resources */,
 				3F1FDE2416137871008C52DE /* magnifier_48.png in Resources */,
 				3F1FDE2516137871008C52DE /* magnifier_64.png in Resources */,
-				3F1FDE4D16137871008C52DE /* phone_24.png in Resources */,
-				3F1FDE4E16137871008C52DE /* phone_48.png in Resources */,
-				3F1FDE4F16137871008C52DE /* phone_64.png in Resources */,
-				3F1FDE5016137871008C52DE /* photo_24.png in Resources */,
-				3F1FDE5116137871008C52DE /* photo_48.png in Resources */,
-				3F1FDE5216137871008C52DE /* photo_64.png in Resources */,
 				3F1FDED916137871008C52DE /* Home_Cem1.jpeg in Resources */,
 				3F1FDEDA16137871008C52DE /* how_to_change_colors.psd in Resources */,
 				3F1FDEDB16137871008C52DE /* icon_add.png in Resources */,
