@@ -59,7 +59,6 @@
 		3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F87BF331625D7D100938C3E /* CoreData.framework */; };
 		3F918A7A16CC4D5400D6745C /* home_quote1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F918A7916CC4D5400D6745C /* home_quote1.png */; };
 		3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45177161CA7E20093329D /* Default-568h@2x.png */; };
-		3FA4517A161CA8C80093329D /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45179161CA8C80093329D /* Map.png */; };
 		3FA7D34F1610B64700F132F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D34E1610B64700F132F3 /* UIKit.framework */; };
 		3FA7D3511610B64700F132F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D3501610B64700F132F3 /* Foundation.framework */; };
 		3FA7D3531610B64700F132F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D3521610B64700F132F3 /* CoreGraphics.framework */; };
@@ -156,7 +155,6 @@
 		3F87BF331625D7D100938C3E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3F918A7916CC4D5400D6745C /* home_quote1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_quote1.png; sourceTree = "<group>"; };
 		3FA45177161CA7E20093329D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		3FA45179161CA8C80093329D /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		3FA7D34A1610B64700F132F3 /* CemeteryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CemeteryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA7D34E1610B64700F132F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FA7D3501610B64700F132F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,7 +223,6 @@
 				309EBD9316488B2A00F7386B /* ssimage02.png */,
 				309EBD9416488B2A00F7386B /* ssimage03.png */,
 				309EBD9516488B2A00F7386B /* ssimage04.png */,
-				3FA45179161CA8C80093329D /* Map.png */,
 				3F8331B916540CB100A51624 /* Map2.png */,
 				3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */,
 				3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */,
@@ -433,7 +430,6 @@
 				07F31BED161AAC4D00CAB198 /* Default.png in Resources */,
 				07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */,
 				3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */,
-				3FA4517A161CA8C80093329D /* Map.png in Resources */,
 				309EBD9716488B2A00F7386B /* ssimage01.png in Resources */,
 				309EBD9816488B2A00F7386B /* ssimage02.png in Resources */,
 				309EBD9916488B2A00F7386B /* ssimage03.png in Resources */,
