@@ -69,7 +69,8 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
         
         // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
         /*NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];
-         NSString *pathToImage = [[NSBundle mainBundle] pathForResource:imageNameToLoad ofType:@"JPG"];
+         NSString *pathToImage = [[NSBundle mainBundle] pathForResource:imageNameToLoad ofType:@"J
+         G"];
          UIImage *image = [[UIImage alloc] initWithContentsOfFile:pathToImage];*/ // needs further investigation
         
         UIImage *image2 = [UIImage imageNamed:self.allImages[selectedIndexPath.row]];
