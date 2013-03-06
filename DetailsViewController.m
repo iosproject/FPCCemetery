@@ -7,6 +7,7 @@
 //
 
 #import "DetailsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface DetailsViewController ()
 
@@ -29,15 +30,24 @@ diedTextField = _diedTextField;
     return self;
 }
 
+- (void)designTextView
+{
+    _textView.layer.cornerRadius = 5;
+    _textView.clipsToBounds = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self designTextView];
         
     [self.scrollView setContentSize:CGSizeMake(320, 455)];
     [_bornTextField setText:selectedTomb.birthDate];
     [_diedTextField setText:selectedTomb.deathDate];
     [_sectionTextField setText:selectedTomb.section];
+    [_textView setText:selectedTomb.epitaph];
     
     if ([selectedTomb.years isEqualToString:@"0"])
     {
