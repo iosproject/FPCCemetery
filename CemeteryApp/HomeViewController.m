@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "JSONHandler.h"
 
 #define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
 #define LOCAL_FILE_NAME @"result.json"
@@ -25,15 +24,13 @@
 @synthesize imgViews = _imgViews;
 @synthesize width;
 @synthesize timer = _timer;
-@synthesize databaseCheckAlertView;
-@synthesize loading;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // begin updating local JSON file on seperate thread
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait"
           //                                                  message:@"Checking server for updates..."
             //                                               delegate:self
@@ -50,7 +47,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             // do nothing after updating local JSON file
         });
-    });
+    });*/
 
      [self setupSlideShow];
 }
@@ -61,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)updateLocalJSONFile
+/*- (void)updateLocalJSONFile
 {
     //NSLog(@"updating local json file");
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -107,7 +104,7 @@
     [loading stopAnimating];
     [databaseCheckAlertView dismissWithClickedButtonIndex:-1 animated:YES];
     //NSLog(@"done updating local json");
-}
+}*/
 
 // setup the home tab slideshow
 - (void)setupSlideShow

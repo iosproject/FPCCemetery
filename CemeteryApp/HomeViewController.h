@@ -16,6 +16,4 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, retain) NSArray *imgViews;
 @property (nonatomic, retain) NSTimer *timer;
-@property (strong, nonatomic) UIAlertView *databaseCheckAlertView;
-@property (strong, nonatomic) UIActivityIndicatorView *loading;
 @end

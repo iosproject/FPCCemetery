@@ -29,18 +29,18 @@
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
 		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
 		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
-		30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30082E03164C8904007AAA80 /* DetailsViewController.m */; };
 		3024B33416D80578007FDB0B /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3024B33316D80578007FDB0B /* ImageDetailViewController.m */; };
 		3030A72516DE8C3600ADD02F /* globe_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72216DE8C3600ADD02F /* globe_24.png */; };
 		3030A72616DE8C3600ADD02F /* globe_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72316DE8C3600ADD02F /* globe_48.png */; };
 		3030A72716DE8C3600ADD02F /* globe_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72416DE8C3600ADD02F /* globe_64.png */; };
-		305C1CC916517987008F0496 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CC816517987008F0496 /* Tomb.m */; };
-		305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD016517AB4008F0496 /* TombDataManager.m */; };
-		305C1CD416517F19008F0496 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 305C1CD316517F19008F0496 /* SearchViewController.m */; };
 		309EBD9716488B2A00F7386B /* ssimage01.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9216488B2A00F7386B /* ssimage01.png */; };
 		309EBD9816488B2A00F7386B /* ssimage02.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9316488B2A00F7386B /* ssimage02.png */; };
 		309EBD9916488B2A00F7386B /* ssimage03.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9416488B2A00F7386B /* ssimage03.png */; };
 		309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9516488B2A00F7386B /* ssimage04.png */; };
+		30D8FE2C16EA70AC00C2C1A1 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */; };
+		30D8FE2E16EA70AC00C2C1A1 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2916EA70AC00C2C1A1 /* Tomb.m */; };
+		30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */; };
+		30D8FE3116EA73FD00C2C1A1 /* new_tomb_database.json in Resources */ = {isa = PBXBuildFile; fileRef = 30D8FE3016EA73FD00C2C1A1 /* new_tomb_database.json */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDE0A16137871008C52DE /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA216137870008C52DE /* home_24.png */; };
@@ -67,8 +67,6 @@
 		3FDDE63E16DBD50200F5F888 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE63B16DBD50200F5F888 /* Cell.m */; };
 		3FDDE63F16DBD50200F5F888 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */; };
 		3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */; };
-		3FFB6A9016790E6500FCC969 /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB6A8F16790E6500FCC969 /* result.json */; };
-		96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96123F0D16695CC70091FD28 /* JSONHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,23 +96,22 @@
 		07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Retina.png; path = ../LaunchImage_Retina.png; sourceTree = "<group>"; };
 		07F31BEC161AAC4D00CAB198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		07F31BEE161AAC6000CAB198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		30082E02164C8904007AAA80 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = ../DetailsViewController.h; sourceTree = "<group>"; };
-		30082E03164C8904007AAA80 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = ../DetailsViewController.m; sourceTree = "<group>"; };
 		3024B33216D80578007FDB0B /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		3024B33316D80578007FDB0B /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 		3030A72216DE8C3600ADD02F /* globe_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe_24.png; path = "../TWG Retina Icons/globe_24.png"; sourceTree = "<group>"; };
 		3030A72316DE8C3600ADD02F /* globe_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe_48.png; path = "../TWG Retina Icons/globe_48.png"; sourceTree = "<group>"; };
 		3030A72416DE8C3600ADD02F /* globe_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe_64.png; path = "../TWG Retina Icons/globe_64.png"; sourceTree = "<group>"; };
-		305C1CC716517987008F0496 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
-		305C1CC816517987008F0496 /* Tomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomb.m; sourceTree = "<group>"; };
-		305C1CCF16517AB4008F0496 /* TombDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TombDataManager.h; sourceTree = "<group>"; };
-		305C1CD016517AB4008F0496 /* TombDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TombDataManager.m; sourceTree = "<group>"; };
-		305C1CD216517F0B008F0496 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		305C1CD316517F19008F0496 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		309EBD9216488B2A00F7386B /* ssimage01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage01.png; sourceTree = "<group>"; };
 		309EBD9316488B2A00F7386B /* ssimage02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage02.png; sourceTree = "<group>"; };
 		309EBD9416488B2A00F7386B /* ssimage03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage03.png; sourceTree = "<group>"; };
 		309EBD9516488B2A00F7386B /* ssimage04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage04.png; sourceTree = "<group>"; };
+		30D8FE2516EA70AC00C2C1A1 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		30D8FE2816EA70AC00C2C1A1 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
+		30D8FE2916EA70AC00C2C1A1 /* Tomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomb.m; sourceTree = "<group>"; };
+		30D8FE2A16EA70AC00C2C1A1 /* TombDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TombDetailViewController.h; sourceTree = "<group>"; };
+		30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TombDetailViewController.m; sourceTree = "<group>"; };
+		30D8FE3016EA73FD00C2C1A1 /* new_tomb_database.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new_tomb_database.json; sourceTree = "<group>"; };
 		3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		3F1FDBA216137870008C52DE /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_24.png; path = "../TWG Retina Icons/home_24.png"; sourceTree = "<group>"; };
@@ -151,9 +148,6 @@
 		3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
-		3FFB6A8F16790E6500FCC969 /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
-		96123F0C16695CC70091FD28 /* JSONHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHandler.h; sourceTree = "<group>"; };
-		96123F0D16695CC70091FD28 /* JSONHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +165,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30D8FE2116EA6F8D00C2C1A1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D444816B9CA8700A760DC /* HomeViewController.h */,
+				3F3D444616B9CA7C00A760DC /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		30D8FE2216EA6FAF00C2C1A1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				30D8FE2516EA70AC00C2C1A1 /* SearchTableViewController.h */,
+				30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */,
+				30D8FE3016EA73FD00C2C1A1 /* new_tomb_database.json */,
+				30D8FE2816EA70AC00C2C1A1 /* Tomb.h */,
+				30D8FE2916EA70AC00C2C1A1 /* Tomb.m */,
+				30D8FE2A16EA70AC00C2C1A1 /* TombDetailViewController.h */,
+				30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		30D8FE2316EA6FC500C2C1A1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3F76C5DA1610D52F0027640E /* MapViewController.h */,
+				3F76C5DB1610D52F0027640E /* MapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		30D8FE2416EA6FD500C2C1A1 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				3FDDE63A16DBD50200F5F888 /* Cell.h */,
+				3FDDE63B16DBD50200F5F888 /* Cell.m */,
+				3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */,
+				3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */,
+				3F76C5E31610DFDA0027640E /* MoreViewController.h */,
+				3F76C5E41610DFDA0027640E /* MoreViewController.m */,
+				07E81A9F16233DB400790930 /* ImageGalleryViewController.h */,
+				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
+				3024B33216D80578007FDB0B /* ImageDetailViewController.h */,
+				3024B33316D80578007FDB0B /* ImageDetailViewController.m */,
+				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
+				3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */,
+				07C8E49D16CC1B88000CC940 /* AboutUsViewController.h */,
+				07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 		3F1FDAAB16137870008C52DE /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,35 +286,10 @@
 			isa = PBXGroup;
 			children = (
 				3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */,
-				3FDDE63A16DBD50200F5F888 /* Cell.h */,
-				3FDDE63B16DBD50200F5F888 /* Cell.m */,
-				3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */,
-				3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */,
-				3F3D444816B9CA8700A760DC /* HomeViewController.h */,
-				3F3D444616B9CA7C00A760DC /* HomeViewController.m */,
-				305C1CD216517F0B008F0496 /* SearchViewController.h */,
-				305C1CD316517F19008F0496 /* SearchViewController.m */,
-				96123F0C16695CC70091FD28 /* JSONHandler.h */,
-				96123F0D16695CC70091FD28 /* JSONHandler.m */,
-				305C1CCF16517AB4008F0496 /* TombDataManager.h */,
-				305C1CD016517AB4008F0496 /* TombDataManager.m */,
-				30082E02164C8904007AAA80 /* DetailsViewController.h */,
-				30082E03164C8904007AAA80 /* DetailsViewController.m */,
-				305C1CC716517987008F0496 /* Tomb.h */,
-				305C1CC816517987008F0496 /* Tomb.m */,
-				3F76C5DA1610D52F0027640E /* MapViewController.h */,
-				3F76C5DB1610D52F0027640E /* MapViewController.m */,
-				3F76C5E31610DFDA0027640E /* MoreViewController.h */,
-				3F76C5E41610DFDA0027640E /* MoreViewController.m */,
-				07E81A9F16233DB400790930 /* ImageGalleryViewController.h */,
-				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
-				3024B33216D80578007FDB0B /* ImageDetailViewController.h */,
-				3024B33316D80578007FDB0B /* ImageDetailViewController.m */,
-				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
-				3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */,
-				07C8E49D16CC1B88000CC940 /* AboutUsViewController.h */,
-				07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */,
-				3FFB6A8F16790E6500FCC969 /* result.json */,
+				30D8FE2116EA6F8D00C2C1A1 /* Home */,
+				30D8FE2216EA6FAF00C2C1A1 /* Search */,
+				30D8FE2316EA6FC500C2C1A1 /* Map */,
+				30D8FE2416EA6FD500C2C1A1 /* More */,
 				3FA7D3551610B64700F132F3 /* Supporting Files */,
 			);
 			path = CemeteryApp;
@@ -381,7 +403,6 @@
 				309EBD9916488B2A00F7386B /* ssimage03.png in Resources */,
 				309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */,
 				3F8331BA16540CB100A51624 /* Map2.png in Resources */,
-				3FFB6A9016790E6500FCC969 /* result.json in Resources */,
 				3F918A7A16CC4D5400D6745C /* home_quote1.png in Resources */,
 				3030A72516DE8C3600ADD02F /* globe_24.png in Resources */,
 				3030A72616DE8C3600ADD02F /* globe_48.png in Resources */,
@@ -402,6 +423,7 @@
 				07027D2C16E683EB007BE13D /* 13_full.jpg in Resources */,
 				07027D2D16E683EB007BE13D /* 14_full.jpg in Resources */,
 				07027D2E16E683EB007BE13D /* 15_full.jpg in Resources */,
+				30D8FE3116EA73FD00C2C1A1 /* new_tomb_database.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,16 +439,14 @@
 				3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */,
 				3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */,
 				07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */,
-				30082E04164C8904007AAA80 /* DetailsViewController.m in Sources */,
-				305C1CC916517987008F0496 /* Tomb.m in Sources */,
-				305C1CD116517AB4008F0496 /* TombDataManager.m in Sources */,
-				305C1CD416517F19008F0496 /* SearchViewController.m in Sources */,
-				96123F0E16695CC70091FD28 /* JSONHandler.m in Sources */,
 				3F3D444716B9CA7C00A760DC /* HomeViewController.m in Sources */,
 				07C8E4A616CC3A37000CC940 /* AboutUsViewController.m in Sources */,
 				3024B33416D80578007FDB0B /* ImageDetailViewController.m in Sources */,
 				3FDDE63E16DBD50200F5F888 /* Cell.m in Sources */,
 				3FDDE63F16DBD50200F5F888 /* CustomCellBackground.m in Sources */,
+				30D8FE2C16EA70AC00C2C1A1 /* SearchTableViewController.m in Sources */,
+				30D8FE2E16EA70AC00C2C1A1 /* Tomb.m in Sources */,
+				30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
