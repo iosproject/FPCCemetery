@@ -28,25 +28,22 @@ causeOfDeathTextField = _causeOfDeathTextField;
     [super viewDidLoad];
     
     [self.scrollView setContentSize:CGSizeMake(320, 455)];
+    
     [_bornTextField setText:_selectedTomb.birthDate];
     [_diedTextField setText:_selectedTomb.deathDate];
     [_sectionTextField setText:_selectedTomb.section];
-    [self styleVeteranString];
     [_causeOfDeathTextField setText: _selectedTomb.causeOfDeath];
-    
-    [self styleAgeString];
+    [self setAgeString];
+    [self setVeteranString];
     
     [self styleEpitaphTextView];
     [_epitaphTextView setText: [NSString stringWithFormat:@"%@", _selectedTomb.epitaph,nil]];
-    
     self.epitaphTextView.contentSize = [self.epitaphTextView.text sizeWithFont:[UIFont systemFontOfSize:14]
                                                constrainedToSize:CGSizeMake(100, 200)
                                                    lineBreakMode:UIViewAutoresizingFlexibleHeight];
-    
-    [self.scrollView flashScrollIndicators];
 }
 
-- (void) styleAgeString
+- (void) setAgeString
 {
     if ([_selectedTomb.years isEqualToString:@"0"])
     {
@@ -64,7 +61,7 @@ causeOfDeathTextField = _causeOfDeathTextField;
         [_ageTextField setText:[NSString stringWithFormat:@"%@ years", _selectedTomb.years]];
 }
 
-- (void) styleVeteranString
+- (void) setVeteranString
 {
     if([_selectedTomb.veteran isEqualToString:@"0"])
     {

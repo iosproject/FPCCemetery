@@ -179,7 +179,6 @@
 			children = (
 				30D8FE2516EA70AC00C2C1A1 /* SearchTableViewController.h */,
 				30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */,
-				30D8FE3016EA73FD00C2C1A1 /* new_tomb_database.json */,
 				30D8FE2816EA70AC00C2C1A1 /* Tomb.h */,
 				30D8FE2916EA70AC00C2C1A1 /* Tomb.m */,
 				30D8FE2A16EA70AC00C2C1A1 /* TombDetailViewController.h */,
@@ -298,6 +297,7 @@
 		3FA7D3551610B64700F132F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30D8FE3016EA73FD00C2C1A1 /* new_tomb_database.json */,
 				3FA7D3561610B64700F132F3 /* CemeteryApp-Info.plist */,
 				3FA7D3571610B64700F132F3 /* InfoPlist.strings */,
 				3FA7D35A1610B64800F132F3 /* main.m */,
