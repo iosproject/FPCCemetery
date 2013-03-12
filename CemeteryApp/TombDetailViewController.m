@@ -26,9 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.scrollView setContentSize:CGSizeMake(320, 455)];
-    
+ 
     [_bornTextField setText:_selectedTomb.birthDate];
     [_diedTextField setText:_selectedTomb.deathDate];
     [_sectionTextField setText:_selectedTomb.section];
@@ -36,11 +34,18 @@
     [self setAgeString];
     [self setVeteranString];
     
-    [self styleEpitaphTextView];
     [_epitaphTextView setText: [NSString stringWithFormat:@"%@", _selectedTomb.epitaph,nil]];
+    [self styleEpitaphTextView];
+    /*
     self.epitaphTextView.contentSize = [self.epitaphTextView.text sizeWithFont:[UIFont systemFontOfSize:14]
                                                constrainedToSize:CGSizeMake(100, 200)
-                                                   lineBreakMode:UIViewAutoresizingFlexibleHeight];
+                                                   lineBreakMode:UIViewAutoresizingFlexibleHeight];*/
+}
+
+-(void) setScrollViewHeight:(int)height
+{
+    height -= 150;
+    [self.scrollView setContentSize:CGSizeMake(320, 455+height)];
 }
 
 - (void) setAgeString
@@ -78,6 +83,11 @@
     [_epitaphTextView.layer setBorderWidth: 1.0];
     [_epitaphTextView.layer setCornerRadius:8.0f];
     [_epitaphTextView.layer setMasksToBounds:YES];
+    
+    CGRect frame = _epitaphTextView.frame;
+    frame.size.height = _epitaphTextView.contentSize.height;
+    _epitaphTextView.frame = frame;
+    [self setScrollViewHeight:_epitaphTextView.contentSize.height];
 }
 
 - (void)viewWillAppear:(BOOL)animated
