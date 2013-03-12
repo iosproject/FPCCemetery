@@ -56,7 +56,6 @@
 		3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5DB1610D52F0027640E /* MapViewController.m */; };
 		3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E41610DFDA0027640E /* MoreViewController.m */; };
 		3F8331BA16540CB100A51624 /* Map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8331B916540CB100A51624 /* Map2.png */; };
-		3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F87BF331625D7D100938C3E /* CoreData.framework */; };
 		3F918A7A16CC4D5400D6745C /* home_quote1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F918A7916CC4D5400D6745C /* home_quote1.png */; };
 		3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45177161CA7E20093329D /* Default-568h@2x.png */; };
 		3FA7D34F1610B64700F132F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D34E1610B64700F132F3 /* UIKit.framework */; };
@@ -159,7 +158,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */,
 				3FA7D34F1610B64700F132F3 /* UIKit.framework in Frameworks */,
 				3FA7D3511610B64700F132F3 /* Foundation.framework in Frameworks */,
 				3FA7D3531610B64700F132F3 /* CoreGraphics.framework in Frameworks */,
