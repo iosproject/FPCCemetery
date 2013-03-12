@@ -36,16 +36,6 @@
     
     [_epitaphTextView setText: [NSString stringWithFormat:@"%@", _selectedTomb.epitaph,nil]];
     [self styleEpitaphTextView];
-    /*
-    self.epitaphTextView.contentSize = [self.epitaphTextView.text sizeWithFont:[UIFont systemFontOfSize:14]
-                                               constrainedToSize:CGSizeMake(100, 200)
-                                                   lineBreakMode:UIViewAutoresizingFlexibleHeight];*/
-}
-
--(void) setScrollViewHeight:(int)height
-{
-    height -= 150;
-    [self.scrollView setContentSize:CGSizeMake(320, 455+height)];
 }
 
 - (void) setAgeString
@@ -87,7 +77,14 @@
     CGRect frame = _epitaphTextView.frame;
     frame.size.height = _epitaphTextView.contentSize.height;
     _epitaphTextView.frame = frame;
+    
     [self setScrollViewHeight:_epitaphTextView.contentSize.height];
+}
+
+-(void) setScrollViewHeight:(int)height
+{
+    height -= 150;
+    [self.scrollView setContentSize:CGSizeMake(320, 455+height)];
 }
 
 - (void)viewWillAppear:(BOOL)animated

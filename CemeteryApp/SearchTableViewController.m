@@ -44,14 +44,12 @@
     // read JSON file
     if(![self connectedToInternet])
     {
-        NSLog(@"Not Connected!");
-        // not connected
+        //NSLog(@"Not Connected!");
         [self readLocalJSON];
     }
     else
     {
-        NSLog(@"Connected!");
-        // connected, do some internet stuff
+        //NSLog(@"Connected!");
         [self showLoadingView];
         [self readRemoteJSON];
     }
