@@ -11,9 +11,4 @@
 
 @interface HomeViewController : UIViewController <UIScrollViewDelegate> 
 
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollView2;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (nonatomic, retain) NSArray *imgViews;
-@property (nonatomic, retain) NSTimer *timer;
 @end

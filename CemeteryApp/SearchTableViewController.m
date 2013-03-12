@@ -8,7 +8,11 @@
 
 #import "SearchTableViewController.h"
 #import "TombDetailViewController.h"
+#import "QuartzCore/QuartzCore.h"
 #import "Tomb.h"
+
+#define LATEST_TOMB_DB_URL @"http://fpcenj.org/FPCENJ/AppDB/new_tomb_database.json"
+#define BACKGROUND_QUEUE dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
 @interface SearchTableViewController ()
 
@@ -18,10 +22,85 @@
 
 @synthesize tombArray = _tombArray,
             searchBar = _searchBar,
+            activityView = _activityView,
+            loadingView = _loadingView,
+            loadingLabel = _loadingLabel,
             filteredTombArray = _filteredTombArray;
 
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // config the search bar.
+    [_searchBar setShowsScopeBar:NO];
+    [_searchBar sizeToFit];
+    
+    // Hide the search bar until user scrolls up.
+    CGRect newBounds = self.tableView.bounds;
+    newBounds.origin.y = newBounds.origin.y + _searchBar.bounds.size.height;
+    self.tableView.bounds = newBounds;
+    
+    // read JSON file
+    if(![self connectedToInternet])
+    {
+        NSLog(@"Not Connected!");
+        // not connected
+        [self readLocalJSON];
+    }
+    else
+    {
+        NSLog(@"Connected!");
+        // connected, do some internet stuff
+        [self showLoadingView];
+        [self readRemoteJSON];
+    }
+    
+    // initialize the array to hold search results.
+    _filteredTombArray = [NSMutableArray arrayWithCapacity:[_tombArray count]];
+}
 
+#define urlString @"http://www.google.com"
+
+- (BOOL) connectedToInternet
+{
+    NSError *error = nil;
+    NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString]
+                                                   encoding:NSUTF8StringEncoding
+                                                      error:&error];
+   
+    return URLString != nil;
+}
+
+- (void) showLoadingView
+{
+    _loadingView = [[UIView alloc] initWithFrame:CGRectMake(75, 155, 170, 170)];
+    _loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    _loadingView.clipsToBounds = YES;
+    _loadingView.layer.cornerRadius = 10.0;
+
+    _activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _activityView.frame = CGRectMake(65, 40, _activityView.bounds.size.width, _activityView.bounds.size.height);
+    [_loadingView addSubview:_activityView];
+
+    _loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 115, 130, 22)];
+    _loadingLabel.backgroundColor = [UIColor clearColor];
+    _loadingLabel.textColor = [UIColor whiteColor];
+    _loadingLabel.adjustsFontSizeToFitWidth = YES;
+    _loadingLabel.textAlignment = NSTextAlignmentCenter;
+    _loadingLabel.text = @"Loading...";
+    [_loadingView addSubview:_loadingLabel];
+    
+    [self.view addSubview:_loadingView];
+    [_activityView startAnimating];
+
+}
+
+- (void) hideLoadingView
+{
+    [_activityView stopAnimating];
+    [_loadingView removeFromSuperview];
+}
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
@@ -58,6 +137,21 @@
     _filteredTombArray = [NSMutableArray arrayWithArray:tempArray];
 }
 
+- (void) readRemoteJSON
+{
+    dispatch_async(BACKGROUND_QUEUE, ^{
+        
+        // GET DATA
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString: LATEST_TOMB_DB_URL]];
+    
+        NSError *error = nil;
+        NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
+                                                                     options:kNilOptions
+                                                                       error:&error];
+        [self performSelectorOnMainThread:@selector(buildTombObjectsFromDictionary:) withObject:jsonTombData waitUntilDone:YES];
+
+    });
+}
 
 - (void) readLocalJSON
 {
@@ -116,38 +210,9 @@
     }
     
     self.tombArray = [[NSArray alloc]initWithArray:tempArray];
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    // style the search bar
-    [_searchBar setShowsScopeBar:NO];
-    [_searchBar sizeToFit];
-    
-    // Hide the search bar until user scrolls up
-    CGRect newBounds = self.tableView.bounds;
-    newBounds.origin.y = newBounds.origin.y + _searchBar.bounds.size.height;
-    self.tableView.bounds = newBounds;
-    
-    // read local JSON file
-    [self readLocalJSON];
-    
-    // initialize the array to hold search results
-    _filteredTombArray = [NSMutableArray arrayWithCapacity:[_tombArray count]];
-    
-    // Reload the table
     [[self tableView] reloadData];
+    [self hideLoadingView];
+
 }
 
 -(IBAction)goToSearch:(id)sender

@@ -8,105 +8,37 @@
 
 #import "HomeViewController.h"
 
-#define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
-#define LOCAL_FILE_NAME @"result.json"
-
 @interface HomeViewController ()
-@property (nonatomic) int width;
-@property (nonatomic, strong) NSMutableArray *images;
+
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView2;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, retain) NSArray *imgViews;
+@property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic) int imageOffset;
+
 @end
 
 
 @implementation HomeViewController
 
-@synthesize scrollView = _scrollView, scrollView2 = _scrollView2;
-@synthesize pageControl = _pageControl;
-@synthesize imgViews = _imgViews;
-@synthesize width;
-@synthesize timer = _timer;
+@synthesize scrollView = _scrollView,
+            scrollView2 = _scrollView2,
+            pageControl = _pageControl,
+            imgViews = _imgViews,
+            imageOffset = _imageOffset,
+            timer = _timer;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // begin updating local JSON file on seperate thread
-    /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //databaseCheckAlertView = [[UIAlertView alloc] initWithTitle:@"Please Wait"
-          //                                                  message:@"Checking server for updates..."
-            //                                               delegate:self
-              //                                    cancelButtonTitle:nil
-                //                                  otherButtonTitles:nil, nil];
-        loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        loading.center = CGPointMake(139.5, 90.5);
-        [databaseCheckAlertView addSubview:loading];
-        [loading startAnimating];
-        [databaseCheckAlertView show];
-        [self updateLocalJSONFile];
-        
-        // return to main thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // do nothing after updating local JSON file
-        });
-    });*/
 
-     [self setupSlideShow];
+    // Call the method setupSlideShow.
+    [self setupSlideShow];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*- (void)updateLocalJSONFile
-{
-    //NSLog(@"updating local json file");
-    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [pathArray objectAtIndex:0];
-    NSString *localFile = [documentsDir stringByAppendingPathComponent:LOCAL_FILE_NAME];
-    
-    if(![[NSFileManager defaultManager] fileExistsAtPath:[documentsDir stringByAppendingPathComponent:LOCAL_FILE_NAME]])
-    {
-        NSURL *url = [NSURL URLWithString:FILE_URL];
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        [data writeToFile:localFile atomically:YES];
-    }
-    else
-    {
-        //We have a local version of the DB but is it the latest?
-        //Check for the updated version
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:FILE_URL]];
-        NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        NSError *error = nil;
-        NSArray *serverJson = [[NSArray alloc] init];
-        serverJson = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
-        
-        NSData *clientresponse = [NSData dataWithContentsOfFile:localFile];
-        NSArray *clientJson = [[NSMutableArray alloc] init];
-        clientJson = [NSJSONSerialization JSONObjectWithData:clientresponse options:NSJSONReadingMutableContainers error:nil];
-        
-        NSDictionary *serverdict = [[NSDictionary alloc] init];
-        NSDictionary *clientdict = [[NSDictionary alloc] init];
-        
-        clientdict = [clientJson objectAtIndex:0];
-        serverdict = [serverJson objectAtIndex:0];
-        
-        if([[clientdict objectForKey:@"LastUpdated"] intValue] < [[serverdict objectForKey:@"LastUpdated"] intValue])
-        {
-            [databaseCheckAlertView setMessage:@"Database updates being applied"];
-            //Copy from server to local
-            NSURL *url = [NSURL URLWithString:FILE_URL];
-            NSData *data = [NSData dataWithContentsOfURL:url];
-            [data writeToFile:localFile atomically:YES];
-            [databaseCheckAlertView setMessage:@"Database updated"];
-        }
-    }
-    [loading stopAnimating];
-    [databaseCheckAlertView dismissWithClickedButtonIndex:-1 animated:YES];
-    //NSLog(@"done updating local json");
-}*/
-
-// setup the home tab slideshow
+// Setup the home tab's slideshow.
 - (void)setupSlideShow
 {
     UIImage *img1 = [UIImage imageNamed:@"ssimage01.png"];
@@ -144,35 +76,46 @@
     }
     self.scrollView2.contentSize = CGSizeMake(cRect.origin.x, self.scrollView2.bounds.size.height);
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0
+                                              target:self
+                                            selector:@selector(onTimer)
+                                            userInfo:nil
+                                             repeats:YES];
 }
 
+// When the timer is done this method gets called.
 - (void) onTimer
 {
-    // Updates the variable width, adding 320
-    if (width >= 320*3) {
-        width = 0;
+    // Updates the variable _imageWidth.
+    if (_imageOffset >= 320*3) {
+        _imageOffset = 0;
     }
     else
-        width += 320;
+        _imageOffset += 320;
     
-    //This makes the scrollView scroll to the desired position
-    [self.scrollView2 setContentOffset:CGPointMake(width, 0) animated:YES];
+    // This makes the scrollView scroll to the next image.
+    [self.scrollView2 setContentOffset:CGPointMake(_imageOffset, 0) animated:YES];
 }
 
+// Reset the timer.
 -(void)resetTimer:(id)sender
 {
     [_timer invalidate];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0
+                                              target:self
+                                            selector:@selector(onTimer)
+                                            userInfo:nil
+                                             repeats:YES];
 }
 
+// Things to do when the scroll view has scrolled.
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat pageWidth = self.scrollView.frame.size.width;
     float fractionalPage = scrollView.contentOffset.x / pageWidth;
     NSInteger page = lround(fractionalPage);
     self.pageControl.currentPage = page;
-    width = page*320;
+    _imageOffset = page*320;
     [self resetTimer:self.timer];
 }
 
