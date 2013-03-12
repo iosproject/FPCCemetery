@@ -34,7 +34,6 @@
 		3030A72616DE8C3600ADD02F /* globe_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72316DE8C3600ADD02F /* globe_48.png */; };
 		3030A72716DE8C3600ADD02F /* globe_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72416DE8C3600ADD02F /* globe_64.png */; };
 		3039444216EE6CA60062FFCA /* PoemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039444116EE6CA60062FFCA /* PoemView.m */; };
-		303A661F16EF669700CA2324 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303A661E16EF669700CA2324 /* SystemConfiguration.framework */; };
 		309EBD9716488B2A00F7386B /* ssimage01.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9216488B2A00F7386B /* ssimage01.png */; };
 		309EBD9816488B2A00F7386B /* ssimage02.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9316488B2A00F7386B /* ssimage02.png */; };
 		309EBD9916488B2A00F7386B /* ssimage03.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9416488B2A00F7386B /* ssimage03.png */; };
@@ -160,7 +159,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303A661F16EF669700CA2324 /* SystemConfiguration.framework in Frameworks */,
 				3F87BF341625D7D100938C3E /* CoreData.framework in Frameworks */,
 				3FA7D34F1610B64700F132F3 /* UIKit.framework in Frameworks */,
 				3FA7D3511610B64700F132F3 /* Foundation.framework in Frameworks */,

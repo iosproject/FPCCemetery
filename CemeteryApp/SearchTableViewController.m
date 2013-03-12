@@ -75,7 +75,8 @@
 - (void) showLoadingView
 {
     _loadingView = [[UIView alloc] initWithFrame:CGRectMake(75, 155, 170, 170)];
-    _loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    _loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.25 alpha:0.25];
+    _loadingView.layer.borderColor = [[UIColor blueColor] CGColor];
     _loadingView.clipsToBounds = YES;
     _loadingView.layer.cornerRadius = 10.0;
 

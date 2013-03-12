@@ -21,7 +21,7 @@
             bornTextField = _bornTextField,
             diedTextField = _diedTextField,
             veteranTextField = _veteranTextField,
-causeOfDeathTextField = _causeOfDeathTextField;
+            causeOfDeathTextField = _causeOfDeathTextField;
 
 - (void)viewDidLoad
 {
