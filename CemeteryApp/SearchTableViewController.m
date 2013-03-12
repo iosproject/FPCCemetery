@@ -62,11 +62,12 @@
 
 - (BOOL) connectedToInternet
 {
+    NSString *URLString = nil;
     NSError *error = nil;
-    NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString]
-                                                   encoding:NSUTF8StringEncoding
-                                                      error:&error];
-   
+    URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString]
+                                         encoding:NSUTF8StringEncoding
+                                            error:&error];
+    
     return URLString != nil;
 }
 

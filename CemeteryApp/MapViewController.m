@@ -27,11 +27,6 @@
     
 }
 
-- (void)viewDidUnload {
-	//[image release], image = nil;
-}
-
-
 - (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
 	CGSize boundsSize = scroll.bounds.size;
     CGRect frameToCenter = rView.frame;

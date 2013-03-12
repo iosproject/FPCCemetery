@@ -29,6 +29,8 @@
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
 		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
 		07F31BEF161AAC6000CAB198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEE161AAC6000CAB198 /* Default@2x.png */; };
+		30031E7716EFA21000981CCC /* BurialMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30031E7616EFA21000981CCC /* BurialMapViewController.m */; };
+		30031E7916EFAA8700981CCC /* BurialMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 30031E7816EFAA8700981CCC /* BurialMap.png */; };
 		3024B33416D80578007FDB0B /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3024B33316D80578007FDB0B /* ImageDetailViewController.m */; };
 		3030A72516DE8C3600ADD02F /* globe_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72216DE8C3600ADD02F /* globe_24.png */; };
 		3030A72616DE8C3600ADD02F /* globe_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A72316DE8C3600ADD02F /* globe_48.png */; };
@@ -96,6 +98,9 @@
 		07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Retina.png; path = ../LaunchImage_Retina.png; sourceTree = "<group>"; };
 		07F31BEC161AAC4D00CAB198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		07F31BEE161AAC6000CAB198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		30031E7516EFA21000981CCC /* BurialMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurialMapViewController.h; sourceTree = "<group>"; };
+		30031E7616EFA21000981CCC /* BurialMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurialMapViewController.m; sourceTree = "<group>"; };
+		30031E7816EFAA8700981CCC /* BurialMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BurialMap.png; sourceTree = "<group>"; };
 		3024B33216D80578007FDB0B /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		3024B33316D80578007FDB0B /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 		3030A72216DE8C3600ADD02F /* globe_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe_24.png; path = "../TWG Retina Icons/globe_24.png"; sourceTree = "<group>"; };
@@ -196,6 +201,8 @@
 			children = (
 				3F76C5DA1610D52F0027640E /* MapViewController.h */,
 				3F76C5DB1610D52F0027640E /* MapViewController.m */,
+				30031E7516EFA21000981CCC /* BurialMapViewController.h */,
+				30031E7616EFA21000981CCC /* BurialMapViewController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				309EBD9316488B2A00F7386B /* ssimage02.png */,
 				309EBD9416488B2A00F7386B /* ssimage03.png */,
 				309EBD9516488B2A00F7386B /* ssimage04.png */,
+				30031E7816EFAA8700981CCC /* BurialMap.png */,
 				3F8331B916540CB100A51624 /* Map2.png */,
 				3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */,
 				3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */,
@@ -429,6 +437,7 @@
 				07027D2D16E683EB007BE13D /* 14_full.jpg in Resources */,
 				07027D2E16E683EB007BE13D /* 15_full.jpg in Resources */,
 				30D8FE3116EA73FD00C2C1A1 /* new_tomb_database.json in Resources */,
+				30031E7916EFAA8700981CCC /* BurialMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +462,7 @@
 				30D8FE2E16EA70AC00C2C1A1 /* Tomb.m in Sources */,
 				30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */,
 				3039444216EE6CA60062FFCA /* PoemView.m in Sources */,
+				30031E7716EFA21000981CCC /* BurialMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
