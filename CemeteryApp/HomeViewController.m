@@ -7,15 +7,12 @@
 //
 
 #import "HomeViewController.h"
-
 @interface HomeViewController ()
 
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollView2;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, retain) NSArray *imgViews;
 @property (nonatomic, retain) NSTimer *timer;
-@property (nonatomic) int imageOffset;
 
 @end
 
@@ -23,17 +20,13 @@
 @implementation HomeViewController
 
 @synthesize scrollView = _scrollView,
-            scrollView2 = _scrollView2,
-            pageControl = _pageControl,
-            imgViews = _imgViews,
-            imageOffset = _imageOffset,
-            timer = _timer;
+pageControl = _pageControl,
+imgViews = _imgViews,
+timer = _timer;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Call the method setupSlideShow.
     [self setupSlideShow];
 }
 
@@ -46,36 +39,42 @@
     UIImage *img3 = [UIImage imageNamed:@"ssimage03.png"];
     UIImage *img4 = [UIImage imageNamed:@"ssimage04.png"];
     
-    UIImageView *imageView1 = [[UIImageView alloc] initWithImage:img1];
-    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:img2];
-    UIImageView *imageView3 = [[UIImageView alloc] initWithImage:img3];
-    UIImageView *imageView4 = [[UIImageView alloc] initWithImage:img4];
+    UIImageView *imageView1 = [[UIImageView alloc] initWithImage:img4];
+    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:img1];
+    UIImageView *imageView3 = [[UIImageView alloc] initWithImage:img2];
+    UIImageView *imageView4 = [[UIImageView alloc] initWithImage:img3];
+    UIImageView *imageView5 = [[UIImageView alloc] initWithImage:img4];
+    UIImageView *imageView6 = [[UIImageView alloc] initWithImage:img1];
     
     
-    _imgViews = [NSArray arrayWithObjects:imageView1, imageView2, imageView3, imageView4, nil];
+    _imgViews = [NSArray arrayWithObjects: imageView1, imageView2, imageView3, imageView4, imageView5, imageView6, nil];
     
-    self.scrollView2 = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    self.scrollView2.pagingEnabled = YES;
-    self.scrollView2.bounces = NO;
-    self.scrollView2.showsHorizontalScrollIndicator = NO;
-    self.scrollView2.showsVerticalScrollIndicator = NO;
-    self.scrollView2.scrollsToTop = NO;
-    self.scrollView2.delegate = self;
-    
-    
-    [self.scrollView addSubview: self.scrollView2];
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.scrollsToTop = NO;
+    self.scrollView.delegate = self;
     
     CGRect cRect = imageView1.bounds;
     UIImageView *cView;
+    
     for (int i = 0; i < _imgViews.count; i++)
     {
         cView = [_imgViews objectAtIndex:i];
         cView.frame = cRect;
-        [self.scrollView2 addSubview:cView];
+        [self.scrollView addSubview:cView];
         cRect.origin.x += cRect.size.width;
     }
-    self.scrollView2.contentSize = CGSizeMake(cRect.origin.x, self.scrollView2.bounds.size.height);
     
+    self.scrollView.contentSize = CGSizeMake(cRect.origin.x, cRect.size.height);
+    [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
+    [self startSlideShow];
+    
+}
+
+- (void) startSlideShow
+{
     _timer = [NSTimer scheduledTimerWithTimeInterval:3.0
                                               target:self
                                             selector:@selector(onTimer)
@@ -83,22 +82,19 @@
                                              repeats:YES];
 }
 
+- (void) stopSlideShow
+{
+    [_timer invalidate];
+}
+
 // When the timer is done this method gets called.
 - (void) onTimer
 {
-    // Updates the variable _imageWidth.
-    if (_imageOffset >= 320*3) {
-        _imageOffset = 0;
-    }
-    else
-        _imageOffset += 320;
-    NSLog(@"onTimer: %d", _imageOffset);
-    // This makes the scrollView scroll to the next image.
-    [self.scrollView2 setContentOffset:CGPointMake(_imageOffset, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + self.scrollView.frame.size.width, 0) animated:YES];
 }
 
 // Reset the timer.
--(void)resetTimer:(id)sender
+-(void)resetTimer
 {
     [_timer invalidate];
     _timer = [NSTimer scheduledTimerWithTimeInterval:3.0
@@ -111,12 +107,24 @@
 // Things to do when the scroll view has scrolled.
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGFloat pageWidth = self.scrollView.frame.size.width;
-    float fractionalPage = scrollView.contentOffset.x / pageWidth;
-    NSInteger page = lround(fractionalPage);
-    self.pageControl.currentPage = page;
-    _imageOffset = page*320;
-    [self resetTimer:self.timer];
+    if (self.scrollView.contentOffset.x == 0)
+    {
+        [self.scrollView setContentOffset:CGPointMake(1280, 0) animated:NO];
+    }
+    else if (self.scrollView.contentOffset.x == 1600)
+    {
+        [self.scrollView setContentOffset:CGPointMake(320, 0) animated:NO];
+    }
+    
+    // Switch the indicator when more than 50% of the previous/next page is visible
+    CGFloat pageWidth = scrollView.frame.size.width;
+    int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth);
+    _pageControl.currentPage = page;
+}
+
+-(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self resetTimer];
 }
 
 @end

@@ -42,17 +42,8 @@
     self.tableView.bounds = newBounds;
     
     // read JSON file
-    if(![self connectedToInternet])
-    {
-        //NSLog(@"Not Connected!");
-        [self readLocalJSON];
-    }
-    else
-    {
-        //NSLog(@"Connected!");
-        [self showLoadingView];
-        [self readRemoteJSON];
-    }
+    [self showLoadingView];
+    [self readRemoteJSON];
     
     // initialize the array to hold search results.
     _filteredTombArray = [NSMutableArray arrayWithCapacity:[_tombArray count]];
@@ -143,6 +134,13 @@
         
         // GET DATA
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString: LATEST_TOMB_DB_URL]];
+        
+        // if no data from internet read locally
+        if (!data) {
+            //NSLog(@"Not Connected!");
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_tomb_database" ofType:@"json"];
+            data = [NSData dataWithContentsOfFile:filePath];
+        }
     
         NSError *error = nil;
         NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
@@ -153,7 +151,8 @@
     });
 }
 
-- (void) readLocalJSON
+/*
+- (void) testLocalJSON
 {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_tomb_database" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
@@ -162,15 +161,16 @@
     NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:kNilOptions
                                                                    error:&error];
-    /*
+    
     for (NSDictionary *tomb in jsonTombData)
     {
         NSLog(@"%@ ", [tomb objectForKey:@"FirstName"]);
     }
     NSLog(@"%d", [jsonTombData count]);
-    */
+    
     [self buildTombObjectsFromDictionary:jsonTombData];
 }
+*/
 
 -(void)buildTombObjectsFromDictionary:(NSDictionary *)jsonTombData
 {
