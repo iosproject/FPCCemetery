@@ -92,7 +92,7 @@
     }
     else
         _imageOffset += 320;
-    
+    NSLog(@"onTimer: %d", _imageOffset);
     // This makes the scrollView scroll to the next image.
     [self.scrollView2 setContentOffset:CGPointMake(_imageOffset, 0) animated:YES];
 }
