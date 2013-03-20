@@ -19,6 +19,8 @@
 
 @implementation HomeViewController
 
+
+
 @synthesize scrollView = _scrollView,
 pageControl = _pageControl,
 imgViews = _imgViews,
