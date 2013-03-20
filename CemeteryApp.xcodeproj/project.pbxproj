@@ -55,6 +55,7 @@
 		3F1FDF3216137871008C52DE /* icon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDCCB16137871008C52DE /* icon_home.png */; };
 		3F1FDF3B16137871008C52DE /* icon_magnify_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDCD416137871008C52DE /* icon_magnify_glass.png */; };
 		3F3D444716B9CA7C00A760DC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D444616B9CA7C00A760DC /* HomeViewController.m */; };
+		3F67165F16FA0F8900674923 /* SlideShowScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F67165E16FA0F8900674923 /* SlideShowScrollView.m */; };
 		3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5DB1610D52F0027640E /* MapViewController.m */; };
 		3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E41610DFDA0027640E /* MoreViewController.m */; };
 		3F8331BA16540CB100A51624 /* Map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8331B916540CB100A51624 /* Map2.png */; };
@@ -133,6 +134,8 @@
 		3F1FDCD416137871008C52DE /* icon_magnify_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_magnify_glass.png; path = ../twg_iphone_toolbar_icons/icon_magnify_glass.png; sourceTree = "<group>"; };
 		3F3D444616B9CA7C00A760DC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		3F3D444816B9CA8700A760DC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3F67165D16FA0F8900674923 /* SlideShowScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideShowScrollView.h; sourceTree = "<group>"; };
+		3F67165E16FA0F8900674923 /* SlideShowScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideShowScrollView.m; sourceTree = "<group>"; };
 		3F76C5DA1610D52F0027640E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		3F76C5DB1610D52F0027640E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		3F76C5E31610DFDA0027640E /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 		30D8FE2116EA6F8D00C2C1A1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3F67165D16FA0F8900674923 /* SlideShowScrollView.h */,
+				3F67165E16FA0F8900674923 /* SlideShowScrollView.m */,
 				3039444016EE6CA60062FFCA /* PoemView.h */,
 				3039444116EE6CA60062FFCA /* PoemView.m */,
 				3F3D444816B9CA8700A760DC /* HomeViewController.h */,
@@ -463,6 +468,7 @@
 				30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */,
 				3039444216EE6CA60062FFCA /* PoemView.m in Sources */,
 				30031E7716EFA21000981CCC /* BurialMapViewController.m in Sources */,
+				3F67165F16FA0F8900674923 /* SlideShowScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
