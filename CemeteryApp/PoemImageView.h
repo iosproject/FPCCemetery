@@ -1,13 +1,13 @@
 //
-//  PoemView.h
+//  PoemImageView.h
 //  CemeteryApp
 //
-//  Created by Joshua Lisojo on 3/11/13.
+//  Created by Computer Science on 3/20/13.
 //  Copyright (c) 2013 KeanU. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PoemView : UIImageView
+@interface PoemImageView : UIImageView
 
 @end
