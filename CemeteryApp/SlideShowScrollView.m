@@ -11,8 +11,8 @@
 @implementation SlideShowScrollView
 
 @synthesize imgViews = _imgViews,
-pageControl = _pageControl,
-timer = _timer;
+            pageControl = _pageControl,
+            timer = _timer;
 
 
 - (id)initWithFrame:(CGRect)frame

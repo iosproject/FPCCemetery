@@ -13,5 +13,7 @@
 @property (weak, nonatomic) UIPageControl *pageControl;
 @property (nonatomic, retain) NSArray *imgViews;
 @property (nonatomic, retain) NSTimer *timer;
+
 - (void)setupSlideShow;
+
 @end
