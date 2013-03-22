@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
-#define LOCAL_FILE_NAME @"result.json"
+//#define FILE_URL @"http://eve.kean.edu/~jplisojo/result2.json"
+//#define LOCAL_FILE_NAME @"result.json"
 
 
 @interface SearchTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
