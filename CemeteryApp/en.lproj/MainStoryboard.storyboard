@@ -248,13 +248,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="p6V-SF-H8L">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="p6V-SF-H8L">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="omS-gO-yPH" appends="YES" id="xsK-U5-hYW"/>
+                                            <outletCollection property="gestureRecognizers" destination="LUV-Pn-vfc" appends="YES" id="e1l-w8-SkY"/>
+                                            <outletCollection property="gestureRecognizers" destination="Qn5-ZB-ryV" appends="YES" id="c35-2t-Ki6"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -262,9 +263,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="omS-gO-yPH" appends="YES" id="goO-sT-pQD"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6rm-1Z-MMD">
                         <barButtonItem key="backBarButtonItem" title="Back" id="tE9-6j-7Ss"/>
@@ -274,7 +272,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9m-Wa-Or3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="omS-gO-yPH"/>
+                <swipeGestureRecognizer direction="left" id="LUV-Pn-vfc">
+                    <connections>
+                        <action selector="didSwipeLeft:" destination="j8j-FN-y8W" id="Hux-Ai-sF0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Qn5-ZB-ryV">
+                    <connections>
+                        <action selector="didSwipeRight:" destination="j8j-FN-y8W" id="Hq5-gW-xoM"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-703" y="1560"/>
         </scene>

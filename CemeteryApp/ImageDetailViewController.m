@@ -11,7 +11,6 @@
 @interface ImageDetailViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
 @end
 
 @implementation ImageDetailViewController
@@ -53,64 +52,20 @@
     [super viewDidUnload];
 }
 
-
-/*- (void)handlePinchGesture:(UIPinchGestureRecognizer *)gestureRecognizer {
-    
-    if([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
-        // Reset the last scale, necessary if there are multiple objects with different scales
-        lastScale = [gestureRecognizer scale];
-    }
-    
-    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan ||
-        [gestureRecognizer state] == UIGestureRecognizerStateChanged) {
-        
-        CGFloat currentScale = [[[gestureRecognizer view].layer valueForKeyPath:@"transform.scale"] floatValue];
-        
-        // Constants to adjust the max/min values of zoom
-        const CGFloat kMaxScale = 2.0;
-        const CGFloat kMinScale = 1.0;
-        
-        CGFloat newScale = 1 -  (lastScale - [gestureRecognizer scale]); // new scale is in the range (0-1)
-        newScale = MIN(newScale, kMaxScale / currentScale);
-        newScale = MAX(newScale, kMinScale / currentScale);
-        CGAffineTransform transform = CGAffineTransformScale([[gestureRecognizer view] transform], newScale, newScale);
-        [gestureRecognizer view].transform = transform;
-        
-        lastScale = [gestureRecognizer scale];  // Store the previous scale factor for the next pinch gesture call
-    }
-}*/
-/*
-- (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
-	CGSize boundsSize = scroll.bounds.size;
-    CGRect frameToCenter = rView.frame;
-    
-    // center horizontally
-    if (frameToCenter.size.width < boundsSize.width) {
-        frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
-    }
-    else {
-        frameToCenter.origin.x = 0;
-    }
-    
-    // center vertically
-    if (frameToCenter.size.height < boundsSize.height) {
-        frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2;
-    }
-    else {
-        frameToCenter.origin.y = 0;
-    }
-	
-	return frameToCenter;
+- (IBAction)didSwipeLeft:(id)sender {
+    //self.imageView.image = [self nextImage];
+    self.imageIndex++;
+    if(self.imageIndex >= self.imageArray.count)
+        self.imageIndex = 0;
+    self.imageView.image = [UIImage imageNamed:self.imageArray[self.imageIndex]];
 }
 
-#pragma mark -
-#pragma mark UIScrollViewDelegate
-
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    _imageView.frame = [self centeredFrameForScrollView:scrollView andUIView:_imageView];
+- (IBAction)didSwipeRight:(id)sender {
+    //self.imageView.image = [self previousImage];
+    self.imageIndex--;
+    if(self.imageIndex < 0)
+        self.imageIndex = self.imageArray.count - 1;
+    self.imageView.image = [UIImage imageNamed:self.imageArray[self.imageIndex]];
 }
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-	return _imageView;
-}*/
 @end
