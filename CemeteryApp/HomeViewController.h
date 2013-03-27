@@ -9,10 +9,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SlideShowScrollView.h"
+#import "PoemImageView.h"
+
 
 @interface HomeViewController : UIViewController <UIScrollViewDelegate> 
 
 @property (strong, nonatomic) IBOutlet SlideShowScrollView *ssScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (strong, nonatomic) IBOutlet PoemImageView *poemImageView;
 
 @end
