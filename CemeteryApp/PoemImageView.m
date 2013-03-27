@@ -21,8 +21,7 @@
 
 // randomly choose an image
 - (void) setUpPoemView{
-    _poemFileNames = [[NSArray alloc] initWithObjects:@"poem_0.png",
-                                                      @"poem_1.png",
+    _poemFileNames = [[NSArray alloc] initWithObjects:@"poem_1.png",
                                                       @"poem_2.png",
                                                       @"poem_3.png",
                                                       @"poem_4.png",
@@ -40,9 +39,9 @@
         
         NSString *fileName = _poemFileNames[randomIndex];
         UIImage *image;
-        fileName = _poemFileNames[3]; // remove this
+        fileName = _poemFileNames[2]; // remove this
         
-        NSLog(@"%@\n", fileName);
+        //NSLog(@"%@\n", fileName);
         
         if (screenSize.height > 480.0f) {
             /*Do iPhone 5 stuff here.*/
