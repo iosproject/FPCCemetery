@@ -9,12 +9,7 @@
 #import "PoemImageView.h"
 
 @implementation PoemImageView
-
-// create an array of image filenames
-// generate a random number within the bounds of the array
-// select the filename with the index of the random number
-// set the image as the view
-
+@synthesize poemFileNames = _poemFileNames;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
