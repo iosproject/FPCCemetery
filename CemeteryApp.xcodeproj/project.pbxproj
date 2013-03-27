@@ -43,8 +43,26 @@
 		30D8FE2C16EA70AC00C2C1A1 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */; };
 		30D8FE2E16EA70AC00C2C1A1 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2916EA70AC00C2C1A1 /* Tomb.m */; };
 		30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */; };
-		3F16AD071703606F00DB0DA8 /* poem_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD051703606F00DB0DA8 /* poem_3.png */; };
-		3F16AD081703606F00DB0DA8 /* i5_poem_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD061703606F00DB0DA8 /* i5_poem_3.png */; };
+		3F16AD1217037F6000DB0DA8 /* poem_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD0A17037F6000DB0DA8 /* poem_1.png */; };
+		3F16AD1417037F6000DB0DA8 /* poem_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD0C17037F6000DB0DA8 /* poem_8.png */; };
+		3F16AD1617037F6000DB0DA8 /* poem_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD0E17037F6000DB0DA8 /* poem_9.png */; };
+		3F16AD1817037F6000DB0DA8 /* poem_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD1017037F6000DB0DA8 /* poem_10.png */; };
+		3F16AD1D1703809F00DB0DA8 /* i5_poem_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD191703809F00DB0DA8 /* i5_poem_1.png */; };
+		3F16AD1E1703809F00DB0DA8 /* i5_poem_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD1A1703809F00DB0DA8 /* i5_poem_8.png */; };
+		3F16AD1F1703809F00DB0DA8 /* i5_poem_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD1B1703809F00DB0DA8 /* i5_poem_9.png */; };
+		3F16AD201703809F00DB0DA8 /* i5_poem_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD1C1703809F00DB0DA8 /* i5_poem_10.png */; };
+		3F16AD251703823300DB0DA8 /* i5_poem_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD211703823300DB0DA8 /* i5_poem_6.png */; };
+		3F16AD261703823300DB0DA8 /* i5_poem_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD221703823300DB0DA8 /* i5_poem_7.png */; };
+		3F16AD271703823300DB0DA8 /* poem_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD231703823300DB0DA8 /* poem_6.png */; };
+		3F16AD281703823300DB0DA8 /* poem_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD241703823300DB0DA8 /* poem_7.png */; };
+		3F16AD2D1703834700DB0DA8 /* i5_poem_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD291703834700DB0DA8 /* i5_poem_3.png */; };
+		3F16AD2E1703834700DB0DA8 /* i5_poem_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD2A1703834700DB0DA8 /* i5_poem_4.png */; };
+		3F16AD2F1703834700DB0DA8 /* poem_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD2B1703834700DB0DA8 /* poem_3.png */; };
+		3F16AD301703834700DB0DA8 /* poem_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD2C1703834700DB0DA8 /* poem_4.png */; };
+		3F16AD33170383A900DB0DA8 /* i5_poem_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD31170383A800DB0DA8 /* i5_poem_5.png */; };
+		3F16AD34170383A900DB0DA8 /* poem_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD32170383A900DB0DA8 /* poem_5.png */; };
+		3F16AD37170384C500DB0DA8 /* i5_poem_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD35170384C500DB0DA8 /* i5_poem_2.png */; };
+		3F16AD38170384C500DB0DA8 /* poem_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD36170384C500DB0DA8 /* poem_2.png */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDE0A16137871008C52DE /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA216137870008C52DE /* home_24.png */; };
@@ -61,7 +79,6 @@
 		3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5DB1610D52F0027640E /* MapViewController.m */; };
 		3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F76C5E41610DFDA0027640E /* MoreViewController.m */; };
 		3F8331BA16540CB100A51624 /* Map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8331B916540CB100A51624 /* Map2.png */; };
-		3F918A7A16CC4D5400D6745C /* home_quote1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F918A7916CC4D5400D6745C /* home_quote1.png */; };
 		3FA45178161CA7E20093329D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA45177161CA7E20093329D /* Default-568h@2x.png */; };
 		3FA7D34F1610B64700F132F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D34E1610B64700F132F3 /* UIKit.framework */; };
 		3FA7D3511610B64700F132F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7D3501610B64700F132F3 /* Foundation.framework */; };
@@ -122,8 +139,26 @@
 		30D8FE2916EA70AC00C2C1A1 /* Tomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomb.m; sourceTree = "<group>"; };
 		30D8FE2A16EA70AC00C2C1A1 /* TombDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TombDetailViewController.h; sourceTree = "<group>"; };
 		30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TombDetailViewController.m; sourceTree = "<group>"; };
-		3F16AD051703606F00DB0DA8 /* poem_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_3.png; sourceTree = "<group>"; };
-		3F16AD061703606F00DB0DA8 /* i5_poem_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_3.png; sourceTree = "<group>"; };
+		3F16AD0A17037F6000DB0DA8 /* poem_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_1.png; sourceTree = "<group>"; };
+		3F16AD0C17037F6000DB0DA8 /* poem_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_8.png; sourceTree = "<group>"; };
+		3F16AD0E17037F6000DB0DA8 /* poem_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_9.png; sourceTree = "<group>"; };
+		3F16AD1017037F6000DB0DA8 /* poem_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_10.png; sourceTree = "<group>"; };
+		3F16AD191703809F00DB0DA8 /* i5_poem_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_1.png; sourceTree = "<group>"; };
+		3F16AD1A1703809F00DB0DA8 /* i5_poem_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_8.png; sourceTree = "<group>"; };
+		3F16AD1B1703809F00DB0DA8 /* i5_poem_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_9.png; sourceTree = "<group>"; };
+		3F16AD1C1703809F00DB0DA8 /* i5_poem_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_10.png; sourceTree = "<group>"; };
+		3F16AD211703823300DB0DA8 /* i5_poem_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_6.png; sourceTree = "<group>"; };
+		3F16AD221703823300DB0DA8 /* i5_poem_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_7.png; sourceTree = "<group>"; };
+		3F16AD231703823300DB0DA8 /* poem_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_6.png; sourceTree = "<group>"; };
+		3F16AD241703823300DB0DA8 /* poem_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_7.png; sourceTree = "<group>"; };
+		3F16AD291703834700DB0DA8 /* i5_poem_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_3.png; sourceTree = "<group>"; };
+		3F16AD2A1703834700DB0DA8 /* i5_poem_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_4.png; sourceTree = "<group>"; };
+		3F16AD2B1703834700DB0DA8 /* poem_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_3.png; sourceTree = "<group>"; };
+		3F16AD2C1703834700DB0DA8 /* poem_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_4.png; sourceTree = "<group>"; };
+		3F16AD31170383A800DB0DA8 /* i5_poem_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_5.png; sourceTree = "<group>"; };
+		3F16AD32170383A900DB0DA8 /* poem_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_5.png; sourceTree = "<group>"; };
+		3F16AD35170384C500DB0DA8 /* i5_poem_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i5_poem_2.png; sourceTree = "<group>"; };
+		3F16AD36170384C500DB0DA8 /* poem_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_2.png; sourceTree = "<group>"; };
 		3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		3F1FDBA216137870008C52DE /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_24.png; path = "../TWG Retina Icons/home_24.png"; sourceTree = "<group>"; };
@@ -147,7 +182,6 @@
 		3F76C5E41610DFDA0027640E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		3F8331B916540CB100A51624 /* Map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map2.png; sourceTree = "<group>"; };
 		3F87BF331625D7D100938C3E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3F918A7916CC4D5400D6745C /* home_quote1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_quote1.png; sourceTree = "<group>"; };
 		3FA45177161CA7E20093329D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FA7D34A1610B64700F132F3 /* CemeteryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CemeteryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA7D34E1610B64700F132F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -243,8 +277,26 @@
 		3F16AD0417035B3500DB0DA8 /* poemQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				3F16AD051703606F00DB0DA8 /* poem_3.png */,
-				3F16AD061703606F00DB0DA8 /* i5_poem_3.png */,
+				3F16AD191703809F00DB0DA8 /* i5_poem_1.png */,
+				3F16AD35170384C500DB0DA8 /* i5_poem_2.png */,
+				3F16AD291703834700DB0DA8 /* i5_poem_3.png */,
+				3F16AD2A1703834700DB0DA8 /* i5_poem_4.png */,
+				3F16AD31170383A800DB0DA8 /* i5_poem_5.png */,
+				3F16AD211703823300DB0DA8 /* i5_poem_6.png */,
+				3F16AD221703823300DB0DA8 /* i5_poem_7.png */,
+				3F16AD1A1703809F00DB0DA8 /* i5_poem_8.png */,
+				3F16AD1B1703809F00DB0DA8 /* i5_poem_9.png */,
+				3F16AD1C1703809F00DB0DA8 /* i5_poem_10.png */,
+				3F16AD0A17037F6000DB0DA8 /* poem_1.png */,
+				3F16AD36170384C500DB0DA8 /* poem_2.png */,
+				3F16AD2B1703834700DB0DA8 /* poem_3.png */,
+				3F16AD2C1703834700DB0DA8 /* poem_4.png */,
+				3F16AD32170383A900DB0DA8 /* poem_5.png */,
+				3F16AD231703823300DB0DA8 /* poem_6.png */,
+				3F16AD241703823300DB0DA8 /* poem_7.png */,
+				3F16AD0C17037F6000DB0DA8 /* poem_8.png */,
+				3F16AD0E17037F6000DB0DA8 /* poem_9.png */,
+				3F16AD1017037F6000DB0DA8 /* poem_10.png */,
 			);
 			name = poemQuotes;
 			sourceTree = "<group>";
@@ -254,7 +306,6 @@
 			children = (
 				3F16AD0417035B3500DB0DA8 /* poemQuotes */,
 				3FB7AA1516DE990100DBC510 /* full */,
-				3F918A7916CC4D5400D6745C /* home_quote1.png */,
 				3FA45177161CA7E20093329D /* Default-568h@2x.png */,
 				07F31BEE161AAC6000CAB198 /* Default@2x.png */,
 				07F31BEC161AAC4D00CAB198 /* Default.png */,
@@ -439,7 +490,6 @@
 				309EBD9916488B2A00F7386B /* ssimage03.png in Resources */,
 				309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */,
 				3F8331BA16540CB100A51624 /* Map2.png in Resources */,
-				3F918A7A16CC4D5400D6745C /* home_quote1.png in Resources */,
 				3030A72516DE8C3600ADD02F /* globe_24.png in Resources */,
 				3030A72616DE8C3600ADD02F /* globe_48.png in Resources */,
 				3030A72716DE8C3600ADD02F /* globe_64.png in Resources */,
@@ -461,8 +511,26 @@
 				07027D2E16E683EB007BE13D /* 15_full.jpg in Resources */,
 				30031E7916EFAA8700981CCC /* BurialMap.png in Resources */,
 				3027743E1703296700FDFBD2 /* default_tomb_db.json in Resources */,
-				3F16AD071703606F00DB0DA8 /* poem_3.png in Resources */,
-				3F16AD081703606F00DB0DA8 /* i5_poem_3.png in Resources */,
+				3F16AD1217037F6000DB0DA8 /* poem_1.png in Resources */,
+				3F16AD1417037F6000DB0DA8 /* poem_8.png in Resources */,
+				3F16AD1617037F6000DB0DA8 /* poem_9.png in Resources */,
+				3F16AD1817037F6000DB0DA8 /* poem_10.png in Resources */,
+				3F16AD1D1703809F00DB0DA8 /* i5_poem_1.png in Resources */,
+				3F16AD1E1703809F00DB0DA8 /* i5_poem_8.png in Resources */,
+				3F16AD1F1703809F00DB0DA8 /* i5_poem_9.png in Resources */,
+				3F16AD201703809F00DB0DA8 /* i5_poem_10.png in Resources */,
+				3F16AD251703823300DB0DA8 /* i5_poem_6.png in Resources */,
+				3F16AD261703823300DB0DA8 /* i5_poem_7.png in Resources */,
+				3F16AD271703823300DB0DA8 /* poem_6.png in Resources */,
+				3F16AD281703823300DB0DA8 /* poem_7.png in Resources */,
+				3F16AD2D1703834700DB0DA8 /* i5_poem_3.png in Resources */,
+				3F16AD2E1703834700DB0DA8 /* i5_poem_4.png in Resources */,
+				3F16AD2F1703834700DB0DA8 /* poem_3.png in Resources */,
+				3F16AD301703834700DB0DA8 /* poem_4.png in Resources */,
+				3F16AD33170383A900DB0DA8 /* i5_poem_5.png in Resources */,
+				3F16AD34170383A900DB0DA8 /* poem_5.png in Resources */,
+				3F16AD37170384C500DB0DA8 /* i5_poem_2.png in Resources */,
+				3F16AD38170384C500DB0DA8 /* poem_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
