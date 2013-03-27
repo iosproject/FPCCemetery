@@ -39,7 +39,7 @@
         
         NSString *fileName = _poemFileNames[randomIndex];
         UIImage *image;
-        fileName = _poemFileNames[2]; // remove this
+        //fileName = _poemFileNames[2]; // remove this
         
         //NSLog(@"%@\n", fileName);
         
