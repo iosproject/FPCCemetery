@@ -12,16 +12,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pH7-wH-Thu">
-                                <rect key="frame" x="0.0" y="44" width="320" height="348"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pH7-wH-Thu" customClass="SlideShowScrollView">
+                                <rect key="frame" x="0.0" y="45" width="320" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <pageControl userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Gec-sD-Af2">
-                                <rect key="frame" x="141" y="275" width="38" height="36"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="pageIndicatorTintColor" red="0.62737771739130432" green="0.62737771739130432" blue="0.62737771739130432" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.96643597146739135" green="0.96643597146739135" blue="0.96643597146739135" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="Ci8-I7-sDK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -30,18 +24,24 @@
                                     <navigationItem title="FPC Burial Grounds" id="7G0-7q-MJG"/>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_quote1.png" id="5Sd-YK-rKW" customClass="PoemView">
-                                <rect key="frame" x="0.0" y="305" width="320" height="194"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cyan="0.0" magenta="0.059999999999999998" yellow="0.10000000000000001" black="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                            <pageControl userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Gec-sD-Af2">
+                                <rect key="frame" x="141" y="252" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.62737771739130432" green="0.62737771739130432" blue="0.62737771739130432" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.96643597146739135" green="0.96643597146739135" blue="0.96643597146739135" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="home_quote1.png" id="cQd-xB-2WF">
+                                <rect key="frame" x="0.0" y="301" width="320" height="197"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.77807598814552792" blue="0.67159639456565445" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="icon_home.png" id="Jtq-AU-wVD"/>
                     <connections>
-                        <outlet property="pageControl" destination="Gec-sD-Af2" id="5bg-DK-dkN"/>
-                        <outlet property="scrollView" destination="pH7-wH-Thu" id="y8l-vV-gy6"/>
+                        <outlet property="pageControl" destination="Gec-sD-Af2" id="kas-fz-Z5H"/>
+                        <outlet property="ssScrollView" destination="pH7-wH-Thu" id="vBM-Vm-g5x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -86,7 +86,7 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oD1-Jm-sfQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="skI-cj-1jW">
                                 <cells>
@@ -193,7 +193,7 @@
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ShR-HS-YXb">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="2" id="g1Y-Oj-gbf">
                             <size key="itemSize" width="76" height="76"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -248,23 +248,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="p6V-SF-H8L">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="p6V-SF-H8L">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="omS-gO-yPH" appends="YES" id="xsK-U5-hYW"/>
+                                            <outletCollection property="gestureRecognizers" destination="LUV-Pn-vfc" appends="YES" id="e1l-w8-SkY"/>
+                                            <outletCollection property="gestureRecognizers" destination="Qn5-ZB-ryV" appends="YES" id="c35-2t-Ki6"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="omS-gO-yPH" appends="YES" id="goO-sT-pQD"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6rm-1Z-MMD">
                         <barButtonItem key="backBarButtonItem" title="Back" id="tE9-6j-7Ss"/>
@@ -274,7 +272,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9m-Wa-Or3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="omS-gO-yPH"/>
+                <swipeGestureRecognizer direction="left" id="LUV-Pn-vfc">
+                    <connections>
+                        <action selector="didSwipeLeft:" destination="j8j-FN-y8W" id="Hux-Ai-sF0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Qn5-ZB-ryV">
+                    <connections>
+                        <action selector="didSwipeRight:" destination="j8j-FN-y8W" id="Hq5-gW-xoM"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-703" y="1560"/>
         </scene>
@@ -383,7 +390,7 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96643597150000005" green="0.96643597150000005" blue="0.96643597150000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Us" id="DOw-Cq-HxV"/>
                 </viewController>
@@ -438,7 +445,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="About Us" id="2Vp-AN-8FB"/>
                 </viewController>
@@ -530,7 +537,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96643597150000005" green="0.96643597150000005" blue="0.96643597150000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Plan Your Visit" id="v64-wh-3nv"/>
                 </viewController>
@@ -604,7 +611,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IC7-qX-cB9">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackOpaque" placeholder="I see dead people" showsScopeBar="YES" id="EYw-01-5qK">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -771,14 +778,14 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Epitaph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QTX-7O-8TQ">
-                                        <rect key="frame" x="22.5" y="225" width="280" height="21"/>
+                                        <rect key="frame" x="22" y="225" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" id="826-Gk-y3m">
-                                        <rect key="frame" x="22.5" y="259" width="280" height="176"/>
+                                        <rect key="frame" x="22" y="259" width="280" height="176"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -832,8 +839,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="scrollView2" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="ssScrollView" candidateClass="SlideShowScrollView"/>
             </relationships>
         </class>
         <class className="ImageDetailViewController" superclassName="UIViewController">
@@ -848,15 +854,15 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
         </class>
-        <class className="PoemView" superclassName="UIImageView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PoemView.h"/>
-        </class>
         <class className="SearchTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goToSearch:"/>
                 <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
             </relationships>
+        </class>
+        <class className="SlideShowScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SlideShowScrollView.h"/>
         </class>
         <class className="TombDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TombDetailViewController.h"/>
@@ -882,9 +888,6 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

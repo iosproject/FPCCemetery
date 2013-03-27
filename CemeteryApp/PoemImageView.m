@@ -1,14 +1,14 @@
 //
-//  PoemView.m
+//  PoemImageView.m
 //  CemeteryApp
 //
-//  Created by Joshua Lisojo on 3/11/13.
+//  Created by Computer Science on 3/20/13.
 //  Copyright (c) 2013 KeanU. All rights reserved.
 //
 
-#import "PoemView.h"
+#import "PoemImageView.h"
 
-@implementation PoemView
+@implementation PoemImageView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -18,6 +18,9 @@
     }
     return self;
 }
+
+// randomly choose an image
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
