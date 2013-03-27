@@ -14,6 +14,7 @@
 
 
 @implementation HomeViewController
+@synthesize poemImageView = _poemImageView;
 @synthesize ssScrollView = _ssScrollView,
             pageControl = _pageControl;
 
@@ -24,6 +25,7 @@
     // Setup the slideshow and reference the page control.
     [_ssScrollView setupSlideShow];
     [_ssScrollView setPageControl:_pageControl];
+    [_poemImageView setUpPoemView];
 }
 
 @end

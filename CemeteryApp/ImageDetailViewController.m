@@ -54,7 +54,6 @@
 }
 
 - (IBAction)didSwipeLeft:(id)sender {
-    //self.imageView.image = [self nextImage];
     self.imageIndex++;
     if(self.imageIndex >= self.imageArray.count)
         self.imageIndex = 0;
@@ -68,7 +67,6 @@
 }
 
 - (IBAction)didSwipeRight:(id)sender {
-    //self.imageView.image = [self previousImage];
     self.imageIndex--;
     if(self.imageIndex < 0)
         self.imageIndex = self.imageArray.count - 1;
@@ -82,13 +80,6 @@
 
     
 }
-/*- (IBAction)didSwipeRight:(id)sender {
-    //self.imageView.image = [self previousImage];
-    self.imageIndex--;
-    if(self.imageIndex < 0)
-        self.imageIndex = self.imageArray.count - 1;
-    self.imageView.image = [UIImage imageNamed:self.imageArray[self.imageIndex]];
-}*/
 
 
 
