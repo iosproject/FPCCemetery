@@ -72,20 +72,8 @@
     {
         // Read file contents
         data = [filemgr contentsAtPath: dataFile];
-        
-        /*
-        NSError *error = nil;
-        NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
-                                                                     options:kNilOptions
-                                                                       error:&error];
-        
-        for (NSDictionary *tomb in jsonTombData)
-        {
-            NSLog(@"%@ ", [tomb objectForKey:@"First_Name"]);
-        }
-        NSLog(@"%d", [jsonTombData count]);
-        */
     }
+    
     return data;
 }
 
@@ -208,7 +196,7 @@
         
         // get data from internet
         if ([self connectedToInternet]) {
-            NSLog(@"connected to internet");
+            //NSLog(@"connected to internet");
             
             // DB URL
             NSURL *url = [NSURL URLWithString:LATEST_TOMB_DB_URL];
