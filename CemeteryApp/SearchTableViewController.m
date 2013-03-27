@@ -13,6 +13,7 @@
 
 #define LATEST_TOMB_DB_URL @"http://fpcenj.org/FPCENJ/AppDB/new_tomb_database.json"
 #define BACKGROUND_QUEUE dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+#define TOMB_DB_FILE @"tomb_db_file.json"
 
 @interface SearchTableViewController ()
 
@@ -43,15 +44,117 @@
     
     // read JSON file
     [self showLoadingView];
-    [self readRemoteJSON];
+    [self readJSONData];
     
     // initialize the array to hold search results.
     _filteredTombArray = [NSMutableArray arrayWithCapacity:[_tombArray count]];
 }
 
+- (NSData *) getLocalDBData
+{
+    NSFileManager *filemgr;
+    NSString *dataFile;
+    NSString *docsDir;
+    NSArray *dirPaths;
+    NSData *data;
+    
+    filemgr = [NSFileManager defaultManager];
+    
+    // Identify the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    // Build the path to the data file
+    dataFile = [docsDir stringByAppendingPathComponent: TOMB_DB_FILE];
+    
+    // Check if the file already exists
+    if ([filemgr fileExistsAtPath: dataFile])
+    {
+        // Read file contents
+        data = [filemgr contentsAtPath: dataFile];
+        
+        /*
+        NSError *error = nil;
+        NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
+                                                                     options:kNilOptions
+                                                                       error:&error];
+        
+        for (NSDictionary *tomb in jsonTombData)
+        {
+            NSLog(@"%@ ", [tomb objectForKey:@"First_Name"]);
+        }
+        NSLog(@"%d", [jsonTombData count]);
+        */
+    }
+    return data;
+}
+
+
+- (void)downloadFileAndSave
+{
+    NSLog(@"downloading...");
+    NSString *stringURL = LATEST_TOMB_DB_URL;
+    NSURL  *url = [NSURL URLWithString:stringURL];
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    
+    if ( urlData )
+    {
+        NSFileManager *filemgr;
+        NSString *dataFile;
+        NSString *docsDir;
+        NSArray *dirPaths;
+        
+        filemgr = [NSFileManager defaultManager];
+        dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        docsDir = [dirPaths objectAtIndex:0];
+        dataFile = [docsDir stringByAppendingPathComponent: TOMB_DB_FILE];
+        [filemgr createFileAtPath: dataFile contents: urlData attributes:nil];
+    }
+}
+
+-(bool)isFileModified:(NSURL *)fileURL forFile:(NSString *)filePath
+{
+    // create a HTTP request to get the file information from the web server
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:fileURL];
+    [request setHTTPMethod:@"HEAD"];
+    
+    NSHTTPURLResponse* response;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    
+    // get the last modified info from the HTTP header
+    NSString* httpLastModified = nil;
+    if ([response respondsToSelector:@selector(allHeaderFields)])
+    {
+        httpLastModified = [[response allHeaderFields] objectForKey:@"Last-Modified"];
+    }
+    
+    // setup a date formatter to query the server file's modified date
+    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    df.dateFormat = @"EEE',' dd MMM yyyy HH':'mm':'ss 'GMT'";
+    df.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    df.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    
+    // get the file attributes to retrieve the local file's modified date
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSDictionary* fileAttributes = [fileManager attributesOfItemAtPath:filePath error:nil];
+    
+    // test if the server file's date is later than the local file's date
+    NSDate* serverFileDate = [df dateFromString:httpLastModified];
+    NSDate* localFileDate = [fileAttributes fileModificationDate];
+    
+    NSLog(@"Local File Date: %@ Server File Date: %@", localFileDate, serverFileDate);
+    
+    //If file doesn't exist, download it
+    if(localFileDate==nil){
+        return YES;
+    }
+    
+    return ([localFileDate laterDate:serverFileDate] == serverFileDate);
+}
+
 #define urlString @"http://www.google.com"
 
-- (BOOL) connectedToInternet
+- (BOOL)connectedToInternet
 {
     NSString *URLString = nil;
     NSError *error = nil;
@@ -60,37 +163,6 @@
                                             error:&error];
     
     return URLString != nil;
-}
-
-- (void) showLoadingView
-{
-    _loadingView = [[UIView alloc] initWithFrame:CGRectMake(75, 155, 170, 170)];
-    _loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.25 alpha:0.25];
-    _loadingView.layer.borderColor = [[UIColor blueColor] CGColor];
-    _loadingView.clipsToBounds = YES;
-    _loadingView.layer.cornerRadius = 10.0;
-
-    _activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    _activityView.frame = CGRectMake(65, 40, _activityView.bounds.size.width, _activityView.bounds.size.height);
-    [_loadingView addSubview:_activityView];
-
-    _loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 115, 130, 22)];
-    _loadingLabel.backgroundColor = [UIColor clearColor];
-    _loadingLabel.textColor = [UIColor whiteColor];
-    _loadingLabel.adjustsFontSizeToFitWidth = YES;
-    _loadingLabel.textAlignment = NSTextAlignmentCenter;
-    _loadingLabel.text = @"Loading...";
-    [_loadingView addSubview:_loadingLabel];
-    
-    [self.view addSubview:_loadingView];
-    [_activityView startAnimating];
-
-}
-
-- (void) hideLoadingView
-{
-    [_activityView stopAnimating];
-    [_loadingView removeFromSuperview];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -128,49 +200,68 @@
     _filteredTombArray = [NSMutableArray arrayWithArray:tempArray];
 }
 
-- (void) readRemoteJSON
+- (void) readJSONData
 {
     dispatch_async(BACKGROUND_QUEUE, ^{
         
-        // GET DATA
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString: LATEST_TOMB_DB_URL]];
+        NSData *data = nil;
         
-        // if no data from internet read locally
+        // get data from internet
+        if ([self connectedToInternet]) {
+            NSLog(@"connected to internet");
+            
+            // DB URL
+            NSURL *url = [NSURL URLWithString:LATEST_TOMB_DB_URL];
+            
+            // build DB local file path
+            NSString *dataFile;
+            NSString *docsDir;
+            NSArray *dirPaths;
+            
+            // Identify the documents directory
+            dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            docsDir = [dirPaths objectAtIndex:0];
+            
+            // Build the path to the data file
+            dataFile = [docsDir stringByAppendingPathComponent: TOMB_DB_FILE];
+            
+            // if the file on the server was modified dowload it, save it, and read it
+            if ([self isFileModified:url forFile:dataFile]) {
+                NSLog(@"connected to internet, file was modified");
+                [self downloadFileAndSave];
+                data = [self getLocalDBData];
+            }
+            // else the file on the server wasn't modified jus read it from local file
+            else
+            {
+                NSLog(@"connected to internet, file was not modified");
+                data = [self getLocalDBData];
+            }
+        }
+        // else there is no internet connection try getting the DB data from a previous local file
+        else {
+            NSLog(@"not connected to internet, using latest local file");
+            data = [self getLocalDBData];
+        }
+        
+        // if no data from internet and no data from downloaded local file read from default DB
         if (!data) {
-            //NSLog(@"Not Connected!");
-            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_tomb_database" ofType:@"json"];
+            NSLog(@"not connected to internet, using default DB");
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"default_tomb_db" ofType:@"json"];
             data = [NSData dataWithContentsOfFile:filePath];
         }
     
+        // create a dictionary from the DB data
         NSError *error = nil;
         NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
                                                                      options:kNilOptions
                                                                        error:&error];
+        
+        // ceate tomb objects from the dictionary
         [self performSelectorOnMainThread:@selector(buildTombObjectsFromDictionary:) withObject:jsonTombData waitUntilDone:YES];
 
     });
 }
-
-/*
-- (void) testLocalJSON
-{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"new_tomb_database" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    
-    NSError *error = nil;
-    NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:kNilOptions
-                                                                   error:&error];
-    
-    for (NSDictionary *tomb in jsonTombData)
-    {
-        NSLog(@"%@ ", [tomb objectForKey:@"FirstName"]);
-    }
-    NSLog(@"%d", [jsonTombData count]);
-    
-    [self buildTombObjectsFromDictionary:jsonTombData];
-}
-*/
 
 -(void)buildTombObjectsFromDictionary:(NSDictionary *)jsonTombData
 {
@@ -311,6 +402,36 @@
     
     // Return YES to cause the search result table view to be reloaded.
     return YES;
+}
+
+- (void) hideLoadingView
+{
+    [_activityView stopAnimating];
+    [_loadingView removeFromSuperview];
+}
+
+- (void) showLoadingView
+{
+    _loadingView = [[UIView alloc] initWithFrame:CGRectMake(75, 155, 170, 170)];
+    _loadingView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.25 alpha:0.25];
+    _loadingView.layer.borderColor = [[UIColor blueColor] CGColor];
+    _loadingView.clipsToBounds = YES;
+    _loadingView.layer.cornerRadius = 10.0;
+
+    _activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _activityView.frame = CGRectMake(65, 40, _activityView.bounds.size.width, _activityView.bounds.size.height);
+    [_loadingView addSubview:_activityView];
+
+    _loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 115, 130, 22)];
+    _loadingLabel.backgroundColor = [UIColor clearColor];
+    _loadingLabel.textColor = [UIColor whiteColor];
+    _loadingLabel.adjustsFontSizeToFitWidth = YES;
+    _loadingLabel.textAlignment = NSTextAlignmentCenter;
+    _loadingLabel.text = @"Loading...";
+    [_loadingView addSubview:_loadingLabel];
+    
+    [self.view addSubview:_loadingView];
+    [_activityView startAnimating];
 }
 
 @end
