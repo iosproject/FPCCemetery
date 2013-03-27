@@ -76,6 +76,9 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
         
         ImageDetailViewController *imageDetailViewController = [segue destinationViewController];
         imageDetailViewController.image = image2;
+        
+        imageDetailViewController.imageArray = _allImages;
+        imageDetailViewController.imageIndex = selectedIndexPath.row;
     }
 }
 
