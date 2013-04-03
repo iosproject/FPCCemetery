@@ -18,6 +18,7 @@
 @synthesize ssScrollView = _ssScrollView,
             pageControl = _pageControl;
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
