@@ -597,14 +597,14 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Contact the team:    ">
+                                    <fragment content="Contact:    ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica-Bold"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="kean.development@gmail.com   ">
+                                    <fragment content="keanmobiledevelopment@gmail.com   ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
