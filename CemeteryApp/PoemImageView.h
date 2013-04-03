@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PoemImageView : UIImageView
-
+@property (strong, atomic) NSArray *poemFileNames;
+- (void) setUpPoemView;
 @end
