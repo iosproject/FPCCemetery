@@ -80,7 +80,7 @@
 
 - (void)downloadFileAndSave
 {
-    NSLog(@"downloading...");
+    //NSLog(@"downloading...");
     NSString *stringURL = LATEST_TOMB_DB_URL;
     NSURL  *url = [NSURL URLWithString:stringURL];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
