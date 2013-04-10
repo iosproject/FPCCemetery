@@ -41,7 +41,13 @@
     UIImageView *imageView6 = [[UIImageView alloc] initWithImage:img1];
     
     
-    _imgViews = [NSArray arrayWithObjects: imageView1, imageView2, imageView3, imageView4, imageView5, imageView6, nil];
+    _imgViews = [NSArray arrayWithObjects: imageView1,
+                                           imageView2,
+                                           imageView3,
+                                           imageView4,
+                                           imageView5,
+                                           imageView6,
+                                                 nil];
     
     self.pagingEnabled = YES;
     self.bounces = NO;

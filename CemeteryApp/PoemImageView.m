@@ -10,14 +10,6 @@
 
 @implementation PoemImageView
 @synthesize poemFileNames = _poemFileNames;
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
 
 // randomly choose an image
 - (void) setUpPoemView{
@@ -39,10 +31,8 @@
         
         NSString *fileName = _poemFileNames[randomIndex];
         UIImage *image;
-        //fileName = _poemFileNames[2]; // remove this
         
-        //NSLog(@"%@\n", fileName);
-        
+        // This if statement recognizes which version of iPhone the user has.
         if (screenSize.height > 480.0f) {
             /*Do iPhone 5 stuff here.*/
             fileName = [NSString stringWithFormat:@"i5_%@",fileName];
@@ -57,14 +47,5 @@
         /*Do iPad stuff here.*/
     }
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

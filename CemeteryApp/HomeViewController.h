@@ -12,7 +12,7 @@
 #import "PoemImageView.h"
 
 
-@interface HomeViewController : UIViewController <UIScrollViewDelegate> 
+@interface HomeViewController : UIViewController 
 
 @property (strong, nonatomic) IBOutlet SlideShowScrollView *ssScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
