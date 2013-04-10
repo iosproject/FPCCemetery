@@ -963,11 +963,11 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5cw-wK-5NQ">
-                                        <rect key="frame" x="18" y="398" width="285" height="40"/>
+                                        <rect key="frame" x="17.5" y="349" width="285" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="View Tombstone">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
@@ -975,6 +975,21 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                         </state>
                                         <connections>
                                             <segue destination="3yY-av-4pG" kind="push" id="kuG-wD-Zc6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qlh-sT-FbU">
+                                        <rect key="frame" x="18" y="396" width="285" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="View Section">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="v0I-OF-2WW" kind="push" id="Tsv-Yu-3eH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -995,6 +1010,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                         <outlet property="scrollView" destination="cGe-y6-kSj" id="AFe-hn-xgf"/>
                         <outlet property="sectionTextField" destination="pFR-Qt-GcA" id="Ds0-wI-5W6"/>
                         <outlet property="veteranTextField" destination="eyK-UJ-Ay2" id="7yf-F2-DSt"/>
+                        <outlet property="viewSectionButton" destination="Qlh-sT-FbU" id="SHV-CE-e1x"/>
                         <outlet property="viewTombstoneButton" destination="5cw-wK-5NQ" id="NyY-hF-TpU"/>
                     </connections>
                 </viewController>
@@ -1010,11 +1026,17 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="3_full.jpg" id="Wd4-Li-3dy">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="spA-F4-cVl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="3_full.jpg" id="xum-Ux-aox">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1023,6 +1045,34 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg4-HN-tcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-340" y="75"/>
+        </scene>
+        <!--Section View Controller - Section-->
+        <scene sceneID="yxq-MH-6sK">
+            <objects>
+                <viewController id="v0I-OF-2WW" customClass="SectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8PH-i9-Mu8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bpG-Z0-kzL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="BurialMap.png" id="Wa4-bi-bnz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Section" id="gMm-FP-cqb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqT-M1-Zez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="785"/>
         </scene>
     </scenes>
     <resources>
@@ -1055,8 +1105,6 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         <class className="ImageDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageDetailViewController.h"/>
             <relationships>
-                <relationship kind="action" name="didSwipeLeft:"/>
-                <relationship kind="action" name="didSwipeRight:"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
@@ -1076,6 +1124,9 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
             </relationships>
         </class>
+        <class className="SectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SectionViewController.h"/>
+        </class>
         <class className="SlideShowScrollView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SlideShowScrollView.h"/>
         </class>
@@ -1090,6 +1141,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="sectionTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="veteranTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewSectionButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="viewTombstoneButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -1107,9 +1159,6 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

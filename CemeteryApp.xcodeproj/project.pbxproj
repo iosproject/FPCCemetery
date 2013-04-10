@@ -64,6 +64,7 @@
 		3F16AD37170384C500DB0DA8 /* i5_poem_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD35170384C500DB0DA8 /* i5_poem_2.png */; };
 		3F16AD38170384C500DB0DA8 /* poem_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F16AD36170384C500DB0DA8 /* poem_2.png */; };
 		3F16D4A81715E46400A4574E /* TombstoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16D4A71715E46400A4574E /* TombstoneViewController.m */; };
+		3F16D4AB1715ECCB00A4574E /* SectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16D4AA1715ECCB00A4574E /* SectionViewController.m */; };
 		3F1FDD1516137871008C52DE /* AppIcon_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */; };
 		3F1FDD1616137871008C52DE /* AppIcon_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */; };
 		3F1FDE0A16137871008C52DE /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDBA216137870008C52DE /* home_24.png */; };
@@ -162,6 +163,8 @@
 		3F16AD36170384C500DB0DA8 /* poem_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poem_2.png; sourceTree = "<group>"; };
 		3F16D4A61715E46400A4574E /* TombstoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TombstoneViewController.h; sourceTree = "<group>"; };
 		3F16D4A71715E46400A4574E /* TombstoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TombstoneViewController.m; sourceTree = "<group>"; };
+		3F16D4A91715ECCB00A4574E /* SectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionViewController.h; sourceTree = "<group>"; };
+		3F16D4AA1715ECCB00A4574E /* SectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionViewController.m; sourceTree = "<group>"; };
 		3F1FDAAC16137870008C52DE /* AppIcon_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Normal.png; sourceTree = "<group>"; };
 		3F1FDAAD16137870008C52DE /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_Retina.png; sourceTree = "<group>"; };
 		3F1FDBA216137870008C52DE /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_24.png; path = "../TWG Retina Icons/home_24.png"; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */,
 				3F16D4A61715E46400A4574E /* TombstoneViewController.h */,
 				3F16D4A71715E46400A4574E /* TombstoneViewController.m */,
+				3F16D4A91715ECCB00A4574E /* SectionViewController.h */,
+				3F16D4AA1715ECCB00A4574E /* SectionViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -563,6 +568,7 @@
 				3F67165F16FA0F8900674923 /* SlideShowScrollView.m in Sources */,
 				3F67166216FA292400674923 /* PoemImageView.m in Sources */,
 				3F16D4A81715E46400A4574E /* TombstoneViewController.m in Sources */,
+				3F16D4AB1715ECCB00A4574E /* SectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

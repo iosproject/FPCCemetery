@@ -22,5 +22,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *veteranTextField;
 @property (strong, nonatomic) IBOutlet UITextView *epitaphTextView;
 @property (strong, nonatomic) IBOutlet UIButton *viewTombstoneButton;
+@property (strong, nonatomic) IBOutlet UIButton *viewSectionButton;
 
 @end
