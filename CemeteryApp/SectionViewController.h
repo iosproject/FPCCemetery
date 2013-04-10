@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SectionViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UIImageView *sectionImageView;
+@property (strong, nonatomic) NSString *section;
 @end

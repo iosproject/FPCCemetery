@@ -14,6 +14,9 @@
 
 @implementation SectionViewController
 
+@synthesize sectionImageView = _sectionImageView,
+            section = _section;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +30,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self fetchSectionImage];
+}
+
+- (void)fetchSectionImage
+{
+    NSString *stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/section_images/section_%@.jpeg", [_section substringToIndex:1], nil];
+    
+    NSLog(@"%@", stringURL);
+
+    NSURL *url = [NSURL URLWithString:stringURL];
+    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+    [_sectionImageView setImage:image];
 }
 
 - (void)didReceiveMemoryWarning

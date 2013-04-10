@@ -8,6 +8,7 @@
 
 #import "TombDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "SectionViewController.h"
 
 @interface TombDetailViewController ()
 
@@ -110,6 +111,15 @@
     else
     {
         [self setTitle:[NSString stringWithFormat:@"%@ %@ %@", _selectedTomb.firstName, _selectedTomb.middleName,_selectedTomb.lastName]];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showSection"])
+    {
+        SectionViewController *sectionViewController = [segue destinationViewController];
+        [sectionViewController setSection:[_selectedTomb.section lowercaseString]];
     }
 }
 
