@@ -21,7 +21,9 @@
             bornTextField = _bornTextField,
             diedTextField = _diedTextField,
             veteranTextField = _veteranTextField,
-            causeOfDeathTextField = _causeOfDeathTextField;
+            causeOfDeathTextField = _causeOfDeathTextField,
+            viewTombstoneButton = _viewTombstoneButton,
+            viewSectionButton = _viewSectionButton;
 
 - (void)viewDidLoad
 {
@@ -83,8 +85,15 @@
 
 -(void) setScrollViewHeight:(int)height
 {
+    // height adjust
     height -= 150;
-    [self.scrollView setContentSize:CGSizeMake(320, 455+height)];
+    
+    // place buttons under the epitaph 
+    _viewTombstoneButton.frame = CGRectMake(20.0, 520+height, 280.0, 40.0);
+    _viewSectionButton.frame = CGRectMake(20.0, 570+height, 280.0, 40.0);
+    
+    // set size of scroll view
+    [self.scrollView setContentSize:CGSizeMake(320, 540+height)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
