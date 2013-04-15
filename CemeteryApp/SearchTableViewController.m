@@ -285,7 +285,7 @@
                                     andDateModified:[dict objectForKey:FPC_TOMB_DATE_MODIFIED]];
         
         [tempArray addObject:tomb];
-        //NSLog(@"%@", [tomb viewDescription]);
+        //NSLog(@"%@ %@", tomb.uniqueId, tomb.lastName);
     }
     
     self.tombArray = [[NSArray alloc]initWithArray:tempArray];

@@ -10,7 +10,8 @@
 
 @implementation MapViewController
 
-- (void)loadView {
+- (void)loadView
+{
 	UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 	scroll.backgroundColor = [UIColor blackColor];
 	scroll.delegate = self;

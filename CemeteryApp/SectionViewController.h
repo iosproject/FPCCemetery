@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SectionViewController : UIViewController
+@interface SectionViewController : UIViewController<UIScrollViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UIImageView *sectionImageView;
+@property (strong, nonatomic) IBOutlet UIScrollView *sectionScrollView;
 @property (strong, nonatomic) NSString *section;
+
+@property (nonatomic, retain) UIActivityIndicatorView * activityView;
+@property (nonatomic, retain) UIView *loadingView;
+@property (nonatomic, retain) UILabel *loadingLabel;
 @end

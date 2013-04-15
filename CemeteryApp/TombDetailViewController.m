@@ -9,6 +9,7 @@
 #import "TombDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SectionViewController.h"
+#import "TombstoneViewController.h"
 
 @interface TombDetailViewController ()
 
@@ -120,6 +121,23 @@
     {
         SectionViewController *sectionViewController = [segue destinationViewController];
         [sectionViewController setSection:[_selectedTomb.section lowercaseString]];
+    }
+    else if ([[segue identifier] isEqualToString:@"showTombstone"])
+    {
+        TombstoneViewController *tombstoneViewController = [segue destinationViewController];
+        
+        // extract the tomb number from the unique id
+        NSMutableString *tombNumber = [[NSMutableString alloc] init];
+        for (int i=0; i<[_selectedTomb.uniqueId length]; i++)
+        {
+            if (isdigit([_selectedTomb.uniqueId characterAtIndex:i]))
+            {
+                [tombNumber appendFormat:@"%c",[_selectedTomb.uniqueId characterAtIndex:i]];
+            }
+        }
+
+        // set the tomb number in the destination view controller
+        [tombstoneViewController setTombstoneNumber:tombNumber];
     }
 }
 
