@@ -37,9 +37,18 @@
     [_causeOfDeathTextField setText: _selectedTomb.causeOfDeath];
     [self setAgeString];
     [self setVeteranString];
-    
-    [_epitaphTextView setText: [NSString stringWithFormat:@"%@", _selectedTomb.epitaph,nil]];
+    [self setEpitaphString];
     [self styleEpitaphTextView];
+}
+
+- (void) setEpitaphString
+{
+    if ([_selectedTomb.epitaph isEqualToString:@""])
+    {
+        [_epitaphTextView setText:@"No Epitaph Available"];
+    }
+    else
+        [_epitaphTextView setText: [NSString stringWithFormat:@"%@", _selectedTomb.epitaph, nil]];
 }
 
 - (void) setAgeString

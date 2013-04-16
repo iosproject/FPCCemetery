@@ -9,6 +9,7 @@
 #import "SectionViewController.h"
 #import "QuartzCore/QuartzCore.h"
 
+
 @interface SectionViewController ()
 
 @end
@@ -22,30 +23,25 @@
             loadingView = _loadingView,
             loadingLabel = _loadingLabel;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self showLoadingView];
-    
-    _sectionScrollView.delegate = self;
+    [self configureScrollview];
     [self fetchSectionImage];
-	_sectionScrollView.contentSize = _sectionScrollView.frame.size;
-	_sectionScrollView.minimumZoomScale = _sectionScrollView.frame.size.width / _sectionScrollView.frame.size.width;
-	_sectionScrollView.maximumZoomScale = 2.0;
-	[_sectionScrollView setZoomScale:_sectionScrollView.minimumZoomScale];
     [self setupDoubleTapGesture];
-    
     [self hideLoadingView];
+}
+
+-(void) configureScrollview
+{
+    _sectionScrollView.delegate = self;
+    _sectionScrollView.contentSize = _sectionScrollView.frame.size;
+    _sectionScrollView.minimumZoomScale = _sectionScrollView.frame.size.width / _sectionScrollView.frame.size.width;
+    _sectionScrollView.maximumZoomScale = 2.0;
+    [_sectionScrollView setZoomScale:_sectionScrollView.minimumZoomScale];
 }
 
 - (void) setupDoubleTapGesture
@@ -69,10 +65,16 @@
 {
     NSString *stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/section_images/section_%@.jpeg", [_section substringToIndex:1], nil];
     
-    NSLog(@"%@", stringURL);
+    //NSLog(@"%@", stringURL);
 
     NSURL *url = [NSURL URLWithString:stringURL];
     UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+    
+    if (!image)
+    {
+        image = [UIImage imageNamed:@"not_available.png"];
+    }
+    
     [_sectionImageView setImage:image];
 }
 
