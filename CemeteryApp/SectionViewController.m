@@ -11,6 +11,9 @@
 
 
 @interface SectionViewController ()
+{
+    UIImage *image;
+}
 
 @end
 
@@ -29,10 +32,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self showLoadingView];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self fetchSectionImage]; // 1
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_sectionImageView setImage:image]; // 2
+            [self hideLoadingView]; // 3
+        });
+    });
+    
     [self configureScrollview];
-    [self fetchSectionImage];
     [self setupDoubleTapGesture];
-    [self hideLoadingView];
 }
 
 -(void) configureScrollview
@@ -66,16 +76,15 @@
     NSString *stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/section_images/section_%@.jpeg", [_section substringToIndex:1], nil];
     
     //NSLog(@"%@", stringURL);
+    //NSLog(@"fetching image...");
 
     NSURL *url = [NSURL URLWithString:stringURL];
-    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+    image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
     
     if (!image)
     {
         image = [UIImage imageNamed:@"not_available.png"];
     }
-    
-    [_sectionImageView setImage:image];
 }
 
 - (void) hideLoadingView

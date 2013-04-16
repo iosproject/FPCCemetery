@@ -10,6 +10,9 @@
 #import "QuartzCore/QuartzCore.h"
 
 @interface TombstoneViewController ()
+{
+    UIImage *image;
+}
 
 @end
 
@@ -28,10 +31,17 @@
     
 	// Do any additional setup after loading the view.
     [self showLoadingView];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self fetchTombstoneImage]; // 1
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_tombstoneImageView setImage:image]; // 2
+            [self hideLoadingView]; // 3
+        });
+    });
+    
     [self configureScrollview];
-    [self fetchTombstoneImage];
     [self setupDoubleTapGesture];
-    [self hideLoadingView];
 }
 
 -(void) configureScrollview
@@ -67,14 +77,12 @@
     NSString *stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/0-99/%@.jpg", _tombstoneNumber];
     //NSLog(@"%@", stringURL);
     NSURL *url = [NSURL URLWithString:stringURL];
-    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+    image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
     
     if (!image)
     {
         image = [UIImage imageNamed:@"not_available.png"];
     }
-    
-    [_tombstoneImageView setImage:image];
 }
 
 - (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView
