@@ -74,7 +74,34 @@
 
 - (void)fetchTombstoneImage
 {
-    NSString *stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/0-99/%@.jpg", _tombstoneNumber];
+    int tombInt = [_tombstoneNumber integerValue];
+    NSString *stringURL = nil;
+    
+    if (tombInt > 0 && tombInt < 100)
+    {
+        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/0-99/%@.jpg", _tombstoneNumber];
+    }
+    else if (tombInt > 99 && tombInt < 200)
+    {
+        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/100s/%@.jpg", _tombstoneNumber];
+    }
+    else if (tombInt > 199 && tombInt < 300)
+    {
+        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/200s/%@.jpg", _tombstoneNumber];
+    }
+    else if (tombInt > 299 && tombInt < 400)
+    {
+        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/300s/%@.jpg", _tombstoneNumber];
+    }
+    else if (tombInt > 399 && tombInt < 511)
+    {
+        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/400s_500s/%@.jpg", _tombstoneNumber];
+    }
+    else if (tombInt > 510 && tombInt < 1809)
+    {
+        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/500-977and Alpa rows/%@.jpg", _tombstoneNumber];
+    }
+    
     //NSLog(@"%@", stringURL);
     NSURL *url = [NSURL URLWithString:stringURL];
     image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
