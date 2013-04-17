@@ -23,6 +23,7 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _allImages = [@[@"0_full.jpg",
                   @"1_full.jpg",
                   @"2_full.jpg",

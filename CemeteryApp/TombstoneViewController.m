@@ -79,27 +79,27 @@
     
     if (tombInt > 0 && tombInt < 100)
     {
-        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/0-99/%@.jpg", _tombstoneNumber];
+        stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/tombstone_images/0-99/%@.jpg", _tombstoneNumber];
     }
     else if (tombInt > 99 && tombInt < 200)
     {
-        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/100s/%@.jpg", _tombstoneNumber];
+        stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/tombstone_images/100s/%@.jpg", _tombstoneNumber];
     }
     else if (tombInt > 199 && tombInt < 300)
     {
-        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/200s/%@.jpg", _tombstoneNumber];
+        stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/tombstone_images/200s/%@.jpg", _tombstoneNumber];
     }
     else if (tombInt > 299 && tombInt < 400)
     {
-        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/300s/%@.jpg", _tombstoneNumber];
+        stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/tombstone_images/300s/%@.jpg", _tombstoneNumber];
     }
     else if (tombInt > 399 && tombInt < 511)
     {
-        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/400s_500s/%@.jpg", _tombstoneNumber];
+        stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/tombstone_images/400s_500s/%@.jpg", _tombstoneNumber];
     }
     else if (tombInt > 510 && tombInt < 1809)
     {
-        stringURL = [NSString stringWithFormat: @"http://localhost/databasepics/500-977and Alpa rows/%@.jpg", _tombstoneNumber];
+        stringURL = [NSString stringWithFormat: @"http://fpcenj.org/FPCENJ/app_images/tombstone_images/500-977and Alpa rows/%@.jpg", _tombstoneNumber];
     }
     
     //NSLog(@"%@", stringURL);
