@@ -125,7 +125,7 @@
 		30031E7516EFA21000981CCC /* BurialMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurialMapViewController.h; sourceTree = "<group>"; };
 		30031E7616EFA21000981CCC /* BurialMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurialMapViewController.m; sourceTree = "<group>"; };
 		30031E7816EFAA8700981CCC /* BurialMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BurialMap.png; sourceTree = "<group>"; };
-		300BAF4B171D87E40098AADA /* not_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_available.png; sourceTree = "<group>"; };
+		300BAF4B171D87E40098AADA /* not_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = not_available.png; path = ../CemeteryApp/not_available.png; sourceTree = "<group>"; };
 		3024B33216D80578007FDB0B /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		3024B33316D80578007FDB0B /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 		3027743D1703296700FDFBD2 /* default_tomb_db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default_tomb_db.json; sourceTree = "<group>"; };
@@ -323,6 +323,7 @@
 				07F31BEC161AAC4D00CAB198 /* Default.png */,
 				07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */,
 				0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */,
+				300BAF4B171D87E40098AADA /* not_available.png */,
 				07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */,
 				0715FAC91610BF81006A91A0 /* AppIcon_Normal.png */,
 				309EBD9216488B2A00F7386B /* ssimage01.png */,
@@ -396,7 +397,6 @@
 		3FA7D3551610B64700F132F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				300BAF4B171D87E40098AADA /* not_available.png */,
 				3027743D1703296700FDFBD2 /* default_tomb_db.json */,
 				3FA7D3561610B64700F132F3 /* CemeteryApp-Info.plist */,
 				3FA7D3571610B64700F132F3 /* InfoPlist.strings */,

@@ -9,6 +9,7 @@
 #import "SearchTableViewController.h"
 #import "TombDetailViewController.h"
 #import "QuartzCore/QuartzCore.h"
+#include <sys/xattr.h>
 #import "Tomb.h"
 
 #define LATEST_TOMB_DB_URL @"http://fpcenj.org/FPCENJ/AppDB/new_tomb_database.json"
@@ -16,6 +17,9 @@
 #define TOMB_DB_FILE @"tomb_db_file.json"
 
 @interface SearchTableViewController ()
+{
+    NSURL *url;
+}
 
 @end
 
@@ -82,7 +86,13 @@
 {
     //NSLog(@"downloading...");
     NSString *stringURL = LATEST_TOMB_DB_URL;
-    NSURL  *url = [NSURL URLWithString:stringURL];
+    
+    //NSURL  *url = [NSURL URLWithString:stringURL];
+    url = [NSURL URLWithString:stringURL];
+    
+    // add the skip backup attribute
+    [self addSkipBackupAttributeToItemAtURL:url];
+    
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     
     if ( urlData )
@@ -130,7 +140,7 @@
     NSDate* serverFileDate = [df dateFromString:httpLastModified];
     NSDate* localFileDate = [fileAttributes fileModificationDate];
     
-    //NSLog(@"Local File Date: %@ Server File Date: %@", localFileDate, serverFileDate);
+    NSLog(@"Local File Date: %@ Server File Date: %@", localFileDate, serverFileDate);
     
     //If file doesn't exist, download it
     if(localFileDate==nil){
@@ -195,11 +205,13 @@
         NSData *data = nil;
         
         // get data from internet
-        if ([self connectedToInternet]) {
-            //NSLog(@"connected to internet");
+        if ([self connectedToInternet])
+        {
+            NSLog(@"connected to internet");
             
             // DB URL
-            NSURL *url = [NSURL URLWithString:LATEST_TOMB_DB_URL];
+            //NSURL *url = [NSURL URLWithString:LATEST_TOMB_DB_URL];
+            url = [NSURL URLWithString:LATEST_TOMB_DB_URL];
             
             // build DB local file path
             NSString *dataFile;
@@ -210,31 +222,32 @@
             dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             docsDir = [dirPaths objectAtIndex:0];
             
+            
             // Build the path to the data file
             dataFile = [docsDir stringByAppendingPathComponent: TOMB_DB_FILE];
             
             // if the file on the server was modified dowload it, save it, and read it
             if ([self isFileModified:url forFile:dataFile]) {
-                //NSLog(@"connected to internet, file was modified");
+                NSLog(@"connected to internet, file was modified");
                 [self downloadFileAndSave];
                 data = [self getLocalDBData];
             }
             // else the file on the server wasn't modified jus read it from local file
             else
             {
-                //NSLog(@"connected to internet, file was not modified");
+                NSLog(@"connected to internet, file was not modified");
                 data = [self getLocalDBData];
             }
         }
         // else there is no internet connection try getting the DB data from a previous local file
         else {
-            //NSLog(@"not connected to internet, using latest local file");
+            NSLog(@"not connected to internet, using latest local file");
             data = [self getLocalDBData];
         }
         
         // if no data from internet and no data from downloaded local file read from default DB
         if (!data) {
-            //NSLog(@"not connected to internet, using default DB");
+            NSLog(@"not connected to internet, using default DB");
             NSString *filePath = [[NSBundle mainBundle] pathForResource:@"default_tomb_db" ofType:@"json"];
             data = [NSData dataWithContentsOfFile:filePath];
         }
@@ -249,6 +262,32 @@
         [self performSelectorOnMainThread:@selector(buildTombObjectsFromDictionary:) withObject:jsonTombData waitUntilDone:YES];
 
     });
+}
+
+////////////////////////////////////////////////////////////////////
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
+{
+    const char* filePath = [[URL path] fileSystemRepresentation];
+    const char* attrName = "com.apple.MobileBackup";
+    if (&NSURLIsExcludedFromBackupKey == nil) {
+        // iOS 5.0.1 and lower
+        u_int8_t attrValue = 1;
+        int result = setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
+        return result == 0;
+    } else {
+        // First try and remove the extended attribute if it is present
+        int result = getxattr(filePath, attrName, NULL, sizeof(u_int8_t), 0, 0);
+        if (result != -1) {
+            // The attribute exists, we need to remove it
+            int removeResult = removexattr(filePath, attrName, 0);
+            if (removeResult == 0) {
+                NSLog(@"Removed extended attribute on file %@", URL);
+            }
+        }
+        
+        // Set the new key
+        return [URL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
+    }
 }
 
 -(void)buildTombObjectsFromDictionary:(NSDictionary *)jsonTombData
