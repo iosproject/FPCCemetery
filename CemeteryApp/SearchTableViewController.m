@@ -140,7 +140,7 @@
     NSDate* serverFileDate = [df dateFromString:httpLastModified];
     NSDate* localFileDate = [fileAttributes fileModificationDate];
     
-    NSLog(@"Local File Date: %@ Server File Date: %@", localFileDate, serverFileDate);
+    //NSLog(@"Local File Date: %@ Server File Date: %@", localFileDate, serverFileDate);
     
     //If file doesn't exist, download it
     if(localFileDate==nil){
@@ -207,7 +207,7 @@
         // get data from internet
         if ([self connectedToInternet])
         {
-            NSLog(@"connected to internet");
+            //NSLog(@"connected to internet");
             
             // DB URL
             //NSURL *url = [NSURL URLWithString:LATEST_TOMB_DB_URL];
@@ -228,26 +228,26 @@
             
             // if the file on the server was modified dowload it, save it, and read it
             if ([self isFileModified:url forFile:dataFile]) {
-                NSLog(@"connected to internet, file was modified");
+                //NSLog(@"connected to internet, file was modified");
                 [self downloadFileAndSave];
                 data = [self getLocalDBData];
             }
             // else the file on the server wasn't modified jus read it from local file
             else
             {
-                NSLog(@"connected to internet, file was not modified");
+                //NSLog(@"connected to internet, file was not modified");
                 data = [self getLocalDBData];
             }
         }
         // else there is no internet connection try getting the DB data from a previous local file
         else {
-            NSLog(@"not connected to internet, using latest local file");
+            //NSLog(@"not connected to internet, using latest local file");
             data = [self getLocalDBData];
         }
         
         // if no data from internet and no data from downloaded local file read from default DB
         if (!data) {
-            NSLog(@"not connected to internet, using default DB");
+            //NSLog(@"not connected to internet, using default DB");
             NSString *filePath = [[NSBundle mainBundle] pathForResource:@"default_tomb_db" ofType:@"json"];
             data = [NSData dataWithContentsOfFile:filePath];
         }
@@ -281,7 +281,7 @@
             // The attribute exists, we need to remove it
             int removeResult = removexattr(filePath, attrName, 0);
             if (removeResult == 0) {
-                NSLog(@"Removed extended attribute on file %@", URL);
+                //NSLog(@"Removed extended attribute on file %@", URL);
             }
         }
         
