@@ -106,7 +106,6 @@
     
     //NSLog(@"%@", stringURL);
     url = [NSURL URLWithString:stringURL];
-    [self addSkipBackupAttributeToItemAtURL:url];
     image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
     
     if (!image)
@@ -114,7 +113,7 @@
         image = [UIImage imageNamed:@"not_available.png"];
     }
 }
-
+/*
 - (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
 {
     const char* filePath = [[URL path] fileSystemRepresentation];
@@ -139,7 +138,7 @@
         return [URL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
     }
 }
-
+*/
 - (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView
 {
     CGSize boundsSize = scroll.bounds.size;

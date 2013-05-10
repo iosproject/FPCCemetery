@@ -45,7 +45,7 @@
     [self configureScrollview];
     [self setupDoubleTapGesture];
 }
-
+/*
 - (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
 {
     const char* filePath = [[URL path] fileSystemRepresentation];
@@ -70,7 +70,7 @@
         return [URL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
     }
 }
-
+*/
 -(void) configureScrollview
 {
     _sectionScrollView.delegate = self;
@@ -105,7 +105,6 @@
     //NSLog(@"fetching image...");
 
     url = [NSURL URLWithString:stringURL];
-    [self addSkipBackupAttributeToItemAtURL:url];
     image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
     
     if (!image)
