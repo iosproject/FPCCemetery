@@ -207,7 +207,7 @@
     dispatch_async(BACKGROUND_QUEUE, ^{
         
         NSData *data = nil;
-        
+        /**
         // get data from internet
         if ([self connectedToInternet])
         {
@@ -255,7 +255,11 @@
             NSString *filePath = [[NSBundle mainBundle] pathForResource:@"default_tomb_db" ofType:@"json"];
             data = [NSData dataWithContentsOfFile:filePath];
         }
-    
+        */
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"default_tomb_db" ofType:@"json"];
+        data = [NSData dataWithContentsOfFile:filePath];
+        
         // create a dictionary from the DB data
         NSError *error = nil;
         NSDictionary *jsonTombData = [NSJSONSerialization JSONObjectWithData:data
