@@ -56,6 +56,8 @@
     self.scrollsToTop = NO;
     self.delegate = self;
     
+    
+    
     CGRect cRect = imageView1.bounds;
     UIImageView *cView;
     
