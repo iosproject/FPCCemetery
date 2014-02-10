@@ -39,6 +39,7 @@
     [self setVeteranString];
     [self setEpitaphString];
     [self styleEpitaphTextView];
+    [self styleTombstoneButton];
 }
 
 - (void) setEpitaphString
@@ -88,10 +89,27 @@
     [_epitaphTextView.layer setMasksToBounds:YES];
     
     CGRect frame = _epitaphTextView.frame;
+    
     frame.size.height = _epitaphTextView.contentSize.height;
+    //frame.size.height = [self textViewHeightForAttributedText:_selectedTomb.epitaph andWidth:280.0];
     _epitaphTextView.frame = frame;
     
     [self setScrollViewHeight:_epitaphTextView.contentSize.height];
+}
+
+- (CGFloat)textViewHeightForAttributedText:(NSAttributedString *)text andWidth:(CGFloat)width
+{
+    UITextView *textView = [[UITextView alloc] init];
+    [textView setAttributedText:text];
+    CGSize size = [textView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    return size.height;
+}
+
+-(void) styleTombstoneButton
+{
+    self.viewTombstoneButton.layer.borderColor = [[UIColor blackColor] CGColor];;
+    self.viewTombstoneButton.layer.borderWidth = 1.0f;
+    //self.viewTombstoneButton.layer.cornerRadius = 10;
 }
 
 -(void) setScrollViewHeight:(int)height

@@ -136,8 +136,8 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="UPU-qN-su4" style="IBUITableViewCellStyleDefault" id="0Rn-Q9-aYt">
                                         <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Rn-Q9-aYt" id="dqj-RZ-1hK">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Rn-Q9-aYt" id="1LB-G2-nV0">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Plan Your Visit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UPU-qN-su4">
@@ -156,8 +156,8 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="U7H-Zo-YZS" style="IBUITableViewCellStyleDefault" id="p5f-Tr-rsZ">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p5f-Tr-rsZ" id="IJB-Fc-cCr">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p5f-Tr-rsZ" id="KdU-g5-08A">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Image Gallery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U7H-Zo-YZS">
@@ -176,8 +176,8 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="lVl-YD-9bq" style="IBUITableViewCellStyleDefault" id="hsL-OD-WBD">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsL-OD-WBD" id="hqH-j0-RNy">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsL-OD-WBD" id="sLP-I3-BMf">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Contact Us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lVl-YD-9bq">
@@ -196,8 +196,8 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fuo-3b-PNQ" style="IBUITableViewCellStyleDefault" id="jxV-d9-uBy">
                                         <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jxV-d9-uBy" id="QuQ-kl-Pk7">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jxV-d9-uBy" id="UO0-f8-nbC">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About Us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fuo-3b-PNQ">
@@ -216,8 +216,8 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" id="viQ-BL-LHC">
                                         <rect key="frame" x="0.0" y="240" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viQ-BL-LHC" id="NY0-HO-wS0">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viQ-BL-LHC" id="LeQ-I8-bjH">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About this App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXO-Dz-XUf">
@@ -466,7 +466,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" id="mm4-GY-GQs">
-                                <rect key="frame" x="0.0" y="14" width="320" height="550"/>
+                                <rect key="frame" x="0.0" y="15" width="320" height="549"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -534,14 +534,14 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" ">
+                                    <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="14" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="This app was developed by a team of students at Kean University, Union, New Jersey.  ">
+                                    <fragment content="This app was developed by a team of students at Kean University, Union, New Jersey.  ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
@@ -555,21 +555,21 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="    Dr. Patricia Morreale  ">
+                                    <fragment content="    Dr. Patricia Morreale  ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Developers:    Project Manager ">
+                                    <fragment content="Developers:    Project Manager ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica-Bold"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="      Carlos Silva  ">
+                                    <fragment content="      Carlos Silva  ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
@@ -583,7 +583,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="       Joshua Lisojo         Allan Goncalves       Nathaly Lozano       Harold Liao  ">
+                                    <fragment content="       Joshua Lisojo         Allan Goncalves       Nathaly Lozano       Harold Liao  ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
@@ -598,7 +598,9 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">       Daniel Church       Stephen H.
+                                        <string key="content">
+      Daniel Church
+      Stephen H.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
@@ -606,7 +608,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="      Jugal Shah       Dev Das     ">
+                                    <fragment content="      Jugal Shah       Dev Das     ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
@@ -620,21 +622,21 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="       Jason Bonafide  ">
+                                    <fragment content="       Jason Bonafide  ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Contact:    ">
+                                    <fragment content="Contact:    ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica-Bold"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="keanmobiledevelopment@gmail.com   ">
+                                    <fragment content="keanmobiledevelopment@gmail.com   ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="15" name="Helvetica"/>
@@ -694,7 +696,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dvf-Dm-MSl" kind="push" identifier="ShowTombDetails" id="nu5-Q7-34c"/>
+                                    <segue destination="VdF-lH-3xE" kind="push" identifier="ShowTombDetails" id="g7B-gc-0tP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -719,7 +721,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1416" y="180"/>
+            <point key="canvasLocation" x="-1390" y="204"/>
         </scene>
         <!--View Controller - Plan Your Visit-->
         <scene sceneID="RjR-dz-WJw">
@@ -872,88 +874,6 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
             </objects>
             <point key="canvasLocation" x="-2003" y="336"/>
         </scene>
-        <!--Search Table View Controller - Tomb Search-->
-        <scene sceneID="HD2-1J-lUf">
-            <objects>
-                <tableViewController id="RTk-Rf-16c" customClass="SearchTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IC7-qX-cB9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="I see dead people" showsScopeBar="YES" id="EYw-01-5qK">
-                            <rect key="frame" x="0.0" y="64" width="320" height="88"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>Name</string>
-                                <string>Y.O.D.</string>
-                                <string>Age</string>
-                                <string>Section</string>
-                            </scopeButtonTitles>
-                            <connections>
-                                <outlet property="delegate" destination="RTk-Rf-16c" id="AXN-8l-GjX"/>
-                            </connections>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TombCell" textLabel="918-4H-eU1" detailTextLabel="sDy-WE-vDA" style="IBUITableViewCellStyleSubtitle" id="QRU-hj-cXg">
-                                <rect key="frame" x="0.0" y="174" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QRU-hj-cXg" id="zb0-xS-0zF">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="918-4H-eU1">
-                                            <rect key="frame" x="15" y="2" width="36" height="22"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sDy-WE-vDA">
-                                            <rect key="frame" x="15" y="24" width="50" height="17"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="dvf-Dm-MSl" kind="push" identifier="ShowTombDetails" id="vIs-EQ-zKC"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="RTk-Rf-16c" id="lPG-n0-O3Q"/>
-                            <outlet property="delegate" destination="RTk-Rf-16c" id="232-sP-Yhy"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Tomb Search" id="eak-dw-ORH">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="M1J-Ad-UYU"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="vBO-ox-J7t">
-                            <connections>
-                                <action selector="goToSearch:" destination="RTk-Rf-16c" id="FBz-PY-XhV"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchBar" destination="EYw-01-5qK" id="tnX-xP-EiM"/>
-                        <outlet property="searchDisplayController" destination="jWW-4N-ih9" id="cBn-Kw-YnO"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IeC-Sd-yCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="jWW-4N-ih9">
-                    <connections>
-                        <outlet property="delegate" destination="RTk-Rf-16c" id="k0E-7e-wUE"/>
-                        <outlet property="searchBar" destination="EYw-01-5qK" id="SCq-Gs-nDr"/>
-                        <outlet property="searchContentsController" destination="RTk-Rf-16c" id="a7p-Ex-J7c"/>
-                        <outlet property="searchResultsDataSource" destination="RTk-Rf-16c" id="tBK-kY-Bav"/>
-                        <outlet property="searchResultsDelegate" destination="RTk-Rf-16c" id="8Ht-AC-gVv"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="-1428" y="219"/>
-        </scene>
         <!--Tomb Detail View Controller - Search-->
         <scene sceneID="okg-SG-7Vi">
             <objects>
@@ -1059,26 +979,20 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5cw-wK-5NQ">
-                                        <rect key="frame" x="18" y="450" width="284" height="52"/>
+                                        <rect key="frame" x="18" y="450.00000597451066" width="284" height="52"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <state key="normal" title="View Tombstone">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="3yY-av-4pG" kind="push" identifier="showTombstone" id="kuG-wD-Zc6"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qlh-sT-FbU">
-                                        <rect key="frame" x="18" y="498" width="285" height="51"/>
+                                        <rect key="frame" x="18" y="499" width="285" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <state key="normal" title="View Section">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="v0I-OF-2WW" kind="push" identifier="showSection" id="Tsv-Yu-3eH"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.96948300050000003" blue="0.81658833500000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -1104,7 +1018,7 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxW-t3-SkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892" y="80"/>
+            <point key="canvasLocation" x="-849" y="-442"/>
         </scene>
         <!--Tombstone View Controller - Tombstone-->
         <scene sceneID="jC7-7t-hkC">
@@ -1137,6 +1051,145 @@ The First Presbyterian Burial Grounds are a perfect place to learn about the his
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg4-HN-tcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-340" y="75"/>
+        </scene>
+        <!--Tomb Detail View Controller-->
+        <scene sceneID="W82-Kx-EAz">
+            <objects>
+                <viewController id="VdF-lH-3xE" customClass="TombDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x61-Dd-wca">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2KR-0T-mv8">
+                                <rect key="frame" x="0.0" y="62" width="320" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="5W1-cX-2Jh">
+                                        <rect key="frame" x="20" y="48" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="YyT-4x-vOA">
+                                        <rect key="frame" x="170" y="48" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Born" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zub-9n-3f5">
+                                        <rect key="frame" x="66" y="20" width="38" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Died" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Czr-4B-OdD">
+                                        <rect key="frame" x="223" y="20" width="36" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Ty-eJ-3TV">
+                                        <rect key="frame" x="70" y="86" width="31" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veteran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eA8-FE-i7B">
+                                        <rect key="frame" x="56" y="153" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PBd-w3-tit">
+                                        <rect key="frame" x="212" y="86" width="59" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cause of Death" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bAn-6H-nBn">
+                                        <rect key="frame" x="176" y="153" width="119" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="SvE-jL-mpB">
+                                        <rect key="frame" x="20" y="115" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="5jg-8k-FxG">
+                                        <rect key="frame" x="176" y="115" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="XNd-vz-Vn5">
+                                        <rect key="frame" x="20" y="181" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="PQ5-Nz-HSr">
+                                        <rect key="frame" x="170" y="181" width="130" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w3J-RX-Zsb">
+                                        <rect key="frame" x="30" y="385" width="260" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="View Tombstone">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="3yY-av-4pG" kind="push" identifier="showTombstone" id="zbt-qN-5ji"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gFw-3e-lWD">
+                                        <rect key="frame" x="30" y="416" width="260" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="View Section">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="v0I-OF-2WW" kind="push" identifier="showSection" id="mLk-Ha-W6G"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epitaph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HmK-9n-NXA">
+                                        <rect key="frame" x="131" y="228" width="59" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="feE-72-Pfc">
+                                        <rect key="frame" x="20" y="251" width="280" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CSu-Pc-gmq"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="SvE-jL-mpB" id="UjX-zM-HgM"/>
+                        <outlet property="bornTextField" destination="5W1-cX-2Jh" id="h57-32-ak3"/>
+                        <outlet property="causeOfDeathTextField" destination="PQ5-Nz-HSr" id="Q85-fw-y5q"/>
+                        <outlet property="diedTextField" destination="YyT-4x-vOA" id="PLi-0c-nJP"/>
+                        <outlet property="epitaphTextView" destination="feE-72-Pfc" id="KtU-e8-o2G"/>
+                        <outlet property="scrollView" destination="2KR-0T-mv8" id="bMU-HE-4gk"/>
+                        <outlet property="sectionTextField" destination="5jg-8k-FxG" id="iiF-zE-gw0"/>
+                        <outlet property="veteranTextField" destination="XNd-vz-Vn5" id="G6V-eB-Sv6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yy-4s-Jjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823" y="249"/>
         </scene>
         <!--Section View Controller - Section-->
         <scene sceneID="yxq-MH-6sK">
