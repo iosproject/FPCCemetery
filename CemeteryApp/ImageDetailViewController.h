@@ -13,4 +13,6 @@
 @property (nonatomic, strong) UIImage *image;
 @property (strong, nonatomic) NSMutableArray *imageArray;
 @property (nonatomic) NSInteger imageIndex;
+- (IBAction)didSwipeLeft:(id)sender;
+
 @end

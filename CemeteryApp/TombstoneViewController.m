@@ -76,7 +76,7 @@
 
 - (void)fetchTombstoneImage
 {
-    int tombInt = [_tombstoneNumber integerValue];
+    NSInteger tombInt = [_tombstoneNumber integerValue];
     NSString *stringURL = nil;
     
     if (tombInt > 0 && tombInt < 100)

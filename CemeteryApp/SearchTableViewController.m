@@ -259,6 +259,8 @@
         
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"default_tomb_db" ofType:@"json"];
         data = [NSData dataWithContentsOfFile:filePath];
+        //NSURL *turl = [[NSURL alloc] initWithString:@"http://fpcenj.org/fpcadmin/view_json.php"];
+        //data = [NSData dataWithContentsOfURL:turl];
         
         // create a dictionary from the DB data
         NSError *error = nil;

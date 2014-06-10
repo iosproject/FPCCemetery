@@ -24,7 +24,6 @@
 		07027D2D16E683EB007BE13D /* 14_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07027D1D16E683EB007BE13D /* 14_full.jpg */; };
 		07027D2E16E683EB007BE13D /* 15_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07027D1E16E683EB007BE13D /* 15_full.jpg */; };
 		07C8E4A616CC3A37000CC940 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */; };
-		07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E81AA016233DB400790930 /* ImageGalleryViewController.m */; };
 		07F31BEA161AAC3700CAB198 /* LaunchImage_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */; };
 		07F31BEB161AAC3700CAB198 /* LaunchImage_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */; };
 		07F31BED161AAC4D00CAB198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F31BEC161AAC4D00CAB198 /* Default.png */; };
@@ -41,6 +40,9 @@
 		309EBD9816488B2A00F7386B /* ssimage02.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9316488B2A00F7386B /* ssimage02.png */; };
 		309EBD9916488B2A00F7386B /* ssimage03.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9416488B2A00F7386B /* ssimage03.png */; };
 		309EBD9A16488B2A00F7386B /* ssimage04.png in Resources */ = {isa = PBXBuildFile; fileRef = 309EBD9516488B2A00F7386B /* ssimage04.png */; };
+		30B2EEEB18D202A5005CBAB4 /* ImageGalleryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B2EEEA18D202A5005CBAB4 /* ImageGalleryCollectionViewController.m */; };
+		30B2EEEE18D2038C005CBAB4 /* ImageGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B2EEED18D2038C005CBAB4 /* ImageGalleryCell.m */; };
+		30D582901944AC49002760D5 /* testjson.json in Resources */ = {isa = PBXBuildFile; fileRef = 30D5828F1944AC49002760D5 /* testjson.json */; };
 		30D8FE2C16EA70AC00C2C1A1 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */; };
 		30D8FE2E16EA70AC00C2C1A1 /* Tomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2916EA70AC00C2C1A1 /* Tomb.m */; };
 		30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8FE2B16EA70AC00C2C1A1 /* TombDetailViewController.m */; };
@@ -90,8 +92,6 @@
 		3FA7D35B1610B64800F132F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D35A1610B64800F132F3 /* main.m */; };
 		3FA7D3621610B64800F132F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7D3601610B64800F132F3 /* MainStoryboard.storyboard */; };
 		3FCC17031700C4B00066EFF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCC17021700C4B00066EFF0 /* QuartzCore.framework */; };
-		3FDDE63E16DBD50200F5F888 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE63B16DBD50200F5F888 /* Cell.m */; };
-		3FDDE63F16DBD50200F5F888 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */; };
 		3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -116,8 +116,6 @@
 		0715FACB1610BF87006A91A0 /* AppIcon_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon_Retina.png; path = ../AppIcon_Retina.png; sourceTree = "<group>"; };
 		07C8E49D16CC1B88000CC940 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		07C8E49E16CC1B88000CC940 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
-		07E81A9F16233DB400790930 /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
-		07E81AA016233DB400790930 /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
 		07F31BE8161AAC3600CAB198 /* LaunchImage_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Normal.png; path = ../LaunchImage_Normal.png; sourceTree = "<group>"; };
 		07F31BE9161AAC3600CAB198 /* LaunchImage_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage_Retina.png; path = ../LaunchImage_Retina.png; sourceTree = "<group>"; };
 		07F31BEC161AAC4D00CAB198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -137,6 +135,11 @@
 		309EBD9316488B2A00F7386B /* ssimage02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage02.png; sourceTree = "<group>"; };
 		309EBD9416488B2A00F7386B /* ssimage03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage03.png; sourceTree = "<group>"; };
 		309EBD9516488B2A00F7386B /* ssimage04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssimage04.png; sourceTree = "<group>"; };
+		30B2EEE918D202A5005CBAB4 /* ImageGalleryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryCollectionViewController.h; sourceTree = "<group>"; };
+		30B2EEEA18D202A5005CBAB4 /* ImageGalleryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryCollectionViewController.m; sourceTree = "<group>"; };
+		30B2EEEC18D2038C005CBAB4 /* ImageGalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryCell.h; sourceTree = "<group>"; };
+		30B2EEED18D2038C005CBAB4 /* ImageGalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryCell.m; sourceTree = "<group>"; };
+		30D5828F1944AC49002760D5 /* testjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testjson.json; sourceTree = "<group>"; };
 		30D8FE2516EA70AC00C2C1A1 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		30D8FE2616EA70AC00C2C1A1 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		30D8FE2816EA70AC00C2C1A1 /* Tomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tomb.h; sourceTree = "<group>"; };
@@ -201,10 +204,6 @@
 		3FA7D35C1610B64800F132F3 /* CemeteryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CemeteryApp-Prefix.pch"; sourceTree = "<group>"; };
 		3FA7D3611610B64800F132F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3FCC17021700C4B00066EFF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3FDDE63A16DBD50200F5F888 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		3FDDE63B16DBD50200F5F888 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
-		3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
-		3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CemeteryAppAppDelegate.h; sourceTree = "<group>"; };
 		3FE71AD0161A0F8E00FF736A /* CemeteryAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CemeteryAppAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,14 +267,12 @@
 		30D8FE2416EA6FD500C2C1A1 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				3FDDE63A16DBD50200F5F888 /* Cell.h */,
-				3FDDE63B16DBD50200F5F888 /* Cell.m */,
-				3FDDE63C16DBD50200F5F888 /* CustomCellBackground.h */,
-				3FDDE63D16DBD50200F5F888 /* CustomCellBackground.m */,
+				30B2EEEC18D2038C005CBAB4 /* ImageGalleryCell.h */,
+				30B2EEED18D2038C005CBAB4 /* ImageGalleryCell.m */,
+				30B2EEE918D202A5005CBAB4 /* ImageGalleryCollectionViewController.h */,
+				30B2EEEA18D202A5005CBAB4 /* ImageGalleryCollectionViewController.m */,
 				3F76C5E41610DFDA0027640E /* MoreViewController.m */,
 				3F76C5E31610DFDA0027640E /* MoreViewController.h */,
-				07E81A9F16233DB400790930 /* ImageGalleryViewController.h */,
-				07E81AA016233DB400790930 /* ImageGalleryViewController.m */,
 				3024B33216D80578007FDB0B /* ImageDetailViewController.h */,
 				3024B33316D80578007FDB0B /* ImageDetailViewController.m */,
 				3FE71ACF161A0F8E00FF736A /* CemeteryAppAppDelegate.h */,
@@ -402,6 +399,7 @@
 				3FA7D3571610B64700F132F3 /* InfoPlist.strings */,
 				3FA7D35A1610B64800F132F3 /* main.m */,
 				3FA7D35C1610B64800F132F3 /* CemeteryApp-Prefix.pch */,
+				30D5828F1944AC49002760D5 /* testjson.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -488,6 +486,7 @@
 				3F1FDE0A16137871008C52DE /* home_24.png in Resources */,
 				3F1FDE0B16137871008C52DE /* home_48.png in Resources */,
 				3F1FDE0C16137871008C52DE /* home_64.png in Resources */,
+				30D582901944AC49002760D5 /* testjson.json in Resources */,
 				3F1FDE2316137871008C52DE /* magnifier_24.png in Resources */,
 				3F1FDE2416137871008C52DE /* magnifier_48.png in Resources */,
 				3F1FDE2516137871008C52DE /* magnifier_64.png in Resources */,
@@ -559,20 +558,19 @@
 				3F76C5DC1610D52F0027640E /* MapViewController.m in Sources */,
 				3F76C5E51610DFDA0027640E /* MoreViewController.m in Sources */,
 				3FE71AD1161A0F8E00FF736A /* CemeteryAppAppDelegate.m in Sources */,
-				07E81AA116233DB400790930 /* ImageGalleryViewController.m in Sources */,
 				3F3D444716B9CA7C00A760DC /* HomeViewController.m in Sources */,
 				07C8E4A616CC3A37000CC940 /* AboutUsViewController.m in Sources */,
 				3024B33416D80578007FDB0B /* ImageDetailViewController.m in Sources */,
-				3FDDE63E16DBD50200F5F888 /* Cell.m in Sources */,
-				3FDDE63F16DBD50200F5F888 /* CustomCellBackground.m in Sources */,
 				30D8FE2C16EA70AC00C2C1A1 /* SearchTableViewController.m in Sources */,
 				30D8FE2E16EA70AC00C2C1A1 /* Tomb.m in Sources */,
 				30D8FE2F16EA70AC00C2C1A1 /* TombDetailViewController.m in Sources */,
 				30031E7716EFA21000981CCC /* BurialMapViewController.m in Sources */,
 				3F67165F16FA0F8900674923 /* SlideShowScrollView.m in Sources */,
 				3F67166216FA292400674923 /* PoemImageView.m in Sources */,
+				30B2EEEE18D2038C005CBAB4 /* ImageGalleryCell.m in Sources */,
 				3F16D4A81715E46400A4574E /* TombstoneViewController.m in Sources */,
 				3F16D4AB1715ECCB00A4574E /* SectionViewController.m in Sources */,
+				30B2EEEB18D202A5005CBAB4 /* ImageGalleryCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

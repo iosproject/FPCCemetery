@@ -54,6 +54,7 @@
 }
 
 - (IBAction)didSwipeLeft:(id)sender {
+    NSLog(@"swipe left");
     self.imageIndex++;
     if(self.imageIndex >= self.imageArray.count)
         self.imageIndex = 0;
@@ -80,7 +81,6 @@
 
     
 }
-
 
 
 @end

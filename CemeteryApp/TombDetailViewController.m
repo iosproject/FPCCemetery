@@ -40,6 +40,7 @@
     [self setEpitaphString];
     [self styleEpitaphTextView];
     [self styleTombstoneButton];
+    [self styleSectionButton];
 }
 
 - (void) setEpitaphString
@@ -82,26 +83,32 @@
 
 - (void) styleEpitaphTextView
 {
+    
     [_epitaphTextView.layer setBackgroundColor: [[UIColor whiteColor] CGColor]];
     [_epitaphTextView.layer setBorderColor: [[UIColor grayColor] CGColor]];
     [_epitaphTextView.layer setBorderWidth: 1.0];
     [_epitaphTextView.layer setCornerRadius:8.0f];
     [_epitaphTextView.layer setMasksToBounds:YES];
     
-    CGRect frame = _epitaphTextView.frame;
+    [_epitaphTextView setEditable:NO];
+    [_epitaphTextView setScrollEnabled:YES];
+    [_epitaphTextView setText:_selectedTomb.epitaph];
+    [_epitaphTextView sizeToFit];
+    [_epitaphTextView setScrollEnabled:NO];
     
-    frame.size.height = _epitaphTextView.contentSize.height;
-    //frame.size.height = [self textViewHeightForAttributedText:_selectedTomb.epitaph andWidth:280.0];
-    _epitaphTextView.frame = frame;
+
+    CGSize textViewSize = [_epitaphTextView sizeThatFits:CGSizeMake(_epitaphTextView.frame.size.width, FLT_MAX)];
+    //_epitaphTextView.height = textViewSize.height;
+    //NSLog(@"Heigh of Text View: %f", textViewSize.height);
+    [_epitaphTextView setFrame:CGRectMake((self.view.frame.size.width - 280)/2,260,280,textViewSize.height)];
+    [self setScrollViewHeight:textViewSize.height];//_epitaphTextView.contentSize.height];
     
-    [self setScrollViewHeight:_epitaphTextView.contentSize.height];
 }
 
-- (CGFloat)textViewHeightForAttributedText:(NSAttributedString *)text andWidth:(CGFloat)width
-{
-    UITextView *textView = [[UITextView alloc] init];
-    [textView setAttributedText:text];
-    CGSize size = [textView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+- (CGFloat)textViewHeightForAttributedText: (NSAttributedString*)text andWidth: (CGFloat)width {
+    UITextView *calculationView = [[UITextView alloc] init];
+    [calculationView setAttributedText:text];
+    CGSize size = [calculationView sizeThatFits:CGSizeMake(width, FLT_MAX)];
     return size.height;
 }
 
@@ -109,17 +116,24 @@
 {
     self.viewTombstoneButton.layer.borderColor = [[UIColor blackColor] CGColor];;
     self.viewTombstoneButton.layer.borderWidth = 1.0f;
-    //self.viewTombstoneButton.layer.cornerRadius = 10;
+    self.viewTombstoneButton.layer.cornerRadius = 10;
+}
+
+-(void) styleSectionButton
+{
+    self.viewSectionButton.layer.borderColor = [[UIColor blackColor] CGColor];;
+    self.viewSectionButton.layer.borderWidth = 1.0f;
+    self.viewSectionButton.layer.cornerRadius = 10;
 }
 
 -(void) setScrollViewHeight:(int)height
 {
     // height adjust
-    height -= 150;
+    height -= 130;
     
     // place buttons under the epitaph 
-    _viewTombstoneButton.frame = CGRectMake(20.0, 520+height, 280.0, 40.0);
-    _viewSectionButton.frame = CGRectMake(20.0, 570+height, 280.0, 40.0);
+    _viewTombstoneButton.frame = CGRectMake(20.0, (540+height)-100, 280.0, 40.0);
+    _viewSectionButton.frame = CGRectMake(20.0, (540+height)-40, 280.0, 40.0);
     
     // set size of scroll view
     [self.scrollView setContentSize:CGSizeMake(320, 540+height)];
